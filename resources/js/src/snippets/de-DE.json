@@ -1,0 +1,38 @@
+{
+    "language": "Deutsch",
+
+    "validation": {
+        "required": "Dieses Feld muss ausgefüllt werden",
+        "min-chars": "Du musst mind. {num} Zeichen eintragen.",
+        "max-chars": "Du darfst nicht mehr als {num} Zeichen eintragen."
+    },
+
+    "navigation": {
+        "back": "Back"
+    },
+
+    "general" : {
+        "form": {
+            "language": {
+                "label": "Sprache"
+            }
+        }
+    },
+
+    "homepage": {
+        "index": {
+            "title": "Spiel beitreten",
+            "form": {
+                "username": {
+                    "label": "Nutzername",
+                    "hint": "So wirst du für andere Spieler angezeigt."
+                },
+                "password": {
+                    "label": "Passwort",
+                    "hint": "Du bekommst das Passwort nur durch deinen GameMaster."
+                },
+                "submit": "Beitreten"
+            }
+        }
+    }
+}

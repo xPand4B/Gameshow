@@ -1,0 +1,137 @@
+{
+    "language": "English",
+
+    "validation": {
+        "swal-error": "Something went wrong!",
+        "required": "This field is required.",
+        "required-field": "The field \"{field}\" is required.",
+        "min-chars": "You need in enter at least {num} characters.",
+        "max-chars": "You are only allowed to enter {num} characters.",
+        "min": "The value must be more than {num}.",
+        "max": "The value must be less than {num}."
+    },
+
+    "navigation": {
+        "back": "Back"
+    },
+
+    "lobby": {
+        "joined": "'{name}' has joined!",
+        "left": "'{name}' has left!"
+    },
+
+    "general" : {
+        "form": {
+            "language": {
+                "label": "Language"
+            }
+        },
+        "modal": {
+            "confirmColor": "#54A857",
+            "cancelColor": "#CB3D3D"
+        },
+        "cancel": "Cancel"
+    },
+
+    "gameplay": {
+        "availableJoker": {
+            "telephone": {
+                "label": "Telephone",
+                "hint": ""
+            },
+            "5050": {
+                "label": "50/50",
+                "hint": ""
+            },
+            "chat": {
+                "label": "Chat",
+                "hint": ""
+            },
+            "googleImages": {
+                "label": "Google Images",
+                "hint": "Your are allowed to search for 30s, but only on Google Images."
+            }
+        }
+    },
+
+    "homepage": {
+        "index": {
+            "title": "Create new Game",
+            "form": {
+                "username": {
+                    "label": "Username",
+                    "hint": ""
+                },
+                "pin": {
+                    "label": "User PIN",
+                    "hint": "This PIN is used to identify you as the GameMaster."
+                },
+                "create": "Create new Game"
+            },
+            "gameCreated": "New Game has been created!"
+        }
+    },
+
+    "menu": {
+        "general": {
+            "copy": {
+                "label": "Game URL",
+                "buttonText": "Copy"
+            }
+        },
+        "gamemaster": {
+            "title": "GameMaster Menu",
+            "items": {
+                "start": "Start",
+                "questions": "Questions",
+                "settings": "Settings"
+            }
+        },
+        "player": {
+            "title": "Game Menu"
+        }
+    },
+
+    "questions": {
+        "title": "Questions"
+    },
+
+    "settings": {
+        "title": "Game Settings",
+        "tabs": {
+            "general": {
+                "tab": "General",
+                "content": {
+                    "playerCount": {
+                        "label": "Number of Players",
+                        "hint": "You must have as many players as selected!"
+                    },
+                    "password": {
+                        "label": "Session Password",
+                        "hint": "This is what players need to join the game."
+                    }
+                }
+            },
+            "gameplay": {
+                "tab": "Gameplay",
+                "content": {
+                    "correctAnswerPoints": {
+                        "label": "Points per correct Answer"
+                    },
+                    "pointsForPlayersIfWrongAnswer": {
+                        "label": "Wrong-Answer Points?",
+                        "hint": "Give points to other players if the answer is wrong."
+                    },
+                    "wrongAnswerPoints": {
+                        "label": "Points per wrong Answer"
+                    }
+                }
+            },
+            "joker": {
+                "tab": "Joker",
+                "title": "Select which jokers should be available for use."
+            }
+        },
+        "save": "Save settings"
+    }
+}

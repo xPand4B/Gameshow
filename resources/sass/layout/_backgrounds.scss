@@ -1,0 +1,26 @@
+@import "../abstract/variables";
+
+body {
+    &.bg-gradient-blue {
+        background-attachment: fixed;
+    }
+}
+
+.bg-gradient-blue {
+    background: $background-gradient-blue;
+    background: $moz-background-gradient-blue;
+    background: $webkit-background-gradient-blue;
+    background: $o-background-gradient-blue;
+    background: $ms-background-gradient-blue;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.bg-unsplash {
+    background-image: url('https://source.unsplash.com/1280x720/daily?programming');
+    //background-image: url('https://source.unsplash.com/random/3440x1440');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

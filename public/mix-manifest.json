@@ -1,0 +1,13 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/js/sweetalert.js": "/js/sweetalert.js",
+    "/js/vue.js": "/js/vue.js",
+    "/js/vuetify.js": "/js/vuetify.js",
+    "/homepage.js": "/homepage.js",
+    "/homepage~menu~questions~settings.js": "/homepage~menu~questions~settings.js",
+    "/layouts.js": "/layouts.js",
+    "/menu.js": "/menu.js",
+    "/questions.js": "/questions.js",
+    "/settings.js": "/settings.js"
+}
