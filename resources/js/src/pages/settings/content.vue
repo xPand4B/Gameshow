@@ -158,7 +158,7 @@
         mounted() {
             this.updateStoredData();
 
-            Echo.channel(`Game.${this.getCurrentGameId}.Settings`)
+            Echo.private(`Game.${this.getCurrentGameId}.Settings`)
                 .listen('.game.updated', (game) => {
                     this.$store.dispatch('formatPusherData', game);
                     this.updateStoredData();

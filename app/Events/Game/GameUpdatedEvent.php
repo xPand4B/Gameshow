@@ -7,6 +7,7 @@ use App\Http\Resources\Game\GameResource;
 use App\Models\Game;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Http\Request;
@@ -34,11 +35,11 @@ class GameUpdatedEvent implements ShouldBroadcast
     /**
      * Get the channels the event should broadcast on.
      *
-     * @return Channel|array
+     * @return PrivateChannel|array
      */
     public function broadcastOn(): Channel
     {
-        return new Channel('Game.'.$this->game->id.'.Settings');
+        return new PrivateChannel('Game.'.$this->game->id.'.Settings');
     }
 
     /**

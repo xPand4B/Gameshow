@@ -240,7 +240,7 @@
 
             initValues() {
                 this.gameId  = this.$route.params.id;
-                this.joinUrl = `${document.location.origin}/${this.gameId}`;
+                this.joinUrl = window.location.href;
                 this.loading = false;
 
                 Echo.join(`Game.${this.$route.params.id}.Lobby`)

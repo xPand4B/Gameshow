@@ -5,20 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GameShow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GameShow.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chunks/0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chunks/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/homepage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/homepage~sites/menu~sites/questions~sites/settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/layouts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/questions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/settings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/routes/apiRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/routes/apiRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/vendors/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vendors/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/_partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_partials/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/_partials/javascript.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_partials/javascript.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Events/Game/GameUpdatedEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/Game/GameUpdatedEvent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/sweetalert.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/sweetalert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/vuetify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/settings/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,11 +183,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1jYTW7Uqo17EIQTDsotcf8EPese" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -236,7 +245,7 @@
       <workItem from="1606762332064" duration="23331000" />
       <workItem from="1606986086658" duration="11500000" />
       <workItem from="1607071303489" duration="355000" />
-      <workItem from="1607071677657" duration="24796000" />
+      <workItem from="1607071677657" duration="26019000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607071598628</created>
@@ -252,16 +261,25 @@
       <option name="project" value="LOCAL" />
       <updated>1607333524899</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed problem with relative paths">
+      <created>1607340577098</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607340577098</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Fixed Channel-Auth + Added frontend stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Channel-Auth + Added frontend stuff" />
+    <MESSAGE value="Fixed problem with relative paths" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed problem with relative paths" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2046" y="524" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604400105179">
@@ -289,10 +307,10 @@
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2081" y="648" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1605447522592" />
-    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2" timestamp="1607333524707">
+    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2" timestamp="1607340576749">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
-    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607333524707" />
+    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607340576749" />
     <state x="2016" y="448" key="NewPhpClassDialog" timestamp="1606906698255">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
