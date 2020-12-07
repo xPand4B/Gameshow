@@ -16,24 +16,35 @@ class AuthHelper extends Controller
      */
     public static function login(string $username): JsonResponse
     {
-        if (auth()->user()) {
+        if (Auth::check()) {
             Auth::logout();
         }
 
         $user = User::where(
-            'username', $username
+            'username', '=', $username
         )->get();
 
         if ($user->count() === 0) {
             $user = User::create([
                 'username' => $username
             ]);
+        } else {
+            $user = $user[0];
         }
 
-        Auth::login($user->first());
+        Auth::login($user);
 
+        return self::getAuthResponse();
+    }
+
+    /**
+     * @return JsonResponse
+     */
+    public static function getAuthResponse(): JsonResponse
+    {
         return response()->json([
-            'success' => !!auth()->user()
+            'success' => !!Auth::user(),
+            'playerName' => Auth::user()->username ?? null
         ]);
     }
 }

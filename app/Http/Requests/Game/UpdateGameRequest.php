@@ -24,7 +24,7 @@ class UpdateGameRequest extends FormRequest
     public function rules()
     {
         return [
-            'player_count'           => 'integer|between:1,4',
+            'player_count'           => 'integer|between:1,5',
             'correct_answer'         => 'integer|min:1|max:1000',
             'points_if_wrong_answer' => 'boolean',
             'wrong_answer'           => 'integer|min:1|max:1000',

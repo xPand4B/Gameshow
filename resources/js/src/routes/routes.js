@@ -33,10 +33,10 @@ const routes = [
                 name: 'gameshow.menu.index',
                 component: () => import(/* webpackChunkName: "menu" */ './../pages/menu'),
                 beforeEnter: (to, from, next) => {
-                    Store.dispatch('fetchSingleGameData', to.params.id).then(() => {
+                    Store.dispatch('fetchGameExists', to.params.id).then(() => {
                         const gameStore = Store.state.GameStore;
 
-                        if (gameStore.currentGame === null) {
+                        if (gameStore.gameExists === false) {
                             next({ name: 'gameshow.home.index' });
                         }
 
@@ -53,10 +53,10 @@ const routes = [
                 name: 'gameshow.questions',
                 component: () => import(/* webpackChunkName: "questions" */ './../pages/questions'),
                 beforeEnter: (to, from, next) => {
-                    Store.dispatch('fetchSingleGameData', to.params.id).then(() => {
+                    Store.dispatch('fetchGameExists', to.params.id).then(() => {
                         const gameStore = Store.state.GameStore;
 
-                        if (gameStore.currentGame === null) {
+                        if (gameStore.gameExists === false) {
                             next({ name: 'gameshow.home.index' });
                         }
 
@@ -80,10 +80,10 @@ const routes = [
                 name: 'gameshow.settings',
                 component: () => import(/* webpackChunkName: "settings" */ './../pages/settings'),
                 beforeEnter: (to, from, next) => {
-                    Store.dispatch('fetchSingleGameData', to.params.id).then(() => {
+                    Store.dispatch('fetchGameExists', to.params.id).then(() => {
                         const gameStore = Store.state.GameStore;
 
-                        if (gameStore.currentGame === null) {
+                        if (gameStore.gameExists === false) {
                             next({ name: 'gameshow.home.index' });
                         }
 

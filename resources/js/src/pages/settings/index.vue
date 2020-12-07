@@ -24,6 +24,5 @@
             GameMenu,
             SettingsContent,
         },
-
     }
 </script>

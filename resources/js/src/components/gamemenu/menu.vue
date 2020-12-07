@@ -18,7 +18,7 @@
             class="mx-auto"
         >
             <div
-                v-if="isLoading || loading"
+                v-if="loading"
                 class="text-center"
             >
                 <v-progress-circular
@@ -30,7 +30,7 @@
             </div>
             <v-container
                 v-else
-                class="pb-0"
+                class="pb-0 px-6"
             >
                 <slot name="content"/>
 
@@ -77,7 +77,21 @@
             </v-container>
         </v-card-text>
 
-        <slot/>
+        <!-- Custom Card -->
+        <v-fade-transition mode="out-in">
+            <div
+                v-if="loading && customCard && !mainMenu"
+                class="text-center py-5"
+            >
+                <v-progress-circular
+                    indeterminate
+                    color="deep-purple lighten-1"
+                    :size="70"
+                    :width="7"
+                />
+            </div>
+            <slot v-else/>
+        </v-fade-transition>
 
         <!-- Actions -->
         <v-card-actions
@@ -98,6 +112,7 @@
 <script>
     import { mapActions, mapGetters } from 'vuex';
     import PlayerListing from './playerListing';
+    import ApiRoutes from "../../routes/apiRoutes";
 
     export default {
         name: "game-menu",
@@ -107,21 +122,18 @@
         },
 
         data: () => ({
-            loading: false,
+            ApiRoutes,
+            loading: true,
             gameId: null,
             joinUrl: ''
         }),
 
         props: {
-            isLoading: {
+            mainMenu: {
                 type: Boolean,
                 default: false
             },
             customCard: {
-                type: Boolean,
-                default: false
-            },
-            fetchGame: {
                 type: Boolean,
                 default: false
             },
@@ -135,38 +147,113 @@
             }
         },
 
-        created() {
-            if (!this.fetchGame) {
+        beforeMount() {
+            if (this.mainMenu) {
                 return;
             }
 
-            this.loading = true;
-            this.gameId = this.$route.params.id;
+            this.fetchMe();
+        },
 
-            this.$store.dispatch('fetchSingleGameData', this.gameId).then(() => {
-                this.joinUrl = `${document.location.origin}/${this.gameId}`;
+        watch: {
+            isLoading: {
+                handler: function(newVal, oldVal) {
+                    if (!newVal && oldVal) {
+                        this.initValues();
+                    }
+                },
+                deep: true,
+                immediate: true,
+            },
+            mainMenu: {
+                handler: function(newVal, oldVal) {
+                    if (!newVal && oldVal) {
+                        this.fetchMe();
+                    }
+                },
+                deep: true,
+                immediate: true,
+            },
+        },
 
-                this.loading = false;
-            });
-
-            Echo.join(`Game.${this.$route.params.id}.Lobby`)
-                .here((users) => {
-                    this.lobbyInit(users);
-                })
-                .joining((user) => {
-                    this.lobbyJoined(user);
-                })
-                .leaving((user) => {
-                    this.lobbyLeft(user);
-                });
+        computed: {
+            ...mapGetters([
+                'getPlayerLoginSuccess'
+            ])
         },
 
         methods: {
             ...mapActions([
+                'fetchSingleGameData',
+                'setPlayerName',
+                'loginPlayer',
                 'lobbyInit',
                 'lobbyJoined',
                 'lobbyLeft',
             ]),
+
+            fetchMe() {
+                axios.get(ApiRoutes.v1.auth.me)
+                    .then(response => {
+                        if (response.data.success) {
+                            this.fetchSingleGameData(this.$route.params.id).then(() => {
+                                this.setPlayerName(response.data.playerName);
+                                this.initValues();
+                            })
+                            return;
+                        }
+
+                        this.enterPlayerName();
+
+                    }).catch(error => {
+                    Toast.fire({
+                        icon: 'error',
+                        title: error
+                    });
+                });
+            },
+
+            enterPlayerName() {
+                Swal.fire({
+                    icon: 'question',
+                    title: "What's your username?",
+                    input: 'text',
+                    allowOutsideClick: false,
+                    preConfirm: (input) => {
+                        if (!!!input) {
+                            Swal.showValidationMessage(
+                                this.$t('validation.required')
+                            );
+                        } else if (input.length > 20) {
+                            Swal.showValidationMessage(
+                                this.$t('validation.max-chars', { num: 20 })
+                            );
+                        }
+                    }
+                }).then(playerName => {
+                    // console.log(playerName.value.toString());
+                    this.loginPlayer(playerName.value.toString()).then(() => {
+                        this.fetchMe();
+                    });
+                });
+            },
+
+            initValues() {
+                this.gameId  = this.$route.params.id;
+                this.joinUrl = `${document.location.origin}/${this.gameId}`;
+                this.loading = false;
+
+                Echo.join(`Game.${this.$route.params.id}.Lobby`)
+                    .here((users) => {
+                        this.lobbyInit(users);
+                    })
+                    .joining((user) => {
+                        this.lobbyJoined(user);
+                    })
+                    .leaving((user) => {
+                        this.lobbyLeft(user);
+                    });
+            },
 
             handleCopySuccess() {
                 Toast.fire({

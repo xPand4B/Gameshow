@@ -1,10 +1,6 @@
 <template>
     <!-- Player-Menu -->
-    <game-menu
-        :is-loading="!hasUsername"
-        :fetch-game="hasUsername"
-        :with-copy-link="hasUsername"
-    >
+    <game-menu with-copy-link>
         <!-- Menu-Title -->
         <template v-slot:title>
             <div v-if="isGamemaster">
@@ -17,7 +13,6 @@
 
         <!-- Menu-Buttons -->
         <template
-            v-if="hasUsername"
             v-slot:content
         >
             <!-- Start -->
@@ -56,6 +51,7 @@
 <script>
     import { mapActions, mapGetters } from 'vuex';
     import { GameMenuButtons, GameMenu } from './../../components/gamemenu';
+    import ApiRoutes from "../../routes/apiRoutes";
 
     export default {
         name: "pages-menu-index",
@@ -65,32 +61,13 @@
             GameMenuButtons,
         },
 
-        data: () => ({
-            username: '',
-            hasUsername: false
-        }),
-
-        created() {
-            this.hasUsername = this.hasPlayerNameSet;
-
-            if (! this.hasUsername) {
-                this.enterPlayerName();
-            }
-        },
-
         computed: {
             ...mapGetters([
-                'hasPlayerNameSet',
-                'isGamemaster',
-            ]),
+                'isGamemaster'
+            ])
         },
 
         methods: {
-            ...mapActions([
-                'setPlayerName',
-                'unsetPlayerName',
-            ]),
-
             startGame() {
                 // TODO: Add translation
                 Swal.fire({
@@ -105,29 +82,6 @@
                 })
             },
 
-            enterPlayerName() {
-                Swal.fire({
-                    icon: 'question',
-                    title: "What's your username?",
-                    input: 'text',
-                    allowOutsideClick: false,
-                    preConfirm: (input) => {
-                        if (!!!input) {
-                            Swal.showValidationMessage(
-                                this.$t('validation.required')
-                            );
-                        } else if (input.length > 20) {
-                            Swal.showValidationMessage(
-                                this.$t('validation.max-chars', { num: 20 })
-                            );
-                        }
-                    }
-                }).then(playerName => {
-                    this.setPlayerName(playerName.value.toString()).then(() => {
-                        this.$router.go(0);
-                    });
-                });
-            }
         }
     }
 </script>

@@ -7,6 +7,7 @@ const REDIRECT_AFTER_CREATE = 'gameshow.menu.index';
 export default {
     state: {
         currentGame: null,
+        gameExists: false,
         isGamemaster: false,
     },
 
@@ -21,6 +22,10 @@ export default {
             if (currentGame) {
                 return currentGame.data.id;
             }
+        },
+
+        getGameExists({ gameExists }) {
+            return gameExists;
         },
 
         isGamemaster({ isGamemaster }) {
@@ -121,6 +126,26 @@ export default {
             });
         },
 
+        async fetchGameExists({ state, commit }, id) {
+            if (state.currentGame !== null) {
+                return;
+            }
+
+            const route = ApiRoutes.v1.game.exists.replace('id', id);
+
+            await axios.get(route).then(response => {
+                commit('GAME_SET_EXISTS', response.data);
+
+            }).catch(e => {
+                const error = Object.assign({}, e);
+
+                Toast.fire({
+                    icon: 'error',
+                    title: error.response.data.errors[0].detail
+                });
+            });
+        },
+
         async updateGameSettings({ state, commit }, payload) {
             try {
                 const route = ApiRoutes.v1.game.update.replace('id', state.currentGame.data.id);
@@ -149,13 +174,19 @@ export default {
 
     mutations: {
         GAME_CREATE(state, payload) {
-            state.isGamemaster = payload.data.attributes['is_gamemaster'];
             state.currentGame  = payload;
+            state.gameExists   = true;
+            state.isGamemaster = true;
         },
 
         GAME_FETCH_CURRENT(state, payload) {
-            state.isGamemaster = payload.data.attributes['is_gamemaster'];
             state.currentGame = payload;
+            state.isGamemaster = payload.data.attributes['is_gamemaster'];
+        },
+
+        GAME_SET_EXISTS(state, payload) {
+            state.gameExists   = payload.success;
+            state.isGamemaster = payload['is_gamemaster'];
         },
 
         GAME_UPDATE_FIELD(state, payload) {

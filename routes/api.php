@@ -1,8 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\GameApiController;
-use App\Http\Controllers\Api\LobbyApiController;
-use App\Http\Controllers\Api\LoginApiController;
+use App\Http\Controllers\Api\AuthApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,10 +21,14 @@ Route::prefix('v1')->group(function() {
     | Auth
     |--------------------------------------------------------------------------
     */
-    Route::prefix('login')->group(function() {
+    Route::prefix('auth')->group(function() {
         Route::post(
-            '', [LoginApiController::class, 'login']
+            'login', [AuthApiController::class, 'login']
         )->name('api.v1.auth.login');
+
+        Route::get(
+            'me', [AuthApiController::class, 'me']
+        )->name('api.v1.auth.me');
     });
 
     /*
@@ -34,10 +37,6 @@ Route::prefix('v1')->group(function() {
     |--------------------------------------------------------------------------
     */
     Route::prefix('game')->group(function() {
-        Route::get(
-            '', [GameApiController::class, 'index']
-        )->name('api.v1.game.index');
-
         Route::post(
             '', [GameApiController::class, 'store']
         )->name('api.v1.game.store');
@@ -46,19 +45,12 @@ Route::prefix('v1')->group(function() {
             '/{id}', [GameApiController::class, 'show']
         )->name('api.v1.game.show');
 
+        Route::get(
+            '/{id}/exists', [GameApiController::class, 'exists']
+        )->name('api.v1.game.exists');
+
         Route::patch(
             '/{id}', [GameApiController::class, 'update']
         )->name('api.v1.game.update');
-    });
-
-    /*
-    |--------------------------------------------------------------------------
-    | Lobby
-    |--------------------------------------------------------------------------
-    */
-    Route::prefix('lobby')->group(function() {
-        Route::post(
-            '{game}/join', [LobbyApiController::class, 'join']
-        )->name('api.v1.lobby.join');
     });
 });

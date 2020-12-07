@@ -16,6 +16,7 @@
     },
 
     "lobby": {
+        "init": "Successfully joined!",
         "joined": "'{name}' has joined!",
         "left": "'{name}' has left!"
     },
@@ -93,7 +94,25 @@
     },
 
     "questions": {
-        "title": "Questions"
+        "title": "Questions",
+        "form": {
+            "question": {
+                "label": "*Question"
+            },
+            "answer": {
+                "label": "*Answer"
+            },
+            "answerNote": {
+                "label": "Write some context to better explain the answer",
+                "hint": "Only you as a gamemaster can see these note."
+            },
+            "isCorrect": {
+                "label": "Correct answer?"
+            },
+            "addAnswer": {
+                "button": "Add Answer"
+            }
+        }
     },
 
     "settings": {

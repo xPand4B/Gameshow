@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 
 /**
  * @method static create(array $array)
- * @method static where(string $string, $count)
+ * @method static where(string $field, string $operator, string $value)
  */
 class User extends Authenticatable
 {

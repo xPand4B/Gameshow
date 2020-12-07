@@ -148,14 +148,14 @@
             loading: false,
             playerCount: {
                 selected: null,
-                available: [1, 2, 3, 4]
+                available: [1, 2, 3, 4, 5]
             },
             availableJokerCount: [1, 2, 3, 4],
             joker: {},
             points: {}
         }),
 
-        created() {
+        mounted() {
             this.updateStoredData();
 
             Echo.channel(`Game.${this.getCurrentGameId}.Settings`)

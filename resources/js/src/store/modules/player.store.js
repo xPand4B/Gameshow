@@ -1,45 +1,47 @@
 import ApiRoutes from './../../routes/apiRoutes';
 
-const LOCAL_STORAGE_PLAYER_NAME = 'playerName';
-
 export default {
     state: {
+        success: false,
         playerName: null
     },
 
     getters: {
-        hasPlayerNameSet() {
-            return !!localStorage.getItem(LOCAL_STORAGE_PLAYER_NAME);
+        getPlayerName({ playerName }) {
+            return playerName;
         },
 
-        getCurrentPlayerName() {
-            return localStorage.getItem(LOCAL_STORAGE_PLAYER_NAME);
+        getPlayerLoginSuccess({ success }) {
+            return success;
         }
     },
 
     actions: {
-        async setPlayerName({ commit }, username) {
-            const route = ApiRoutes.v1.auth.login;
-
-            await axios.post(route, { username }).then(() => {
-                commit('SET_PLAYER_NAME', username);
+        async loginPlayer({ commit }, username) {
+            await axios.post(ApiRoutes.v1.auth.login, {
+                username
+            }).then(response => {
+                commit('PLAYER_SET', response.data);
+            }).catch(error => {
+                Toast.fire({
+                    icon: 'error',
+                    title: error
+                });
             });
         },
 
-        unsetPlayerName({ commit }) {
-            commit('UNSET_PLAYER_NAME');
+        setPlayerName({ commit }, playerName) {
+            commit('PLAYER_SET', {
+                playerName,
+                success: true
+            });
         },
     },
 
     mutations: {
-        SET_PLAYER_NAME(state, payload) {
-            state.playerName = payload;
-            localStorage.setItem(LOCAL_STORAGE_PLAYER_NAME, payload);
-        },
-
-        UNSET_PLAYER_NAME(state) {
-            state.playerName = null;
-            localStorage.removeItem(LOCAL_STORAGE_PLAYER_NAME);
+        PLAYER_SET(state, payload) {
+            state.playerName = payload.playerName;
+            state.success = !!payload.success;
         }
     },
 };

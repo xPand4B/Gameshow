@@ -14,6 +14,11 @@ export default {
     actions: {
         lobbyInit({ commit }, users) {
             commit('LOBBY_INIT', users);
+
+            Toast.fire({
+                icon: 'success',
+                title: i18n.t('lobby.init'),
+            });
         },
 
         lobbyJoined({ commit }, user) {
@@ -29,7 +34,7 @@ export default {
             commit('LOBBY_LEFT', user);
 
             Toast.fire({
-                icon: 'info',
+                icon: 'warning',
                 title: i18n.t('lobby.left', { name: user.playerName}),
             });
         }
@@ -46,10 +51,19 @@ export default {
         },
 
         LOBBY_JOINED(state, payload) {
-            state.lobby.push({
-                text: payload.playerName,
-                isGamemaster: payload['is_gamemaster']
+            let userAlreadyThere = false;
+            state.lobby.map((user, index) => {
+                if (user.text === payload.playerName) {
+                    userAlreadyThere = true;
+                }
             });
+
+            if (! userAlreadyThere) {
+                state.lobby.push({
+                    text: payload.playerName,
+                    isGamemaster: payload['is_gamemaster']
+                });
+            }
         },
 
         LOBBY_LEFT(state, payload) {

@@ -1,5 +1,8 @@
 <template>
-    <game-menu custom-card>
+    <game-menu
+        main-menu
+        custom-card
+    >
         <!-- Title -->
         <template v-slot:title>
             {{ $t('homepage.index.title') }}
@@ -13,6 +16,7 @@
                         <!-- Username -->
                         <v-col class="pb-0">
                             <v-text-field
+                                v-on:keyup.enter="onCreateSubmit"
                                 v-model="form.username"
                                 autoComplete="username"
                                 :label="$t('homepage.index.form.username.label')"
@@ -90,13 +94,18 @@
 
         methods: {
             ...mapActions([
+                'loginPlayer',
                 'createNewGame',
-                'setPlayerName'
             ]),
 
             onCreateSubmit() {
-                this.setPlayerName(this.form.username);
-                this.createNewGame(this.form);
+                if (! this.isValid) {
+                    return;
+                }
+
+                this.loginPlayer(this.form.username).then(() => {
+                    this.createNewGame(this.form);
+                });
             },
         }
     }

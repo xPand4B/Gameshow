@@ -25,7 +25,6 @@ class CreateGameRequest extends FormRequest
     {
         return [
             'username'  => 'required|bail|alpha_num|max:20',
-//            'pin'       => 'required|bail|digits:4',
         ];
     }
 }

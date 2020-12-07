@@ -26,7 +26,7 @@
 
 <style scoped lang="scss">
     .fullscreen {
-        height: 100vh;
+        height: 100%;
         width: 100vw;
     }
 </style>

@@ -6,7 +6,7 @@
                 :key="`lobby.user.${index}`"
                 class="ma-2"
                 color="primary"
-                :outlined="getCurrentPlayerName !== user.text"
+                :outlined="getPlayerName !== user.text"
             >
                 <i
                     v-if="user.isGamemaster"
@@ -27,7 +27,7 @@
         computed: {
             ...mapGetters([
                 'getLobbyUser',
-                'getCurrentPlayerName'
+                'getPlayerName'
             ]),
         },
     }

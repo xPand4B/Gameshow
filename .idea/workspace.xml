@@ -4,298 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/GameShow.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Console/Commands/CacheClearCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Console/Commands/PhpUnitTestCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Events/Game/GameUpdatedEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Events/Lobby/LobbyJoinedEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Events/Lobby/LobbyLeftEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helper/AuthHelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helper/MessageResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/JokerApiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/LobbyApiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginApiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/VueController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Auth/LoginRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Game/CreateGameRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Game/UpdateGameRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Gamemaster/CreateGamemasterRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Lobby/JoinLobbyRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Error/ErrorResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Game/GameCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Game/GameEventResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Game/GameJokerResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Game/GameResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Joker/JokerCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Joker/JokerResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Game.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Joker.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/HasRandomStringId.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/websockets.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/GameFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/0000_00_00_000000_create_websockets_statistics_entries_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_08_162150_create_sessions_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_08_163443_create_games_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_08_163844_create_jokers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/GameSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/10.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/10.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/11.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/11.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/app.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/gamemaster.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/gamemaster.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/gamemaster~player.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/homepage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/homepage.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/homepage~menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/homepage~menu~questions~settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/homepage~menu~settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/homepage~questions~settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/blue-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/blue-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/blue-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/blue-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/blue-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/blue-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/blue-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/blue-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/red-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/red-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/red-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/red-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/red-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/red-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/red-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/red-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/heart/red-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/lost/dribbble_1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/404-errors/space/bg_purple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/material-icons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sweetalert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sweetalert.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sweetalert.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/vue.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/vue.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/vuetify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/vuetify.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/vuetify.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layouts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/layouts.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/menu.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/player.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/player.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/questions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/settings.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svgs/404-errors/space/404.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svgs/404-errors/space/astronaut.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svgs/404-errors/space/earth.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svgs/404-errors/space/moon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svgs/404-errors/space/overlay_stars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svgs/404-errors/space/rocket.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendors~settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/blue-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/blue-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/blue-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/blue-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/blue-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/blue-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/blue-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/blue-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/red-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/red-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/red-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/red-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/red-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/red-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/red-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/red-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/heart/red-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/lost/dribbble_1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/img/404-errors/space/bg_purple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/svgs/404-errors/space/404.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/svgs/404-errors/space/astronaut.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/svgs/404-errors/space/earth.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/svgs/404-errors/space/moon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/svgs/404-errors/space/overlay_stars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/assets/svgs/404-errors/space/rocket.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/components/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/buttons.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/components/global/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/components/global/languageSwitch/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/layouts/PassThrough.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/layouts/main/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/gamemaster/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/home/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/menu/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/player/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/questions/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/content.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/settings-tab.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/routes/apiRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/routes/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/snippets/de-DE.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/snippets/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/game.store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/joker.store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/player.store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/sample.store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/vendors/sweetalert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/vendors/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/vendors/vuetify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/errors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/abstract/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/layout/_backgrounds.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/vendor/_sweetalert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/_partials/head.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/_partials/javascript.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404-templates/_template.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404-templates/heart.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404-templates/lost.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404-templates/space-invader.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404-templates/space.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404-templates/vampire.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/error.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/vue.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/vue.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/builds/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/logs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Helper/MessageResponseTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Error/ErrorResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameCollectionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameEventResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameGamemasterResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameJokerResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameResourceTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Gamemaster/GamemasterCollectionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Gamemaster/GamemasterGameResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Gamemaster/GamemasterResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Joker/JokerCollectionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Joker/JokerResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Events/Lobby/LobbyJoinedEvent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Events/Lobby/LobbyLeftEvent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helper/AuthHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/AuthHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LobbyApiController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Game/CreateGameRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Game/CreateGameRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Game/UpdateGameRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Game/UpdateGameRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Gamemaster/CreateGamemasterRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Lobby/JoinLobbyRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/main/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/main/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/home/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/menu/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/menu/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/questions/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/questions/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/settings/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/routes/apiRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/routes/apiRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/game.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/game.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/player.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/player.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -467,7 +203,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Events/Lobby" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -512,12 +248,25 @@
       <workItem from="1606720770308" duration="2929000" />
       <workItem from="1606762332064" duration="23331000" />
       <workItem from="1606986086658" duration="11500000" />
-      <workItem from="1607071303489" duration="92000" />
+      <workItem from="1607071303489" duration="355000" />
+      <workItem from="1607071677657" duration="19956000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1607071598628</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607071598628</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2046" y="524" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604400105179">
@@ -528,10 +277,10 @@
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2102" y="404" key="#com.intellij.ide.util.MemberChooser/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1605439249877" />
-    <state x="826" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606999023389">
-      <screen x="0" y="23" width="1440" height="845" />
+    <state x="2026" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607273601909">
+      <screen x="0" y="23" width="3440" height="1385" />
     </state>
-    <state x="2026" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1606579081759" />
+    <state x="2026" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607273601909" />
     <state x="826" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.845@0.23.1440.845" timestamp="1606999023389" />
     <state x="2026" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606841717649" />
     <state x="850" y="300" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606988602485">
@@ -545,19 +294,20 @@
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2081" y="648" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1605447522592" />
-    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2" timestamp="1607071381480">
+    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2" timestamp="1607333478905">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
-    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607071381480" />
+    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607333478905" />
     <state x="2016" y="448" key="NewPhpClassDialog" timestamp="1606906698255">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2016" y="448" key="NewPhpClassDialog/-1440.530.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606906698255" />
     <state x="2016" y="448" key="NewPhpClassDialog/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1606578362198" />
     <state x="2016" y="448" key="NewPhpClassDialog/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606818578996" />
-    <state x="227" y="89" key="SettingsEditor" timestamp="1606381632983">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="1229" y="355" key="SettingsEditor" timestamp="1607071694593">
+      <screen x="0" y="23" width="3440" height="1385" />
     </state>
+    <state x="1229" y="355" key="SettingsEditor/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607071694593" />
     <state x="227" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1606381632983" />
     <state x="1802" y="354" key="SettingsEditor/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1604401861683" />
     <state x="2900" y="484" width="540" height="524" key="StructurePopup" timestamp="1606835394921">
@@ -572,10 +322,14 @@
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="1893" y="455" key="Vcs.Push.Dialog.v2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607071361283" />
-    <state x="3440" y="217" width="1920" height="1057" key="dock-window-1" timestamp="1606825367411">
+    <state x="2106" y="636" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607274421726">
+      <screen x="0" y="23" width="3440" height="1385" />
+    </state>
+    <state x="2106" y="636" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607274421726" />
+    <state x="3440" y="217" width="886" height="1057" maximized="true" key="dock-window-1" timestamp="1607274347073">
       <screen x="3440" y="217" width="1920" height="1057" />
     </state>
-    <state x="3440" y="217" width="964" height="1057" maximized="true" key="dock-window-1/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1606320053403" />
+    <state x="3440" y="217" width="886" height="1057" maximized="true" key="dock-window-1/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607274347073" />
     <state x="3440" y="217" width="1920" height="1057" key="dock-window-1/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606825367411" />
     <state x="3440" y="217" width="1781" height="1057" maximized="true" key="dock-window-10" timestamp="1606840733380">
       <screen x="3440" y="217" width="1920" height="1057" />
@@ -613,11 +367,11 @@
       <screen x="3440" y="217" width="1920" height="1057" />
     </state>
     <state x="3440" y="217" width="1781" height="1057" maximized="true" key="dock-window-9/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606840651646" />
-    <state x="1123" y="307" width="1558" height="899" key="find.popup" timestamp="1607031877304">
+    <state x="1123" y="304" width="1557" height="882" key="find.popup" timestamp="1607289147161">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="1123" y="307" width="1558" height="899" key="find.popup/-1440.530.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1607031877304" />
-    <state x="1123" y="307" width="1557" height="882" key="find.popup/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1606066719894" />
+    <state x="1123" y="304" width="1557" height="882" key="find.popup/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607289147161" />
     <state x="249" y="109" width="1051" height="669" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606554823826" />
     <state x="470" y="196" width="652" height="548" key="find.popup/0.23.1440.845@0.23.1440.845" timestamp="1606999272519" />
     <state x="1123" y="307" width="1557" height="882" key="find.popup/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606843493155" />

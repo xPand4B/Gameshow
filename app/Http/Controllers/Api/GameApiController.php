@@ -7,34 +7,15 @@ use App\Helper\AuthHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Game\CreateGameRequest;
 use App\Http\Requests\Game\UpdateGameRequest;
-use App\Http\Resources\Game\GameCollection;
 use App\Http\Resources\Game\GameResource;
 use App\Models\Game;
 use App\Models\Joker;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class GameApiController extends Controller
 {
-    /** @var string  */
-    public const SESSION_KEY_GAMEMASTER_USERNAME = 'gamemaster.name';
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @param Request $request
-     * @return GameCollection
-     */
-    public function index(Request $request): GameCollection
-    {
-        $games = Game::pagyinate(15);
-
-        return new GameCollection($games);
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -45,13 +26,9 @@ class GameApiController extends Controller
     {
         $request->validated();
 
-        AuthHelper::login(
-            $request->get('username')
-        );
-
         // Check if GM has a game running
         $runningGames = Game::where([
-            ['gamemaster', '=', auth()->user()->username],
+            ['gamemaster', '=', Auth::user()->username],
             ['finished', '=', false]
         ])->get();
 
@@ -66,8 +43,8 @@ class GameApiController extends Controller
 
         // Create game
         $game = Game::create([
-            'gamemaster' => auth()->user()->username,
-            'available_joker'    => $this->getAllAvailableJoker(),
+            'gamemaster'      => Auth::user()->username,
+            'available_joker' => $this->getAllAvailableJoker(),
         ]);
 
         return new GameResource($game);
@@ -93,9 +70,31 @@ class GameApiController extends Controller
             }
         }
 
-//        broadcast(new LobbyJoinedEvent($game))->toOthers();
-
         return response()->json($resource);
+    }
+
+    /**
+     * @param Request $request
+     * @param $id
+     * @return JsonResponse
+     */
+    public function exists(Request $request, $id): JsonResponse
+    {
+        $response = [
+            'success' => true,
+        ];
+
+        $game = Game::findOrFail($id);
+
+        if (Auth::check()) {
+            $isGamemaster = $game->gamemaster === Auth::user()->username;
+
+            if ($isGamemaster) {
+                $response['is_gamemaster'] = true;
+            }
+        }
+
+        return response()->json($response);
     }
 
     /**
