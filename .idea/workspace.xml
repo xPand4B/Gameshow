@@ -4,34 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="Initial commit">
+    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GameShow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GameShow.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/Lobby/LobbyJoinedEvent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/Lobby/LobbyLeftEvent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper/AuthHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/AuthHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LobbyApiController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Game/CreateGameRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Game/CreateGameRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Game/UpdateGameRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Game/UpdateGameRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Gamemaster/CreateGamemasterRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Lobby/JoinLobbyRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/main/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/main/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/home/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/menu/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/menu/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/questions/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/questions/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/settings/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/content.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/routes/apiRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/routes/apiRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/game.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/game.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/player.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/player.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/vendors/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vendors/vuetify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_partials/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_partials/javascript.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_partials/javascript.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +236,7 @@
       <workItem from="1606762332064" duration="23331000" />
       <workItem from="1606986086658" duration="11500000" />
       <workItem from="1607071303489" duration="355000" />
-      <workItem from="1607071677657" duration="19956000" />
+      <workItem from="1607071677657" duration="24796000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607071598628</created>
@@ -258,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607071598628</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed Channel-Auth + Added frontend stuff">
+      <created>1607333524899</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607333524899</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +260,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Fixed Channel-Auth + Added frontend stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Channel-Auth + Added frontend stuff" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2046" y="524" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604400105179">
@@ -294,10 +289,10 @@
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2081" y="648" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1605447522592" />
-    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2" timestamp="1607333478905">
+    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2" timestamp="1607333524707">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
-    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607333478905" />
+    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607333524707" />
     <state x="2016" y="448" key="NewPhpClassDialog" timestamp="1606906698255">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
@@ -367,11 +362,11 @@
       <screen x="3440" y="217" width="1920" height="1057" />
     </state>
     <state x="3440" y="217" width="1781" height="1057" maximized="true" key="dock-window-9/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606840651646" />
-    <state x="1123" y="304" width="1557" height="882" key="find.popup" timestamp="1607289147161">
+    <state x="1123" y="304" width="1557" height="882" key="find.popup" timestamp="1607340105426">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="1123" y="307" width="1558" height="899" key="find.popup/-1440.530.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1607031877304" />
-    <state x="1123" y="304" width="1557" height="882" key="find.popup/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607289147161" />
+    <state x="1123" y="304" width="1557" height="882" key="find.popup/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607340105426" />
     <state x="249" y="109" width="1051" height="669" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606554823826" />
     <state x="470" y="196" width="652" height="548" key="find.popup/0.23.1440.845@0.23.1440.845" timestamp="1606999272519" />
     <state x="1123" y="307" width="1557" height="882" key="find.popup/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606843493155" />

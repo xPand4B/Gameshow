@@ -1,3 +1,5 @@
+<base href="{{ url('/') }}/">
+
 @section('master.head.meta')
     <meta charset="utf-8"/>
     <meta name="author" content="Eric Heinzl"/>
@@ -11,6 +13,7 @@
 
 @section('master.stylesheets')
     <link type="text/css" rel="stylesheet" href="{{ url(mix('css/app.css')) }}"/>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css"/>
 @endsection
 @yield('master.stylesheets')

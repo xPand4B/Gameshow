@@ -19,19 +19,19 @@ function prefixRoutes(prefix = '', routes = []) {
 const routes = [
     {
         path: '/',
-        component: () => import(/* webpackChunkName: "layouts" */ '../layouts/main'),
+        component: () => import(/* webpackChunkName: "sites/layouts" */ '../layouts/main'),
         children: [
             // Homepage
             {
                 path: '',
                 name: 'gameshow.home.index',
-                component: () => import(/* webpackChunkName: "homepage" */ './../pages/home'),
+                component: () => import(/* webpackChunkName: "sites/homepage" */ './../pages/home'),
             },
             // Menu
             {
                 path: ':id',
                 name: 'gameshow.menu.index',
-                component: () => import(/* webpackChunkName: "menu" */ './../pages/menu'),
+                component: () => import(/* webpackChunkName: "sites/menu" */ './../pages/menu'),
                 beforeEnter: (to, from, next) => {
                     Store.dispatch('fetchGameExists', to.params.id).then(() => {
                         const gameStore = Store.state.GameStore;
@@ -51,7 +51,7 @@ const routes = [
             {
                 path: ':id/questions',
                 name: 'gameshow.questions',
-                component: () => import(/* webpackChunkName: "questions" */ './../pages/questions'),
+                component: () => import(/* webpackChunkName: "sites/questions" */ './../pages/questions'),
                 beforeEnter: (to, from, next) => {
                     Store.dispatch('fetchGameExists', to.params.id).then(() => {
                         const gameStore = Store.state.GameStore;
@@ -78,7 +78,7 @@ const routes = [
             {
                 path: ':id/settings',
                 name: 'gameshow.settings',
-                component: () => import(/* webpackChunkName: "settings" */ './../pages/settings'),
+                component: () => import(/* webpackChunkName: "sites/settings" */ './../pages/settings'),
                 beforeEnter: (to, from, next) => {
                     Store.dispatch('fetchGameExists', to.params.id).then(() => {
                         const gameStore = Store.state.GameStore;

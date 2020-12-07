@@ -1,12 +1,7 @@
+/.idea
 /node_modules
 /public/hot
-/public/css
-/public/fonts
-/public/img
-/public/js
-/public/svgs
 /public/storage
-/public/*.js
 /storage/*.key
 /vendor
 .env

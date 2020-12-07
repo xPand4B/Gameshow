@@ -22,6 +22,13 @@ if (mix.inProduction()) {
     mix.sourceMaps();
 }
 
+mix.webpackConfig({
+    output: {
+        chunkFilename: mix.inProduction() ? "js/chunks/[name].[chunkhash].js" : "js/chunks/[name].js",
+        publicPath: '',
+    }
+})
+
 /**
  * --------------------------------------------------------------------------
  * | Application
@@ -30,6 +37,9 @@ if (mix.inProduction()) {
 mix
     .js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
+    .options({
+        processCssUrls: false
+    });
 
 /**
  * --------------------------------------------------------------------------
