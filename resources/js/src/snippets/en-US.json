@@ -63,10 +63,6 @@
                     "label": "Username",
                     "hint": ""
                 },
-                "pin": {
-                    "label": "User PIN",
-                    "hint": "This PIN is used to identify you as the GameMaster."
-                },
                 "create": "Create new Game"
             },
             "gameCreated": "New Game has been created!"
@@ -104,7 +100,7 @@
             },
             "answerNote": {
                 "label": "Write some context to better explain the answer",
-                "hint": "Only you as a gamemaster can see these note."
+                "hint": "Only You as a GameMaster can see these note."
             },
             "isCorrect": {
                 "label": "Correct answer?"
@@ -124,10 +120,6 @@
                     "playerCount": {
                         "label": "Number of Players",
                         "hint": "You must have as many players as selected!"
-                    },
-                    "password": {
-                        "label": "Session Password",
-                        "hint": "This is what players need to join the game."
                     }
                 }
             },
@@ -150,7 +142,6 @@
                 "tab": "Joker",
                 "title": "Select which jokers should be available for use."
             }
-        },
-        "save": "Save settings"
+        }
     }
 }

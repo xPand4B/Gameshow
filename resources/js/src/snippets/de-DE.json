@@ -2,13 +2,23 @@
     "language": "Deutsch",
 
     "validation": {
+        "swal-error": "Etwas ist schief gelaufen!",
         "required": "Dieses Feld muss ausgefüllt werden",
+        "required-field": "Das Feld \"{field}\" muss ausgefüllt werden.",
         "min-chars": "Du musst mind. {num} Zeichen eintragen.",
-        "max-chars": "Du darfst nicht mehr als {num} Zeichen eintragen."
+        "max-chars": "Du darfst nicht mehr als {num} Zeichen eintragen.",
+        "min": "Der Wert muss größer als '{num}' sein.",
+        "max": "Der Wert muss kleiner als '{num}' sein."
     },
 
     "navigation": {
-        "back": "Back"
+        "back": "Zurück"
+    },
+
+    "lobby": {
+        "init": "Erfolgreich beigetreten!",
+        "joined": "'{name}' ist beigetreten!",
+        "left": "'{name}' hat uns verlassen!"
     },
 
     "general" : {
@@ -16,22 +26,121 @@
             "language": {
                 "label": "Sprache"
             }
+        },
+        "modal": {
+            "confirmColor": "#54A857",
+            "cancelColor": "#CB3D3D"
+        },
+        "cancel": "Abbrechen"
+    },
+
+    "gameplay": {
+        "availableJoker": {
+            "telephone": {
+                "label": "Telefon",
+                "hint": ""
+            },
+            "5050": {
+                "label": "50/50",
+                "hint": ""
+            },
+            "chat": {
+                "label": "Chat",
+                "hint": ""
+            },
+            "googleImages": {
+                "label": "Google Bilder",
+                "hint": "Du darfst für 30s suchen, allerdings nur auf Google Bilder."
+            }
         }
     },
 
     "homepage": {
         "index": {
-            "title": "Spiel beitreten",
+            "title": "Neues Spiel erstellen",
             "form": {
                 "username": {
                     "label": "Nutzername",
-                    "hint": "So wirst du für andere Spieler angezeigt."
+                    "hint": ""
                 },
-                "password": {
-                    "label": "Passwort",
-                    "hint": "Du bekommst das Passwort nur durch deinen GameMaster."
-                },
-                "submit": "Beitreten"
+                "create": "Neues Spiel erstellen"
+            },
+            "gameCreated": "Spiel wurde erstellt!"
+        }
+    },
+
+    "menu": {
+        "general": {
+            "copy": {
+                "label": "Spiel URL",
+                "buttonText": "Kopieren"
+            }
+        },
+        "gamemaster": {
+            "title": "GameMaster Menü",
+            "items": {
+                "start": "Start",
+                "questions": "Fragen",
+                "settings": "Einstellungen"
+            }
+        },
+        "player": {
+            "title": "Spiel Menü"
+        }
+    },
+
+    "questions": {
+        "title": "Fragen",
+        "form": {
+            "question": {
+                "label": "*Frage"
+            },
+            "answer": {
+                "label": "*Antwort"
+            },
+            "answerNote": {
+                "label": "Schreibe etwas Kontext, um die Antwort besser zu erklären",
+                "hint": "Nur Du als GameMaster kannst diese Notiz sehen."
+            },
+            "isCorrect": {
+                "label": "Richtige Antwort?"
+            },
+            "addAnswer": {
+                "button": "Antwort hinzufügen"
+            }
+        }
+    },
+
+    "settings": {
+        "title": "Spiel Einstellungen",
+        "tabs": {
+            "general": {
+                "tab": "Allgemein",
+                "content": {
+                    "playerCount": {
+                        "label": "Anzahl SPieler",
+                        "hint": "Du brauchst genau so viele Spieler wie ausgewählt!"
+                    }
+                }
+            },
+            "gameplay": {
+                "tab": "Gameplay",
+                "content": {
+                    "correctAnswerPoints": {
+                        "label": "Punkte pro Richtige Antwort"
+                    },
+                    "pointsForPlayersIfWrongAnswer": {
+                        "label": "Punkte bei Falscher Antwort?",
+                        "hint": "Andere Spieler bekommen bei falscher Antwort Punkte."
+                    },
+                    "wrongAnswerPoints": {
+                        "label": "Punkte pro Falsche Antwort"
+                    }
+                }
+            },
+            "joker": {
+                "tab": "Joker",
+                "title": "Wähle aus welche Joker für das Spiel aktiv sind."
             }
         }
     }
