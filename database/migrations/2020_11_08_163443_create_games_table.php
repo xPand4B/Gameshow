@@ -23,6 +23,7 @@ class CreateGamesTable extends Migration
             $table->unsignedInteger('wrong_points')->default(1);
             $table->json('available_joker');
             $table->boolean('finished')->default(false);
+            $table->boolean('started')->default(false);
 
             $table->timestampsTz();
         });

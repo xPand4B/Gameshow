@@ -38,3 +38,9 @@ Broadcast::channel('Game.{id}.Lobby', function ($user, $id) {
         'is_gamemaster' => $isGamemaster
     ];
 });
+
+Broadcast::channel('Game.{id}.Chat', function ($user, $id) {
+    return [
+        'playerName' => $user->username,
+    ];
+});

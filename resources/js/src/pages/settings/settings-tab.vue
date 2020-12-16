@@ -2,7 +2,7 @@
     <v-tab>
         <v-row>
             <!-- Icon -->
-            <v-col cols="4">
+            <v-col cols="3">
                 <i :class="icon"></i>
             </v-col>
 

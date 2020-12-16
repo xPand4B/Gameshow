@@ -30,15 +30,18 @@
             </div>
             <v-container
                 v-else
-                class="pb-0 px-6"
+                class="py-0 px-6"
             >
                 <slot name="content"/>
 
                 <!-- Copy Game URL -->
-                <v-container v-if="withCopyLink">
+                <v-container
+                    v-if="withCopyLink"
+                    class="pt-10"
+                >
                     <v-row>
                         <v-col
-                            cols="9"
+                            cols="8"
                             class="px-0 pb-0"
                         >
                             <v-text-field
@@ -55,15 +58,20 @@
                         <v-col class="px-0">
                             <v-btn
                                 class="ml-4"
-                                color="info"
+                                color="primary"
                                 v-clipboard="joinUrl"
                                 @success="handleCopySuccess"
+                                dark
                                 block
                             >
                                 <i class="fas fa-copy pr-2"/>
                                 {{ $t('menu.general.copy.buttonText') }}
                             </v-btn>
                         </v-col>
+                    </v-row>
+
+                    <v-row>
+                        <language-switch dense/>
                     </v-row>
 
                     <!-- Player-Listing -->

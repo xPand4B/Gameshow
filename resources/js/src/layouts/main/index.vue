@@ -14,13 +14,21 @@
                     </v-card>
                 </v-col>
             </v-row>
+
+            <chat-bubble/>
         </v-container>
     </div>
 </template>
 
 <script>
+    import ChatBubble from './../../components/chatBubble';
+
     export default {
         name: "layout-main",
+
+        components: {
+            ChatBubble,
+        },
     }
 </script>
 

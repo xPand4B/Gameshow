@@ -24,7 +24,7 @@
     "general" : {
         "form": {
             "language": {
-                "label": "Sprache"
+                "label": "Menü Sprache"
             }
         },
         "modal": {
@@ -70,6 +70,7 @@
     },
 
     "menu": {
+        "whatYourUsername": "Wie ist dein Nutzername?",
         "general": {
             "copy": {
                 "label": "Spiel URL",
@@ -81,7 +82,8 @@
             "items": {
                 "start": "Start",
                 "questions": "Fragen",
-                "settings": "Einstellungen"
+                "settings": "Einstellungen",
+                "chat": "Chat"
             }
         },
         "player": {
@@ -92,21 +94,28 @@
     "questions": {
         "title": "Fragen",
         "form": {
+            "title": "{num}. Antwortmöglichkeit",
             "question": {
                 "label": "*Frage"
             },
             "answer": {
-                "label": "*Antwort"
+                "label": "*Antwortmöglichkeit"
             },
             "answerNote": {
                 "label": "Schreibe etwas Kontext, um die Antwort besser zu erklären",
                 "hint": "Nur Du als GameMaster kannst diese Notiz sehen."
             },
             "isCorrect": {
-                "label": "Richtige Antwort?"
+                "label": "Richtige Antwort"
+            },
+            "deleteAnswerOption": {
+                "button": "Antwortmöglichkeit löschen"
+            },
+            "deleteQuestion": {
+                "button": "Frage löschen"
             },
             "addAnswer": {
-                "button": "Antwort hinzufügen"
+                "button": "Antwortmöglichkeit hinzufügen"
             }
         }
     },
@@ -118,7 +127,7 @@
                 "tab": "Allgemein",
                 "content": {
                     "playerCount": {
-                        "label": "Anzahl SPieler",
+                        "label": "Anzahl Spieler",
                         "hint": "Du brauchst genau so viele Spieler wie ausgewählt!"
                     }
                 }
@@ -143,5 +152,9 @@
                 "title": "Wähle aus welche Joker für das Spiel aktiv sind."
             }
         }
+    },
+
+    "chat": {
+        "title": "Chat"
     }
 }

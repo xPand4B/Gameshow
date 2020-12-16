@@ -6,6 +6,7 @@
         item-text="name"
         item-value="ISO"
         :label="$t('general.form.language.label')"
+        :dense="dense"
         outlined
     />
 </template>
@@ -15,6 +16,13 @@
 
     export default {
         name: "language-switch",
+
+        props: {
+            dense: {
+                type: Boolean,
+                default: false
+            }
+        },
 
         data: () => ({
             selected: i18n.locale,

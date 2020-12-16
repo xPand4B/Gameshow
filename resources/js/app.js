@@ -10,10 +10,12 @@ import GlobalComponents from "./src/components/global";
 import vuetify from './vendors/vuetify';
 import i18n from './src/snippets';
 import VueClipboards from 'vue-clipboards';
+import VueChatScroll from 'vue-chat-scroll';
 
 Vue.use(VueRouter);
 Vue.use(GlobalComponents);
 Vue.use(VueClipboards);
+Vue.use(VueChatScroll);
 
 Vue.config.productionTip = false;
 

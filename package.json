@@ -33,6 +33,7 @@
         "sass": "^1.28.0",
         "sass-loader": "^8.0.2",
         "sweetalert2": "^10.9.0",
+        "vue-chat-scroll": "^1.4.0",
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {

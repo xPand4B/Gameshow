@@ -2,7 +2,7 @@
 
 namespace Tests\Http\Resources\Joker;
 
-use App\Http\Resources\Joker\JokerResource;
+use App\Http\Resources\Joker\QuestionResource;
 use App\Models\Joker;
 use Illuminate\Http\Request;
 use Tests\TestCase;
@@ -14,7 +14,7 @@ class JokerResourceTest extends TestCase
         $request = new Request();
         $joker = Joker::first();
 
-        return (new JokerResource($joker))->toArray($request);
+        return (new QuestionResource($joker))->toArray($request);
     }
 
     /** @test */

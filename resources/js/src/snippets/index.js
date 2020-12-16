@@ -25,6 +25,6 @@ if (! localStorage.getItem('locale')) {
 
 export default new VueI18n({
     locale: localStorage.getItem('locale'),
-    fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en-US',
+    fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'de-DE',
     messages: loadLocaleMessages()
 });

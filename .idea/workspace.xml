@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/snippets/de-DE.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/snippets/de-DE.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/components/chatBubble/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/chatBubble/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +178,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Events/Lobby" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/src/snippets" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
@@ -194,11 +192,11 @@
       <recent name="$PROJECT_DIR$/resources/js/src/pages/menu/gamemaster" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/src/snippets" />
+      <recent name="$PROJECT_DIR$/app/Http/Resources" />
+      <recent name="$PROJECT_DIR$/resources/js/src/pages" />
       <recent name="$PROJECT_DIR$/app/Events/Lobby" />
       <recent name="$PROJECT_DIR$/app/Http/Resources/Joker" />
-      <recent name="$PROJECT_DIR$/app/Events" />
-      <recent name="$PROJECT_DIR$/resources/js/src/store/modules" />
-      <recent name="$PROJECT_DIR$/app/Console/Commands" />
     </key>
   </component>
   <component name="RunManager">
@@ -229,7 +227,10 @@
       <workItem from="1606762332064" duration="23331000" />
       <workItem from="1606986086658" duration="11500000" />
       <workItem from="1607071303489" duration="355000" />
-      <workItem from="1607071677657" duration="27373000" />
+      <workItem from="1607071677657" duration="40628000" />
+      <workItem from="1607510537064" duration="457000" />
+      <workItem from="1607520154739" duration="1030000" />
+      <workItem from="1607677686643" duration="26274000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607071598628</created>
@@ -266,7 +267,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607342507531</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Completed german translation">
+      <created>1607352164936</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607352164936</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed/Improved many menu things">
+      <created>1608115669265</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608115669265</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +293,9 @@
     <MESSAGE value="Fixed Channel-Auth + Added frontend stuff" />
     <MESSAGE value="Fixed problem with relative paths" />
     <MESSAGE value="Fixed copy link&#10;Fixed copy link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed copy link&#10;Fixed copy link" />
+    <MESSAGE value="Completed german translation" />
+    <MESSAGE value="Fixed/Improved many menu things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed/Improved many menu things" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2046" y="524" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604400105179">
@@ -289,33 +306,34 @@
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2102" y="404" key="#com.intellij.ide.util.MemberChooser/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1605439249877" />
-    <state x="2026" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607273601909">
+    <state x="2026" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607774757564">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2026" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607273601909" />
     <state x="826" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.845@0.23.1440.845" timestamp="1606999023389" />
-    <state x="2026" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606841717649" />
-    <state x="850" y="300" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606988602485">
-      <screen x="0" y="23" width="1440" height="845" />
+    <state x="2026" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1607774757564" />
+    <state x="2031" y="477" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607776043253">
+      <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2031" y="477" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1440.530.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606763964208" />
     <state x="2031" y="477" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1606320225038" />
     <state x="850" y="300" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.845@0.23.1440.845" timestamp="1606988602485" />
-    <state x="2031" y="477" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606045594043" />
+    <state x="2031" y="477" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1607776043253" />
     <state x="2081" y="648" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1605447522592">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2081" y="648" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1605447522592" />
-    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2" timestamp="1607342506912">
+    <state x="609" y="126" width="2248" height="1147" key="CommitChangelistDialog2" timestamp="1608115668699">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
-    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607342506912" />
-    <state x="2016" y="448" key="NewPhpClassDialog" timestamp="1606906698255">
+    <state x="609" y="126" width="2222" height="1180" key="CommitChangelistDialog2/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607352163850" />
+    <state x="609" y="126" width="2248" height="1147" key="CommitChangelistDialog2/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1608115668699" />
+    <state x="2016" y="448" key="NewPhpClassDialog" timestamp="1607771914332">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2016" y="448" key="NewPhpClassDialog/-1440.530.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606906698255" />
     <state x="2016" y="448" key="NewPhpClassDialog/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1606578362198" />
-    <state x="2016" y="448" key="NewPhpClassDialog/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606818578996" />
+    <state x="2016" y="448" key="NewPhpClassDialog/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1607771914332" />
     <state x="1229" y="355" key="SettingsEditor" timestamp="1607071694593">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
@@ -326,9 +344,10 @@
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="2900" y="484" width="540" height="524" key="StructurePopup/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606835394921" />
-    <state width="569" height="445" key="SwitcherDM" timestamp="1605020557600">
+    <state width="569" height="445" key="SwitcherDM" timestamp="1607441549350">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
+    <state width="569" height="445" key="SwitcherDM/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607441549350" />
     <state width="569" height="445" key="SwitcherDM/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1605020557600" />
     <state x="1893" y="455" key="Vcs.Push.Dialog.v2" timestamp="1607071361283">
       <screen x="0" y="23" width="3440" height="1385" />
@@ -379,19 +398,19 @@
       <screen x="3440" y="217" width="1920" height="1057" />
     </state>
     <state x="3440" y="217" width="1781" height="1057" maximized="true" key="dock-window-9/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606840651646" />
-    <state x="1123" y="304" width="1557" height="882" key="find.popup" timestamp="1607340105426">
+    <state x="1123" y="307" width="1557" height="882" key="find.popup" timestamp="1608111939897">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="1123" y="307" width="1558" height="899" key="find.popup/-1440.530.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1607031877304" />
-    <state x="1123" y="304" width="1557" height="882" key="find.popup/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607340105426" />
+    <state x="1123" y="304" width="1557" height="882" key="find.popup/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1607352382763" />
     <state x="249" y="109" width="1051" height="669" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606554823826" />
     <state x="470" y="196" width="652" height="548" key="find.popup/0.23.1440.845@0.23.1440.845" timestamp="1606999272519" />
-    <state x="1123" y="307" width="1557" height="882" key="find.popup/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606843493155" />
-    <state width="600" height="428" key="javadoc.popup" timestamp="1606841732087">
+    <state x="1123" y="307" width="1557" height="882" key="find.popup/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1608111939897" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1607774729384">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state width="600" height="428" key="javadoc.popup/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1606065891055" />
-    <state width="600" height="428" key="javadoc.popup/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606841732087" />
+    <state width="600" height="428" key="javadoc.popup/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1607774729384" />
     <state x="2140" y="496" key="refactoring.ChangeSignatureDialog" timestamp="1605438397305">
       <screen x="0" y="23" width="3440" height="1385" />
     </state>
@@ -401,12 +420,12 @@
     </state>
     <state x="238" y="337" key="run.anything.popup/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1605882824232" />
     <state x="100" y="204" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1606297154614" />
-    <state x="770" y="216" width="670" height="413" key="search.everywhere.popup" timestamp="1606987826598">
-      <screen x="0" y="23" width="1440" height="845" />
+    <state x="1958" y="340" width="670" height="676" key="search.everywhere.popup" timestamp="1607771884642">
+      <screen x="0" y="23" width="3440" height="1385" />
     </state>
     <state x="1958" y="340" width="670" height="676" key="search.everywhere.popup/-1440.563.1440.877/3440.217.1920.1057/0.23.3440.1385@0.23.3440.1385" timestamp="1606073113711" />
     <state x="770" y="206" width="670" height="440" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606382104824" />
     <state x="770" y="216" width="670" height="413" key="search.everywhere.popup/0.23.1440.845@0.23.1440.845" timestamp="1606987826598" />
-    <state x="1958" y="340" width="670" height="676" key="search.everywhere.popup/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1606843348860" />
+    <state x="1958" y="340" width="670" height="676" key="search.everywhere.popup/3440.217.1920.1057/-1440.563.1440.877/0.23.3440.1385@0.23.3440.1385" timestamp="1607771884642" />
   </component>
 </project>

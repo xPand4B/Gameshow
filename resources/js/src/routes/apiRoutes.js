@@ -12,6 +12,12 @@ export default {
             update:  'api/v1/game/id',
             destroy: 'api/v1/game/id',
         },
+        questions: {
+            store:   'api/v1/game/id/questions',
+            show:    'api/v1/game/id/questions',
+            update:  'api/v1/game/id/questions',
+            destroy: 'api/v1/game/id/questions',
+        },
         lobby: {
             join: 'api/v1/lobby/id/join',
         },

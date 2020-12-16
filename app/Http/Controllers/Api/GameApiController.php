@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Events\Game\GameUpdatedEvent;
-use App\Helper\AuthHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Game\CreateGameRequest;
 use App\Http\Requests\Game\UpdateGameRequest;

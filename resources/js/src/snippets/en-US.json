@@ -24,7 +24,7 @@
     "general" : {
         "form": {
             "language": {
-                "label": "Language"
+                "label": "Menu Language"
             }
         },
         "modal": {
@@ -70,6 +70,7 @@
     },
 
     "menu": {
+        "whatYourUsername": "What's your username?",
         "general": {
             "copy": {
                 "label": "Game URL",
@@ -81,7 +82,8 @@
             "items": {
                 "start": "Start",
                 "questions": "Questions",
-                "settings": "Settings"
+                "settings": "Settings",
+                "chat": "Chat"
             }
         },
         "player": {
@@ -92,21 +94,38 @@
     "questions": {
         "title": "Questions",
         "form": {
+            "title": "{num}. Answer option",
             "question": {
                 "label": "*Question"
             },
             "answer": {
-                "label": "*Answer"
+                "label": "*Answer option"
             },
             "answerNote": {
                 "label": "Write some context to better explain the answer",
                 "hint": "Only You as a GameMaster can see these note."
             },
             "isCorrect": {
-                "label": "Correct answer?"
+                "label": "Correct answer"
+            },
+            "deleteAnswerOption": {
+                "button": "Delete Answer option"
+            },
+            "deleteQuestion": {
+                "button": "Delete Question"
             },
             "addAnswer": {
-                "button": "Add Answer"
+                "button": "Add Answer option"
+            }
+        },
+        "modal": {
+            "lastQuestion": {
+                "title": "ᕙ(⇀‸↼‶)ᕗ",
+                "text": "You can't delete this question, because it's the last one standing."
+            },
+            "lastAnswerOption": {
+                "title": ".·´¯`(>▂<)´¯`·.",
+                "text": "You can't delete your last two answer options...well...I guess you know why that would be bad."
             }
         }
     },
@@ -143,5 +162,9 @@
                 "title": "Select which jokers should be available for use."
             }
         }
+    },
+
+    "chat": {
+        "title": "Chat"
     }
 }

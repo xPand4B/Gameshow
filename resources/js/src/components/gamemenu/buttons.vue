@@ -1,7 +1,6 @@
 <template>
     <v-btn
         @click="changeRoute(routeName)"
-        class="mb-8"
         color="indigo"
         elevation="2"
         block

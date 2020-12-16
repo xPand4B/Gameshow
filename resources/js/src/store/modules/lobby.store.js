@@ -3,11 +3,16 @@ import i18n from './../../snippets/index';
 export default {
     state: {
         lobby: [],
+        chat: [],
     },
 
     getters: {
         getLobbyUser({ lobby }) {
             return lobby;
+        },
+
+        getChatMessages({ chat }) {
+            return chat;
         }
     },
 
@@ -37,6 +42,10 @@ export default {
                 icon: 'warning',
                 title: i18n.t('lobby.left', { name: user.playerName}),
             });
+        },
+
+        pushChatMessage({ commit }, data) {
+            commit('CHAT_MESSAGE_SENT', data);
         }
     },
 
@@ -73,5 +82,9 @@ export default {
                 }
             });
         },
+
+        CHAT_MESSAGE_SENT(state, payload) {
+            state.chat.push(payload);
+        }
     },
 };

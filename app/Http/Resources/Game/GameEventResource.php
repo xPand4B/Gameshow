@@ -13,7 +13,7 @@ class GameEventResource extends GameResource
      * @param  Request  $request
      * @return array
      */
-    public function toArray($request)
+    public function toArray($request): array
     {
         $response = parent::toArray($request);
 

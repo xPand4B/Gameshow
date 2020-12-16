@@ -7,6 +7,7 @@ const REDIRECT_AFTER_CREATE = 'gameshow.menu.index';
 export default {
     state: {
         currentGame: null,
+        questions: null,
         gameExists: false,
         isGamemaster: false,
     },
@@ -169,6 +170,10 @@ export default {
                     title: e
                 });
             }
+        },
+
+        async addQuestion({ commit }, data) {
+
         }
     },
 

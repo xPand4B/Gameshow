@@ -19,7 +19,7 @@
             <v-btn
                 v-if="isGamemaster"
                 @click="startGame"
-                class="mb-8"
+                class="mt-8"
                 color="indigo"
                 elevation="2"
                 block
@@ -33,6 +33,7 @@
             <!-- Questions -->
             <game-menu-buttons
                 v-if="isGamemaster"
+                class="mt-8"
                 :text="$t('menu.gamemaster.items.questions')"
                 route-name="gameshow.questions"
                 icon="fas fa-question"
@@ -41,17 +42,18 @@
             <!-- Settings -->
             <game-menu-buttons
                 :text="$t('menu.gamemaster.items.settings')"
+                class="mt-8"
                 route-name="gameshow.settings"
                 icon="fas fa-cogs"
             />
         </template>
     </game-menu>
+
 </template>
 
 <script>
-    import { mapActions, mapGetters } from 'vuex';
+    import { mapGetters } from 'vuex';
     import { GameMenuButtons, GameMenu } from './../../components/gamemenu';
-    import ApiRoutes from "../../routes/apiRoutes";
 
     export default {
         name: "pages-menu-index",

@@ -16,9 +16,7 @@ class AuthHelper extends Controller
      */
     public static function login(string $username): JsonResponse
     {
-        if (Auth::check()) {
-            Auth::logout();
-        }
+        self::logout();
 
         $user = User::where(
             'username', '=', $username
@@ -37,11 +35,20 @@ class AuthHelper extends Controller
         return self::getAuthResponse();
     }
 
+    public static function logout(): void
+    {
+        if (Auth::check()) {
+            Auth::logout();
+        }
+    }
+
     /**
      * @return JsonResponse
      */
     public static function getAuthResponse(): JsonResponse
     {
+//        self::logout();
+
         return response()->json([
             'success' => !!Auth::user(),
             'playerName' => Auth::user()->username ?? null

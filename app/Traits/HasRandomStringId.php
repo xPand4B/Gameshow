@@ -12,12 +12,25 @@ trait HasRandomStringId
     protected static function boot()
     {
         parent::boot();
+
         static::creating(function ($model) {
             if (empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = Str::random(16);
+                $model->{$model->getKeyName()} = self::generateRandomStringId($model);
             }
         });
     }
+
+    public static function generateRandomStringId($model)
+    {
+        $id = Str::random(16);
+
+        if ($model::find($id) !== null) {
+            self::generateRandomStringId($model);
+        }
+
+        return $id;
+    }
+
     /**
      * Get the value indicating whether the IDs are incrementing.
      *
