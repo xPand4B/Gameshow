@@ -15,7 +15,9 @@ class CreateGamesTable extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->string('id')->primary();
-            $table->string('gamemaster');
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->cascadeOnDelete();
 
             $table->unsignedSmallInteger('player_count')->default(4);
             $table->unsignedInteger('correct_points')->default(5);

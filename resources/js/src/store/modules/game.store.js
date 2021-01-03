@@ -7,7 +7,6 @@ const REDIRECT_AFTER_CREATE = 'gameshow.menu.index';
 export default {
     state: {
         currentGame: null,
-        questions: null,
         gameExists: false,
         isGamemaster: false,
     },
@@ -107,12 +106,13 @@ export default {
             });
         },
 
-        async fetchSingleGameData({ state, commit }, id) {
+        async fetchSingleGameData({ state, commit }, gameId) {
             if (state.currentGame !== null) {
                 return;
             }
 
-            const route = ApiRoutes.v1.game.show.replace('id', id);
+            const route = ApiRoutes.v1.game.show
+                .replace('gameID', gameId);
 
             await axios.get(route).then(response => {
                 commit('GAME_FETCH_CURRENT', response.data);
@@ -127,12 +127,13 @@ export default {
             });
         },
 
-        async fetchGameExists({ state, commit }, id) {
+        async fetchGameExists({ state, commit }, gameId) {
             if (state.currentGame !== null) {
                 return;
             }
 
-            const route = ApiRoutes.v1.game.exists.replace('id', id);
+            const route = ApiRoutes.v1.game.exists
+                .replace('gameID', gameId);
 
             await axios.get(route).then(response => {
                 commit('GAME_SET_EXISTS', response.data);
@@ -149,7 +150,9 @@ export default {
 
         async updateGameSettings({ state, commit }, payload) {
             try {
-                const route = ApiRoutes.v1.game.update.replace('id', state.currentGame.data.id);
+                const route = ApiRoutes.v1.game.update
+                    .replace('gameID', state.currentGame.data.id);
+
                 const { data } = await axios.patch(route, payload);
 
                 commit('GAME_UPDATE_FIELD', data);
@@ -171,10 +174,6 @@ export default {
                 });
             }
         },
-
-        async addQuestion({ commit }, data) {
-
-        }
     },
 
     mutations: {

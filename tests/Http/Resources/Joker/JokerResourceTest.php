@@ -2,20 +2,12 @@
 
 namespace Tests\Http\Resources\Joker;
 
-use App\Http\Resources\Joker\QuestionResource;
 use App\Models\Joker;
-use Illuminate\Http\Request;
 use Tests\TestCase;
 
 class JokerResourceTest extends TestCase
 {
-    private function getJokerResource(): array
-    {
-        $request = new Request();
-        $joker = Joker::first();
-
-        return (new QuestionResource($joker))->toArray($request);
-    }
+    use JokerResourceTrait;
 
     /** @test */
     public function test_joker_resource_has_correct_format(): void
@@ -38,11 +30,6 @@ class JokerResourceTest extends TestCase
                 'name' => 'telephone',
                 'created_at' => null,
                 'updated_at' => null,
-            ],
-            'relationships' => null,
-            'links' => [
-                'self' => 'http://gameshow.test:8080/api/v1/joker/1',
-                'related' => null
             ]
         ], $resource);
     }

@@ -15,7 +15,7 @@
                         >
                             <div
                                 class="message"
-                                :style="getPlayerName === message.user ? null : stringToHslColor(message.user)"
+                                :style="stringToHslColor(message.user)"
                             >
                                 <strong>{{ message.user }}</strong>
                                 <small>{{ message.time }}</small>
@@ -62,32 +62,42 @@
             typingTimer: false,
         }),
 
-        created() {
-            this.chatChannel = `Game.${this.$route.params.id}.Chat`;
-
-            Echo.join(this.chatChannel)
-                .listenForWhisper('newMessage', message => {
-                    this.pushChatMessage(message);
-                });
-
-            Echo.join(this.chatChannel)
-                .listenForWhisper('typing', user => {
-                    this.activeUser = user;
-
-                    if (this.typingTimer) {
-                        clearTimeout(this.typingTimer);
+        watch: {
+            getPlayerLoginSuccess: {
+                handler: function(newValue, oldValue) {
+                    if (newValue !== true) {
+                        return;
                     }
 
-                    this.typingTimer = setTimeout(() => {
-                        this.activeUser = false;
-                    }, 3000);
-                });
+                    this.chatChannel = `Game.${this.$route.params.id}.Chat`;
+
+                    Echo.join(this.chatChannel)
+                        .listenForWhisper('newMessage', message => {
+                            this.pushChatMessage(message);
+                        });
+
+                    Echo.join(this.chatChannel)
+                        .listenForWhisper('typing', user => {
+                            this.activeUser = user;
+
+                            if (this.typingTimer) {
+                                clearTimeout(this.typingTimer);
+                            }
+
+                            this.typingTimer = setTimeout(() => {
+                                this.activeUser = false;
+                            }, 3000);
+                        });
+                },
+                immediate: true
+            }
         },
 
         computed: {
             ...mapGetters([
                 'getPlayerName',
-                'getChatMessages'
+                'getChatMessages',
+                'getPlayerLoginSuccess'
             ])
         },
 
@@ -106,7 +116,7 @@
                 const data = {
                     user: this.getPlayerName,
                     message: this.newMessage,
-                    time: `${date.getHours()}:${date.getMinutes()}`
+                    time: `${ ('0'+date.getHours()).slice(-2)}:${ ('0'+date.getMinutes()).slice(-2)}`
                 };
 
                 this.pushChatMessage(data);
@@ -143,6 +153,7 @@
 <style scoped lang="scss">
     .chat-window {
         position: absolute;
+        z-index: 1;
         height: 100px;
         bottom: 540px;
         right: 40px;
@@ -208,7 +219,7 @@
     }
 
     .mine .message {
-        color: white;
+        //color: white;
         margin-left: 25%;
         //background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%) fixed;
         background: #7E57C2;

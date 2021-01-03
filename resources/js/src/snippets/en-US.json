@@ -17,6 +17,7 @@
 
     "lobby": {
         "init": "Successfully joined!",
+        "full": "Game can't the start, there are to many players.",
         "joined": "'{name}' has joined!",
         "left": "'{name}' has left!"
     },
@@ -116,6 +117,9 @@
             },
             "addAnswer": {
                 "button": "Add Answer option"
+            },
+            "save": {
+                "button": "Save"
             }
         },
         "modal": {

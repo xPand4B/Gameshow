@@ -5,8 +5,7 @@
                 v-for="(user, index) in getLobbyUser"
                 :key="`lobby.user.${index}`"
                 class="ma-2"
-                color="primary"
-                :outlined="getPlayerName !== user.text"
+                :style="stringToHslColor(user.text)"
             >
                 <i
                     v-if="user.isGamemaster"
@@ -30,6 +29,28 @@
                 'getPlayerName'
             ]),
         },
+
+        methods: {
+            /**
+             * @link https://medium.com/@pppped/compute-an-arbitrary-color-for-user-avatar-starting-from-his-username-with-javascript-cd0675943b66
+             *
+             * @param str - hue parameter
+             * @param saturation - a number between 0 and 100
+             * @param lightness - a number between 0 and 100
+             * @returns {string}
+             */
+            stringToHslColor(str, saturation = 60, lightness = 70) {
+                let hash = 0;
+
+                for (let i = 0; i < str.length; i++) {
+                    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+                }
+
+                const hue = hash % 360;
+
+                return `background-color: hsl(${hue}, ${saturation}%, ${lightness}%); !important`;
+            },
+        }
     }
 </script>
 

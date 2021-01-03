@@ -35,6 +35,9 @@ class AuthHelper extends Controller
         return self::getAuthResponse();
     }
 
+    /**
+     * Logout the current user
+     */
     public static function logout(): void
     {
         if (Auth::check()) {

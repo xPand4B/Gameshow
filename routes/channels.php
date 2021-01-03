@@ -24,12 +24,12 @@ Broadcast::channel('Game.{id}.Settings', function() {
     return true;
 });
 
-Broadcast::channel('Game.{id}.Lobby', function ($user, $id) {
-    $game = Game::findOrFail($id);
+Broadcast::channel('Game.{gameId}.Lobby', function ($user, $gameId) {
+    $game = Game::findOrFail($gameId);
 
     $isGamemaster = false;
 
-    if ($game->gamemaster === $user->username) {
+    if ($game->user_id === $user->id) {
         $isGamemaster = true;
     }
 
@@ -39,7 +39,7 @@ Broadcast::channel('Game.{id}.Lobby', function ($user, $id) {
     ];
 });
 
-Broadcast::channel('Game.{id}.Chat', function ($user, $id) {
+Broadcast::channel('Game.{gameId}.Chat', function ($user, $gameId) {
     return [
         'playerName' => $user->username,
     ];

@@ -11,56 +11,22 @@
             </div>
         </template>
 
-        <!-- Menu-Buttons -->
-        <template
-            v-slot:content
-        >
-            <!-- Start -->
-            <v-btn
-                v-if="isGamemaster"
-                @click="startGame"
-                class="mt-8"
-                color="indigo"
-                elevation="2"
-                block
-                x-large
-                outlined
-            >
-                <i class="fas fa-play pr-2"/>
-                {{ $t('menu.gamemaster.items.start') }}
-            </v-btn>
+        <menu-content/>
 
-            <!-- Questions -->
-            <game-menu-buttons
-                v-if="isGamemaster"
-                class="mt-8"
-                :text="$t('menu.gamemaster.items.questions')"
-                route-name="gameshow.questions"
-                icon="fas fa-question"
-            />
-
-            <!-- Settings -->
-            <game-menu-buttons
-                :text="$t('menu.gamemaster.items.settings')"
-                class="mt-8"
-                route-name="gameshow.settings"
-                icon="fas fa-cogs"
-            />
-        </template>
     </game-menu>
-
 </template>
 
 <script>
     import { mapGetters } from 'vuex';
-    import { GameMenuButtons, GameMenu } from './../../components/gamemenu';
+    import { GameMenu } from './../../components/gamemenu';
+    import MenuContent from './content';
 
     export default {
         name: "pages-menu-index",
 
         components: {
             GameMenu,
-            GameMenuButtons,
+            MenuContent,
         },
 
         computed: {
@@ -68,22 +34,5 @@
                 'isGamemaster'
             ])
         },
-
-        methods: {
-            startGame() {
-                // TODO: Add translation
-                Swal.fire({
-                    icon: 'question',
-                    title: 'Are u sure?',
-                    confirmButtonText: `Start game`,
-                    showCancelButton: true,
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        // TODO: Start game
-                    }
-                })
-            },
-
-        }
     }
 </script>

@@ -22,7 +22,7 @@ trait HasRandomStringId
 
     public static function generateRandomStringId($model)
     {
-        $id = Str::random(16);
+        $id = Str::random(18);
 
         if ($model::find($id) !== null) {
             self::generateRandomStringId($model);

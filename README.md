@@ -1,10 +1,60 @@
 ## Gameshow
 This should be an interactive website to manage a live-online Game-Show with twitch-chat-integration.
 
+## Table of content
+* [How to setup](#how-to-set-up)
+* [Ideas](#ideas)
+    * [Functions](#functions)
+    * [Game Settings](#game-settings)
+    * [Twitch-Chat](#twitch-chat)
+    * [Screens](#screens)
+    * [Workflow](#workflow)
+
+## How to Set up
+In order to set up this project you have to copy the file `.env.example` to `.env` 
+and fill in your database and [pusher](https://pusher.com/) credentials.
+
+[comment]: <> (Imaginary because this project uses [Laravel Websockets]&#40;https://beyondco.de/docs/laravel-websockets/getting-started/introduction&#41;)
+
+[comment]: <> (which is basically the same as pusher but served locally. )
+
+**IMPORTANT:** I expect you to already have [composer](https://getcomposer.org/) and [npm](https://nodejs.org/en/download/) installed on your system.
+
+If that's done you need to run following commands:
+```bash
+# Install composer & npm dependencies
+composer install 
+npm install
+
+# Generates app key
+php artisan key:generate
+
+# Run all database migrations
+php artisan migrate:fresh
+
+# Compile all js code
+npm run {watch|dev|prod}
+
+# Optional: Run local web-server
+php artisan serve
+```
+
+[comment]: <> (Great! Now the only thing missing is to start the *"imaginary pusher"* server.)
+
+[comment]: <> (```bash)
+
+[comment]: <> (# Start websockets)
+
+[comment]: <> (php artisan websockets:serve)
+
+[comment]: <> (```)
+
+**Enjoy!**
+
 ## Ideas
 
 ### Functions
-* Multiple sessions vs. Single-Game-Only with pre-defined login
+* Multiple sessions
 * Based on communication, so only the game-master can log-in answers, grant joker etc. (he manages everything)
 * Players can use joker (telephone, ...) which are granted by the game-master
 * Fancy-animation to mark which player is currently playing
@@ -19,7 +69,7 @@ This should be an interactive website to manage a live-online Game-Show with twi
 * Which jokers should be available? (telephone, chat, 50/50,...)
 
 ### Twitch-Chat
-* Viewers can type in their guess for the current question. After the player's answer is logged in he get's points depending on how many viewers did know the answer
+* Viewers can type in their guess for the current question. After the player's answer is logged in he gets points depending on how many viewers did know the answer
     * Possible points:
         * 30%  = 5p
         * 50%  = 4p
@@ -46,15 +96,16 @@ This should be an interactive website to manage a live-online Game-Show with twi
 
 ## Workflow
 1. Create new Game
-    - Enter username and PIN
-    - Click "Create new Game" button
-    - Check if gamemaster already exists. Create new one if not.
-    - Check if gamemaster has a running game. Crate new one if not.
-    - Return GameResource as response.
-    - Set game store.
-    - Redirect to game menu
+    - [x] Enter user-name.
+    - [x] Click "Create new Game" button.
+    - [x] Check if a game exists with the user-name as GameMaster. Create new one if not.
+    - [ ] Login user with the entered username.
+    - [ ] Return GameResource as response.
+    - [ ] Redirect to game-menu.
 2. Game-Menu
-    - Ask for username
-    - Check if lobby is full 
-    - Send event that a user has joined
-    - Subscribe to lobby updates
+    - [ ] Logout user the there is still something in the cache.
+    - [x] Ask for username if accessing via invite-link.
+    - [x] Login user with the entered username.
+    - [ ] Check if lobby is full.
+    - [x] Send an event that a user has joined.
+    - [x] Subscribe to lobby updates.

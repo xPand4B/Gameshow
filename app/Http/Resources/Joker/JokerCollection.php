@@ -16,7 +16,7 @@ class JokerCollection extends ResourceCollection
     public function toArray($request): array
     {
         return [
-            'attributes' => QuestionResource::collection($this)
+            'attributes' => JokerResource::collection($this)
         ];
     }
 }

@@ -27,7 +27,7 @@ class PhpUnitTestCommand extends Command
     /**
      * @var string
      */
-    private const BASE_COMMAND = 'php vendor/phpunit/phpunit/phpunit --verbose --colors=always ';
+    private const BASE_COMMAND = 'php vendor/phpunit/phpunit/phpunit --verbose --colors=always --coverage-text ';
 
 
     /**

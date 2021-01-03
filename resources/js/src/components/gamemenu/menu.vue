@@ -12,107 +12,109 @@
             </v-card-title>
         </div>
 
-        <!-- Text -->
-        <v-card-text
-            v-if="!customCard"
-            class="mx-auto"
-        >
-            <div
-                v-if="loading"
-                class="text-center"
+        <!-- Card Text -->
+        <v-card-text class="text-center py-0 px-0">
+            <v-slide-y-transition
+                v-if="!loading && !isLoading"
+                mode="out-in"
             >
-                <v-progress-circular
-                    indeterminate
-                    color="deep-purple lighten-1"
-                    :size="70"
-                    :width="7"
-                />
-            </div>
-            <v-container
+                <div>
+                    <!-- Slot -->
+                    <slot/>
+
+                    <!-- Copy Game URL -->
+                    <v-container
+                        v-if="withCopyLink"
+                        class="px-10"
+                    >
+                        <v-row>
+                            <v-col class="col-12 col-sm-7 col-md-8 px-0 py-0">
+                                <v-text-field
+                                    v-model="joinUrl"
+                                    ref="joinUrl"
+                                    :label="$t('menu.general.copy.label')"
+                                    outlined
+                                    dense
+                                    disabled
+                                    hide-details
+                                    aria-disabled="true"
+                                />
+                            </v-col>
+
+                            <v-col class="col-sm-1 px-0 py-0"/>
+
+                            <v-col class="col-12 col-sm-3 px-0 py-0">
+                                <v-btn
+                                    color="primary"
+                                    v-clipboard="joinUrl"
+                                    @success="handleCopySuccess"
+                                    dark
+                                    block
+                                >
+                                    <i class="fas fa-copy pr-2"/>
+                                    {{ $t('menu.general.copy.buttonText') }}
+                                </v-btn>
+                            </v-col>
+                        </v-row>
+
+                        <!-- Language switch -->
+                        <v-row>
+                            <v-col class="pt-8 pb-0 px-0">
+                                <language-switch dense/>
+                            </v-col>
+                        </v-row>
+
+                        <!-- Player-Listing -->
+                        <div>
+                            <v-divider class="pb-3"/>
+
+                            <player-listing/>
+                        </div>
+                    </v-container>
+                </div>
+            </v-slide-y-transition>
+
+            <!-- Loading -->
+            <v-fade-transition
                 v-else
-                class="py-0 px-6"
+                mode="out-in"
             >
-                <slot name="content"/>
-
-                <!-- Copy Game URL -->
-                <v-container
-                    v-if="withCopyLink"
-                    class="pt-10"
-                >
-                    <v-row>
-                        <v-col
-                            cols="8"
-                            class="px-0 pb-0"
-                        >
-                            <v-text-field
-                                v-model="joinUrl"
-                                ref="joinUrl"
-                                :label="$t('menu.general.copy.label')"
-                                outlined
-                                dense
-                                disabled
-                                aria-disabled="true"
-                            />
-                        </v-col>
-
-                        <v-col class="px-0">
-                            <v-btn
-                                class="ml-4"
-                                color="primary"
-                                v-clipboard="joinUrl"
-                                @success="handleCopySuccess"
-                                dark
-                                block
-                            >
-                                <i class="fas fa-copy pr-2"/>
-                                {{ $t('menu.general.copy.buttonText') }}
-                            </v-btn>
-                        </v-col>
-                    </v-row>
-
-                    <v-row>
-                        <language-switch dense/>
-                    </v-row>
-
-                    <!-- Player-Listing -->
-                    <div>
-                        <v-divider class="pb-3"/>
-
-                        <player-listing/>
-                    </div>
-                </v-container>
-
-            </v-container>
-        </v-card-text>
-
-        <!-- Custom Card -->
-        <v-fade-transition mode="out-in">
-            <div
-                v-if="loading && customCard && !mainMenu"
-                class="text-center py-5"
-            >
+                <!-- Loading -->
                 <v-progress-circular
-                    indeterminate
+                    class="my-6"
                     color="deep-purple lighten-1"
+                    indeterminate
                     :size="70"
                     :width="7"
                 />
-            </div>
-            <slot v-else/>
-        </v-fade-transition>
+            </v-fade-transition>
+
+        </v-card-text>
 
         <!-- Actions -->
         <v-card-actions
             v-if="backLink"
             class="grey lighten-2 rounded-br-xl"
         >
-            <v-btn
-                @click="changeRoute('gameshow.menu.index')"
-                text
-            >
-                <i class="fas fa-2x fa-caret-left pr-3"></i>
-                {{ $t('navigation.back') }}
-            </v-btn>
+            <v-row>
+                <!-- Left -->
+                <v-col class="px-0 py-0">
+                    <slot name="bottomLeft">
+                        <v-btn
+                            @click="changeRoute('gameshow.menu.index')"
+                            text
+                        >
+                            <i class="fas fa-2x fa-caret-left pr-3"></i>
+                            {{ $t('navigation.back') }}
+                        </v-btn>
+                    </slot>
+                </v-col>
+
+                <!-- Right -->
+                <v-col class="px-0 py-0 pr-8 text-right">
+                    <slot name="bottomRight"/>
+                </v-col>
+            </v-row>
         </v-card-actions>
     </div>
 </template>
@@ -137,6 +139,10 @@
         }),
 
         props: {
+            isLoading: {
+                type: Boolean,
+                default: false
+            },
             mainMenu: {
                 type: Boolean,
                 default: false
@@ -157,6 +163,8 @@
 
         beforeMount() {
             if (this.mainMenu) {
+                this.loading = false;
+                this.isLoading = false;
                 return;
             }
 
@@ -164,15 +172,15 @@
         },
 
         watch: {
-            isLoading: {
-                handler: function(newVal, oldVal) {
-                    if (!newVal && oldVal) {
-                        this.initValues();
-                    }
-                },
-                deep: true,
-                immediate: true,
-            },
+            // isLoading: {
+            //     handler: function(newVal, oldVal) {
+            //         if (!newVal && oldVal) {
+            //             this.initValues();
+            //         }
+            //     },
+            //     deep: true,
+            //     immediate: true,
+            // },
             mainMenu: {
                 handler: function(newVal, oldVal) {
                     if (!newVal && oldVal) {
@@ -239,7 +247,6 @@
                         }
                     }
                 }).then(playerName => {
-                    // console.log(playerName.value.toString());
                     this.loginPlayer(playerName.value.toString()).then(() => {
                         this.fetchMe();
                     });

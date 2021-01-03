@@ -11,7 +11,7 @@ class UpdateGameRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -21,14 +21,14 @@ class UpdateGameRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             'player_count'           => 'integer|between:1,5',
-            'correct_answer'         => 'integer|min:1|max:1000',
+            'correct_points'         => 'integer|min:1|max:1000',
             'points_if_wrong_answer' => 'boolean',
-            'wrong_answer'           => 'integer|min:1|max:1000',
-            'available_joker'        => 'json',
+            'wrong_points'           => 'integer|min:1|max:1000',
+            'available_joker'        => 'array',
         ];
     }
 }

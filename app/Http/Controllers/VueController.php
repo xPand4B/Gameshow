@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\Game\LobbyJoinedEvent;
-use App\Models\Game;
+use Illuminate\Contracts\View\View;
 
 class VueController extends Controller
 {
-    public function index()
+    /**
+     * @return View
+     */
+    public function index(): View
     {
         return view('pages.vue');
     }

@@ -17,7 +17,7 @@ class GameServiceProvider extends ServiceProvider
     {
         Game::created(function($game) {
             Question::create(
-                Question::getAnswerScaffolding($game)
+                Question::getAnswerScaffolding($game->id)
             );
         });
     }

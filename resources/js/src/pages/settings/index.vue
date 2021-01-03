@@ -1,8 +1,6 @@
 <template>
-    <game-menu
-        custom-card
-        back-link="gameshow.menu.index"
-    >
+    <game-menu back-link="gameshow.menu.index">
+
         <!-- Title-->
         <template v-slot:title>
             {{ $t('settings.title') }}

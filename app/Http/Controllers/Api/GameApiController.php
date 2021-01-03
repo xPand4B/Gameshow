@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Api;
 
 use App\Events\Game\GameUpdatedEvent;
+use App\Helper\MessageResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Game\CreateGameRequest;
 use App\Http\Requests\Game\UpdateGameRequest;
 use App\Http\Resources\Game\GameResource;
 use App\Models\Game;
 use App\Models\Joker;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -27,46 +29,45 @@ class GameApiController extends Controller
 
         // Check if GM has a game running
         $runningGames = Game::where([
-            ['gamemaster', '=', Auth::user()->username],
+            ['user_id', '=', Auth::user()->id],
             ['finished', '=', false]
         ])->get();
 
-        if ($runningGames->count() === 1) {
-            $resource = [
-                'data' => (new GameResource($runningGames[0]))->toArray($request)
-            ];
-            $resource['data']['attributes']['is_gamemaster'] = true;
+        if ($runningGames->count() !== 1) {
+            // Create game
+            $game = Game::create([
+                'user_id'         => Auth::user()->id,
+                'available_joker' => $this->getAllAvailableJoker(),
+            ]);
+            $game = Game::where(['id' => $game->id])->first();
 
-            return response()->json($resource);
+            return new GameResource($game);
         }
 
-        // Create game
-        $game = Game::create([
-            'gamemaster'      => Auth::user()->username,
-            'available_joker' => $this->getAllAvailableJoker(),
-        ]);
+        $resource = [
+            'data' => (new GameResource($runningGames[0]))->toArray($request)
+        ];
+        $resource['data']['attributes']['is_gamemaster'] = true;
 
-        return new GameResource($game);
+        return response()->json($resource);
     }
 
     /**
      * @param Request $request
-     * @param $id
+     * @param string $gameId
      * @return JsonResponse
      */
-    public function show(Request $request, $id): JsonResponse
+    public function show(Request $request, string $gameId): JsonResponse
     {
         // Get GameResource
-        $game = Game::findOrFail($id);
+        $game = Game::findOrFail($gameId);
         $resource = [
             'data' => (new GameResource($game))->toArray($request)
         ];
 
         // Check if there is something inside the session
-        if (auth()->user()) {
-            if (auth()->user()->username === $game->gamemaster) {
-                $resource['data']['attributes']['is_gamemaster'] = true;
-            }
+        if (Auth::user()->id === (int)$game->user_id) {
+            $resource['data']['attributes']['is_gamemaster'] = true;
         }
 
         return response()->json($resource);
@@ -74,19 +75,19 @@ class GameApiController extends Controller
 
     /**
      * @param Request $request
-     * @param $id
+     * @param string $gameId
      * @return JsonResponse
      */
-    public function exists(Request $request, $id): JsonResponse
+    public function exists(Request $request, string $gameId): JsonResponse
     {
         $response = [
             'success' => true,
         ];
 
-        $game = Game::findOrFail($id);
+        $game = Game::findOrFail($gameId);
 
         if (Auth::check()) {
-            $isGamemaster = $game->gamemaster === Auth::user()->username;
+            $isGamemaster = (int)$game->user_id === Auth::user()->id;
 
             if ($isGamemaster) {
                 $response['is_gamemaster'] = true;
@@ -98,15 +99,15 @@ class GameApiController extends Controller
 
     /**
      * @param UpdateGameRequest $request
-     * @param $id
+     * @param string $gameId
      * @return GameResource
      */
-    public function update(UpdateGameRequest $request, $id)
+    public function update(UpdateGameRequest $request, string $gameId): GameResource
     {
         $request->validated();
 
         $params = $request->all();
-        $game = Game::findOrFail($id);
+        $game = Game::findOrFail($gameId);
 
         foreach ($params as $attribute => $value) {
             if (!array_key_exists($attribute, $game->getAttributes())) {
@@ -137,19 +138,17 @@ class GameApiController extends Controller
      * Remove the specified resource from storage.
      *
      * @param Request $request
-     * @param $id
+     * @param string $gameId
      * @return JsonResponse
      */
-    public function destroy(Request $request, $id): JsonResponse
+    public function destroy(Request $request, string $gameId): JsonResponse
     {
-        $game = Game::findOrFail($id);
+        $game = Game::findOrFail($gameId);
         $game->delete();
 
-        return response()->json([
-           'data' => [
+        $game->user->delete();
 
-           ]
-        ]);
+        return MessageResponse::json('Entry has been successfully deleted!');
     }
 
     /**
@@ -164,7 +163,7 @@ class GameApiController extends Controller
             $availableJoker[] = [
                 'id' => $joker->id,
                 'active' => false,
-                'count' => 1
+                'count' => 1,
             ];
         }
 

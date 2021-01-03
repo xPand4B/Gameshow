@@ -2,7 +2,7 @@
     <div class="fullscreen bg-gradient-blue">
         <v-container fill-height>
             <v-row>
-                <v-col class="offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                <v-col class="offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6 offset-xl-4 col-xl-4">
                     <!-- Card -->
                     <v-card
                         elevation="3"

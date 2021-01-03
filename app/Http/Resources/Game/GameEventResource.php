@@ -19,15 +19,7 @@ class GameEventResource extends GameResource
 
         $response['type'] = 'event.game.updated';
 
-        unset($response['relationships']);
         unset($response['links']);
-//        $response['attributes'] = [
-//            'name' => $response['attributes']['name'],
-//            'active' => null,
-//            'count' => null,
-//            'created_at' => $response['attributes']['created_at'],
-//            'updated_at' => $response['attributes']['updated_at'],
-//        ];
 
         return $response;
     }

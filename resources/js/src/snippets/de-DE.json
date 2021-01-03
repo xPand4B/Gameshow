@@ -17,6 +17,7 @@
 
     "lobby": {
         "init": "Erfolgreich beigetreten!",
+        "full": "Spiel kann nicht starten, da zu viele Spieler da sind.",
         "joined": "'{name}' ist beigetreten!",
         "left": "'{name}' hat uns verlassen!"
     },
@@ -116,6 +117,19 @@
             },
             "addAnswer": {
                 "button": "Antwortmöglichkeit hinzufügen"
+            },
+            "save": {
+                "button": "Speichern"
+            }
+        },
+        "modal": {
+            "lastQuestion": {
+                "title": "ᕙ(⇀‸↼‶)ᕗ",
+                "text": "Du kannst diese Frage nicht löschen, sie weigert sich."
+            },
+            "lastAnswerOption": {
+                "title": ".·´¯`(>▂<)´¯`·.",
+                "text": "Du kannst die letzten beiden Antwortmöglichkeiten nicht löschen...naja...du kannst dir bestimmt denken, warum das keine gute Idee wäre."
             }
         }
     },

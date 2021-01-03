@@ -11,7 +11,7 @@ class CreateGameRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -21,10 +21,10 @@ class CreateGameRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            'username'  => 'required|bail|alpha_num|max:20',
+            'username'  => 'required|bail|string|max:20',
         ];
     }
 }

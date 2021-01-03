@@ -1,9 +1,11 @@
 import i18n from './../../snippets/index';
+import Store from './../index';
 
 export default {
     state: {
         lobby: [],
         chat: [],
+        joined: false,
     },
 
     getters: {
@@ -13,6 +15,14 @@ export default {
 
         getChatMessages({ chat }) {
             return chat;
+        },
+
+        getJoinedSuccessfully({ joined }) {
+            return joined;
+        },
+
+        getLobbyFull({ lobby }) {
+            return lobby.length - 1 > Store.getters.getCurrentGamePlayerCount;
         }
     },
 
@@ -31,7 +41,7 @@ export default {
 
             Toast.fire({
                 icon: 'info',
-                title: i18n.t('lobby.joined', { name: user.playerName}),
+                title: i18n.t('lobby.joined', { name: user.playerName }),
             });
         },
 
@@ -40,7 +50,7 @@ export default {
 
             Toast.fire({
                 icon: 'warning',
-                title: i18n.t('lobby.left', { name: user.playerName}),
+                title: i18n.t('lobby.left', { name: user.playerName }),
             });
         },
 
@@ -57,13 +67,16 @@ export default {
                     isGamemaster: user['is_gamemaster']
                 });
             });
+
+            state.joined = true;
         },
 
         LOBBY_JOINED(state, payload) {
             let userAlreadyThere = false;
-            state.lobby.map((user, index) => {
+            state.lobby.some((user, index) => {
                 if (user.text === payload.playerName) {
                     userAlreadyThere = true;
+                    return true;
                 }
             });
 

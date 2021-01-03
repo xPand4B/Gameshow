@@ -60,12 +60,12 @@ const routes = [
                             next({ name: 'gameshow.home.index' });
                         }
 
-                        if (!gameStore.isGamemaster) {
-                            next({
-                                name: 'gameshow.menu.index',
-                                params: to.params
-                            });
-                        }
+                        // if (!gameStore.isGamemaster) {
+                        //     next({
+                        //         name: 'gameshow.menu.index',
+                        //         params: to.params
+                        //     });
+                        // }
 
                         next();
 

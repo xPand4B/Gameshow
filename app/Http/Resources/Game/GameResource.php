@@ -32,7 +32,7 @@ class GameResource extends JsonResource
                 'updated_at' => (string) $this->updated_at
             ],
             'links' => [
-                'self' => route('api.v1.game.show', ['id' => $this->id]),
+                'self' => route('api.v1.game.show', ['gameId' => $this->id]),
             ],
         ];
     }
