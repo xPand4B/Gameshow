@@ -4,112 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="Finished game-menu stuff">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AnswerApiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Question/UpdateQuestionRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/QuestionFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/homepage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/homepage~sites/menu~sites/questions~sites/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/layouts.278696056263558c7310.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/layouts.278696056263558c7310.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/layouts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/questions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/chunks/sites/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/components/chatBubble/fabIcon.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/home/content.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/menu/content.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/questions/content.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/store/modules/question.store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Helper/AuthHelperTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Controllers/Api/AnswerApiControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Controllers/Api/ApiControllerTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Controllers/Api/AuthApiControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Controllers/Api/GameApiControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Controllers/Api/QuestionApiControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Controllers/VueControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Requests/Auth/LoginRequestTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Requests/Game/CreateGameRequestTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Requests/Game/UpdateGameRequestTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Requests/Question/UpdateQuestionRequestTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Joker/JokerResourceTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Question/QuestionCollectionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Question/QuestionResourceTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Http/Resources/Question/QuestionResourceTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GameShow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GameShow.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/PhpUnitTestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/PhpUnitTestCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper/AuthHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/AuthHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/JokerApiController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/QuestionApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/QuestionApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Auth/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Auth/LoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Game/CreateGameRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Game/CreateGameRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Game/UpdateGameRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Game/UpdateGameRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Game/GameEventResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Game/GameEventResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Game/GameResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Game/GameResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Joker/JokerCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Joker/JokerCollection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Question.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/GameServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/GameServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/HasRandomStringId.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/HasRandomStringId.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/GameFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/GameFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_08_163443_create_games_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_08_163443_create_games_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_12_112416_create_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_12_112416_create_questions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/GameSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/GameSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/sweetalert.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/sweetalert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/chatBubble/chatWindow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/chatBubble/chatWindow.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/chatBubble/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/chatBubble/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/main/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/main/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/home/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/menu/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/menu/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/questions/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/questions/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/settings/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/content.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/settings/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/routes/apiRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/routes/apiRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/snippets/de-DE.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/snippets/de-DE.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/game.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/game.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Error/ErrorResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Resources/Error/ErrorResourceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Game/GameCollectionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameCollectionTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Game/GameEventResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameEventResourceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Game/GameGamemasterResourceTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Game/GameJokerResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameJokerResourceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Game/GameResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameResourceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Game/GameResourceTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Resources/Game/GameResourceTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Gamemaster/GamemasterCollectionTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Gamemaster/GamemasterGameResourceTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Gamemaster/GamemasterResourceTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Joker/JokerCollectionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Resources/Joker/JokerCollectionTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Resources/Joker/JokerResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Resources/Joker/JokerResourceTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -337,7 +232,7 @@
       <workItem from="1607677686643" duration="27537000" />
       <workItem from="1608277241924" duration="114000" />
       <workItem from="1608295870723" duration="3435000" />
-      <workItem from="1608621159194" duration="76831000" />
+      <workItem from="1608621159194" duration="77192000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607071598628</created>
@@ -395,7 +290,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608115794054</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finished game-menu stuff + Added tests for 100% api-coverage">
+      <created>1609685947204</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609685947204</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updated gitignore">
+      <created>1609686016113</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609686016113</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,6 +318,8 @@
     <MESSAGE value="Fixed copy link&#10;Fixed copy link" />
     <MESSAGE value="Completed german translation" />
     <MESSAGE value="Fixed/Improved many menu things" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed/Improved many menu things" />
+    <MESSAGE value="Finished game-menu stuff + Added tests for 100% api-coverage" />
+    <MESSAGE value="Updated gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated gitignore" />
   </component>
 </project>
