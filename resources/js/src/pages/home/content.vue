@@ -69,7 +69,7 @@
         data: () => ({
             isValid: false,
             form: {
-                username: 'xPand',
+                username: '',
             }
         }),
 
