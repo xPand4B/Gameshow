@@ -77,7 +77,7 @@
                 immediate: true
             },
 
-            getPlayerLoginSuccess: {
+            getJoinedSuccessfully: {
                 handler: function(newValue, oldValue) {
                     if (newValue !== true) {
                         return;
@@ -99,8 +99,7 @@
 
         computed: {
             ...mapGetters([
-                'getJoinedSuccessfully',
-                'getPlayerLoginSuccess'
+                'getJoinedSuccessfully'
             ]),
         },
 

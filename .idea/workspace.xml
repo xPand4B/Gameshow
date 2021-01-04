@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="" />
+    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/components/chatBubble/chatWindow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/chatBubble/chatWindow.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/components/chatBubble/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/chatBubble/index.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -232,7 +236,7 @@
       <workItem from="1607677686643" duration="27537000" />
       <workItem from="1608277241924" duration="114000" />
       <workItem from="1608295870723" duration="3435000" />
-      <workItem from="1608621159194" duration="77192000" />
+      <workItem from="1608621159194" duration="80346000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607071598628</created>
@@ -304,7 +308,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609686016113</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updated gitignore">
+      <created>1609686198999</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609686198999</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Updated gitignore">
+      <created>1609686216226</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609686216226</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

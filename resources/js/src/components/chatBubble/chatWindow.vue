@@ -63,7 +63,7 @@
         }),
 
         watch: {
-            getPlayerLoginSuccess: {
+            getJoinedSuccessfully: {
                 handler: function(newValue, oldValue) {
                     if (newValue !== true) {
                         return;
@@ -97,7 +97,7 @@
             ...mapGetters([
                 'getPlayerName',
                 'getChatMessages',
-                'getPlayerLoginSuccess'
+                'getJoinedSuccessfully'
             ])
         },
 
@@ -112,6 +112,10 @@
             },
 
             sendMessage() {
+                if (this.messageIsBlank()) {
+                    return;
+                }
+
                 const date = new Date();
                 const data = {
                     user: this.getPlayerName,
@@ -125,6 +129,10 @@
                     .whisper('newMessage', data);
 
                 this.newMessage = '';
+            },
+
+            messageIsBlank() {
+                return (!this.newMessage || /^\s*$/.test(this.newMessage));
             },
 
             /**
