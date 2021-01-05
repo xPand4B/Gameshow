@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Http/Controllers/Api/GameApiControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Controllers/Api/GameApiControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +237,7 @@
       <workItem from="1607677686643" duration="27537000" />
       <workItem from="1608277241924" duration="114000" />
       <workItem from="1608295870723" duration="3435000" />
-      <workItem from="1608621159194" duration="81391000" />
+      <workItem from="1608621159194" duration="83099000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607071598628</created>
@@ -328,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609767315188</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixed broadcast-auth-error by adding the authEndpoint">
+      <created>1609768283981</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609768283981</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Removed default username">
+      <created>1609768488228</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609768488228</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +361,9 @@
     <MESSAGE value="Finished game-menu stuff + Added tests for 100% api-coverage" />
     <MESSAGE value="Updated gitignore" />
     <MESSAGE value="Fixed chat-joining-error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed chat-joining-error" />
+    <MESSAGE value="Fixed broadcast-auth-error by adding the authEndpoint" />
+    <MESSAGE value="Removed default username" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed default username" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

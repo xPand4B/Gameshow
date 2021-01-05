@@ -39,11 +39,9 @@ Route::prefix('v1')->group(function() {
     |--------------------------------------------------------------------------
     */
     Route::prefix('game')->group(function() {
-        Route::prefix('game')->group(function() {
-            Route::get(
-                '/{gameId}/exists', [GameApiController::class, 'exists']
-            )->name('api.v1.game.exists');
-        });
+        Route::get(
+            '/{gameId}/exists', [GameApiController::class, 'exists']
+        )->name('api.v1.game.exists');
     });
 
     /*

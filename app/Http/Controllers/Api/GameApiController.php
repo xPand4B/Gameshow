@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Events\Game\GameUpdatedEvent;
+use App\Helper\AuthHelper;
 use App\Helper\MessageResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Game\CreateGameRequest;
@@ -80,21 +81,13 @@ class GameApiController extends Controller
      */
     public function exists(Request $request, string $gameId): JsonResponse
     {
-        $response = [
+        AuthHelper::logout();
+
+        Game::findOrFail($gameId);
+
+        return response()->json([
             'success' => true,
-        ];
-
-        $game = Game::findOrFail($gameId);
-
-        if (Auth::check()) {
-            $isGamemaster = (int)$game->user_id === Auth::user()->id;
-
-            if ($isGamemaster) {
-                $response['is_gamemaster'] = true;
-            }
-        }
-
-        return response()->json($response);
+        ]);
     }
 
     /**
