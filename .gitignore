@@ -1,4 +1,3 @@
-.idea
 /node_modules
 /public/css
 /public/fonts
@@ -7,8 +6,8 @@
 /public/svgs
 /public/hot
 /public/storage
+/public/mix-manifest.json
 /storage/*.key
-/storage/mix-manifest.json
 /vendor
 .env
 .env.backup
