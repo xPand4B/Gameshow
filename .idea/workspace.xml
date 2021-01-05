@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="Improved menu + added correct start-game modal">
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/menu/startGameModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/pages/menu/startGameModalItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GameShow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GameShow.iml" afterDir="false" />
+    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Console/Commands/UpdateCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/chatBubble/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/chatBubble/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/layouts/main/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/layouts/main/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/pages/menu/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/pages/menu/content.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/snippets/de-DE.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/snippets/de-DE.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/snippets/en-US.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/game.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/game.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/question.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/question.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Controllers/Api/GameApiControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Controllers/Api/GameApiControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/CacheClearCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/CacheClearCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +182,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Http/Controllers/Api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Console/Commands" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -203,11 +192,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Console/Commands" />
       <recent name="$PROJECT_DIR$/tests/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/tests/Http/Requests/Question" />
       <recent name="$PROJECT_DIR$/tests/Http/Requests/Game" />
       <recent name="$PROJECT_DIR$/tests/Http/Requests" />
-      <recent name="$PROJECT_DIR$/database/factories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Helper" />
@@ -249,7 +238,7 @@
       <workItem from="1607677686643" duration="27537000" />
       <workItem from="1608277241924" duration="114000" />
       <workItem from="1608295870723" duration="3435000" />
-      <workItem from="1608621159194" duration="92459000" />
+      <workItem from="1608621159194" duration="92899000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607071598628</created>
@@ -363,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609845530526</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Improved menu + added correct start-game modal">
+      <created>1609868668251</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609868668251</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +379,8 @@
     <MESSAGE value="Fixed broadcast-auth-error by adding the authEndpoint" />
     <MESSAGE value="Removed default username" />
     <MESSAGE value="Small changes to the game-exists check" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small changes to the game-exists check" />
+    <MESSAGE value="Improved menu + added correct start-game modal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved menu + added correct start-game modal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -42,7 +42,5 @@ class CacheClearCommand extends Command
         File::delete(base_path('bootstrap/cache/config.php'));
         File::delete(base_path('bootstrap/cache/packages.php'));
         File::delete(base_path('bootstrap/cache/services.php'));
-
-
     }
 }
