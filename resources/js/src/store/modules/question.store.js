@@ -15,6 +15,10 @@ export default {
                 return item.attributes;
             });
         },
+
+        getGameQuestionsTotalCount({ questions }) {
+            return questions.data.attributes.length;
+        },
     },
 
     actions: {

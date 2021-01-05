@@ -13,6 +13,10 @@ export default {
             return lobby;
         },
 
+        getLobbyUserCount({ lobby }) {
+            return lobby.length;
+        },
+
         getChatMessages({ chat }) {
             return chat;
         },
@@ -22,6 +26,10 @@ export default {
         },
 
         getLobbyFull({ lobby }) {
+            return lobby.length - 1 === Store.getters.getCurrentGamePlayerCount;
+        },
+
+        getLobbyTooManyPlayers({ lobby }) {
             return lobby.length - 1 > Store.getters.getCurrentGamePlayerCount;
         }
     },

@@ -11,7 +11,13 @@
                     v-if="user.isGamemaster"
                     class="fas fa-crown fa-sm pr-2"
                 />
-                {{ user.text }}
+
+                <template v-if="getPlayerName !== user.text">
+                    {{ user.text }}
+                </template>
+                <template v-else>
+                    <strong>{{ user.text }}</strong>
+                </template>
             </v-chip>
         </v-slide-y-transition>
     </v-row>

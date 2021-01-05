@@ -64,7 +64,8 @@
             show: false,
             fab: false,
             messageCount: 0,
-            unreadMessages: false
+            unreadMessages: false,
+            firstMessageArrived: false
         }),
 
         watch: {
@@ -87,6 +88,11 @@
 
                     Echo.join(this.chatChannel)
                         .listenForWhisper('newMessage', () => {
+                            if (!this.firstMessageArrived) {
+                                this.firstMessageArrived = true;
+                                this.fab = true;
+                            }
+
                             if (!this.fab) {
                                 this.unreadMessages = true;
                                 this.messageCount++;

@@ -130,25 +130,6 @@ class GameApiControllerTest extends TestCase
     }
 
     /** @test */
-    public function test_game_api_controller_can_tell_if_exists_if_gamemaster(): void
-    {
-        self::markTestSkipped('GameApiController::exists now logs-out the current user.');
-
-        $game = $this->createGame()[0];
-
-        $response = $this->actingAsUser()
-            ->json('GET', route(self::EXIST_ROUTE, [
-                'gameId' => $game->id
-            ]))
-            ->assertStatus(200);
-
-        self::assertSame([
-            'success' => true,
-            'is_gamemaster' => true
-        ], json_decode($response->getContent(), true));
-    }
-
-    /** @test */
     public function test_game_api_controller_can_update(): void
     {
         $game = $this->createGame()[0];

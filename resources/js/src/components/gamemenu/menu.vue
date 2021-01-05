@@ -134,8 +134,9 @@
         data: () => ({
             ApiRoutes,
             loading: true,
+            dialog: true,
             gameId: null,
-            joinUrl: ''
+            joinUrl: '',
         }),
 
         props: {
@@ -172,15 +173,6 @@
         },
 
         watch: {
-            // isLoading: {
-            //     handler: function(newVal, oldVal) {
-            //         if (!newVal && oldVal) {
-            //             this.initValues();
-            //         }
-            //     },
-            //     deep: true,
-            //     immediate: true,
-            // },
             mainMenu: {
                 handler: function(newVal, oldVal) {
                     if (!newVal && oldVal) {

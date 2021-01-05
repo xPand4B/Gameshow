@@ -63,6 +63,24 @@ export default {
             return jokers;
         },
 
+        getActiveGameJokerCount({ currentGame }) {
+            if (!currentGame) {
+                return;
+            }
+
+            let count = 0;
+
+            currentGame.data.attributes['available_joker'].map(joker => {
+                const attrs = joker.attributes;
+
+                if (attrs.active) {
+                    count++;
+                }
+            });
+
+            return count;
+        },
+
         getGamePointSettings({ currentGame }) {
             if (!currentGame) {
                 return;

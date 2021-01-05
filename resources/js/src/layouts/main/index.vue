@@ -15,7 +15,9 @@
                 </v-col>
             </v-row>
 
+            <!-- Chat Bubble-->
             <chat-bubble/>
+
         </v-container>
     </div>
 </template>

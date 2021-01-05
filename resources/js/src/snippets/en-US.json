@@ -89,6 +89,21 @@
         },
         "player": {
             "title": "Game Menu"
+        },
+        "modal" : {
+            "title" : "You are about to start your game. Are you sure?",
+            "stats": {
+                "currentPlayerCount": "Current player:",
+                "totalQuestions": "Total questions:",
+                "correctPoints": "Points per correct Answer:",
+                "pointsIfWrongAnswer": "Wrong-Answer Points?",
+                "pointsIfWrongAnswerTrue": "Yes",
+                "pointsIfWrongAnswerFalse": "No",
+                "wrongPoints": "Points per wrong Answer:",
+                "activeJoker": "Active joker:"
+            },
+            "cancel" : "NO! WAIT!",
+            "start" : "Let's do this!"
         }
     },
 

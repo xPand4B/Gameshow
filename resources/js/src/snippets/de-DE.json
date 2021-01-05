@@ -89,6 +89,21 @@
         },
         "player": {
             "title": "Spiel Menü"
+        },
+        "modal" : {
+            "title" : "Du bist dabei dein Spiel zu starten. Bist du sicher?",
+            "stats": {
+                "currentPlayerCount": "Anzahl Spieler:",
+                "totalQuestions": "Anzahl Fragen:",
+                "correctPoints": "Punkte pro Richtige Antwort:",
+                "pointsIfWrongAnswer": "Punkte bei Falscher Antwort?",
+                "pointsIfWrongAnswerTrue": "Ja",
+                "pointsIfWrongAnswerFalse": "Nein",
+                "wrongPoints": "Punkte pro Falsche Antwort:",
+                "activeJoker": "Aktive Joker:"
+            },
+            "cancel" : "NEIN! WARTE!",
+            "start" : "Let's do this!"
         }
     },
 
