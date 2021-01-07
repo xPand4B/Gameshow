@@ -53,7 +53,7 @@ class UpdateCommand extends Command
         foreach (self::COMMANDS as $command) {
             $command = explode(' ', $command);
 
-            $process = new Process($command);
+            $process = (new Process($command))->setTimeout(null);
             $process->start();
             $iterator = $process->getIterator($process::ITER_SKIP_ERR | $process::ITER_KEEP_OUTPUT);
 

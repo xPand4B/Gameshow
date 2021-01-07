@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="Added cookies to login +">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper/AuthHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/AuthHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/GameApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Game/CreateGameRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Game/CreateGameRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/GameServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/GameServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/HasRandomStringId.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/HasRandomStringId.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_12_112416_create_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_12_112416_create_questions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/chatBubble/chatWindow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/chatBubble/chatWindow.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/components/gamemenu/playerListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/lobby.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/store/modules/player.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/store/modules/player.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Helper/AuthHelperTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Helper/AuthHelperTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Controllers/Api/AuthApiControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Controllers/Api/AuthApiControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Http/Controllers/Api/GameApiControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Http/Controllers/Api/GameApiControllerTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="e31187b7-e3f8-4b08-bf35-22606addbd9c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,7 +232,7 @@
       <workItem from="1607677686643" duration="27537000" />
       <workItem from="1608277241924" duration="114000" />
       <workItem from="1608295870723" duration="3435000" />
-      <workItem from="1608621159194" duration="104683000" />
+      <workItem from="1608621159194" duration="105079000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607071598628</created>
@@ -404,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609873218220</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added cookies to login + small improvements">
+      <created>1610040338642</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1610040338643</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +411,8 @@
     <MESSAGE value="Improved menu + added correct start-game modal" />
     <MESSAGE value="Added update command" />
     <MESSAGE value="Updated .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore" />
+    <MESSAGE value="Added cookies to login + small improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added cookies to login + small improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
