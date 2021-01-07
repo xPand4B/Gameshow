@@ -205,7 +205,9 @@
                     .then(response => {
                         if (response.data.success) {
                             this.fetchSingleGameData(this.$route.params.id).then(() => {
-                                this.setPlayerName(response.data.playerName);
+                                if (!this.getPlayerLoginSuccess) {
+                                    this.setPlayerName(response.data);
+                                }
                                 this.initValues();
                             })
                             return;

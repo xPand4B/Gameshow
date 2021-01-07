@@ -20,9 +20,13 @@ trait HasRandomStringId
         });
     }
 
-    public static function generateRandomStringId($model)
+    /**
+     * @param $model
+     * @return string
+     */
+    public static function generateRandomStringId($model): string
     {
-        $id = Str::random(18);
+        $id = Str::random(24);
 
         if ($model::find($id) !== null) {
             self::generateRandomStringId($model);
@@ -36,7 +40,7 @@ trait HasRandomStringId
      *
      * @return bool
      */
-    public function getIncrementing()
+    public function getIncrementing(): bool
     {
         return false;
     }
@@ -45,7 +49,7 @@ trait HasRandomStringId
      *
      * @return string
      */
-    public function getKeyType()
+    public function getKeyType(): string
     {
         return 'string';
     }

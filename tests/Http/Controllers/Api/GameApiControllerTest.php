@@ -99,7 +99,6 @@ class GameApiControllerTest extends TestCase
             ->assertStatus(200);
 
         $response = json_decode($response->getContent(), true);
-
         $game = Game::first();
         $resource = (new GameResource($game))->toArray(new Request());
         $resource['attributes']['is_gamemaster'] = true;

@@ -29,7 +29,7 @@ class GameApiController extends Controller
 
         // Check if GM has a game running
         $runningGames = Game::where([
-            ['user_id', '=', Auth::user()->id],
+            ['user_id',  '=', Auth::user()->id],
             ['finished', '=', false]
         ])->get();
 

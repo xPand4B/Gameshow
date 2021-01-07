@@ -2,6 +2,7 @@
 
 namespace Tests\Http\Controllers\Api;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
@@ -27,7 +28,8 @@ class AuthApiControllerTest extends TestCase
         self::assertTrue(Auth::check());
         self::assertSame([
             'success' => true,
-            'playerName' => $this->user->username
+            'id' => 2,
+            'playerName' => $this->user->username,
         ], json_decode($response->getContent(), true));
     }
 
@@ -40,7 +42,8 @@ class AuthApiControllerTest extends TestCase
 
         self::assertSame([
             'success' => true,
-            'playerName' => $this->user->username
+            'id' => $this->user->id,
+            'playerName' => $this->user->username,
         ], json_decode($response->getContent(), true));
     }
 }

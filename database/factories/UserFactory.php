@@ -30,7 +30,7 @@ class UserFactory extends Factory
 
         return [
             'username' => $username,
-            'remember_token' => Str::random()
+            'auth_token' => Str::random(24),
         ];
     }
 }

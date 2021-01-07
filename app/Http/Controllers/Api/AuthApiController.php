@@ -19,6 +19,7 @@ class AuthApiController extends Controller
         $request->validated();
 
         return AuthHelper::login(
+            $request,
             $request->get('username')
         );
     }

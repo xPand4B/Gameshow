@@ -34,6 +34,7 @@ Broadcast::channel('Game.{gameId}.Lobby', function ($user, $gameId) {
     }
 
     return [
+        'id' => $user->id,
         'playerName' => $user->username,
         'is_gamemaster' => $isGamemaster
     ];

@@ -71,6 +71,7 @@ export default {
         LOBBY_INIT(state, payload) {
             payload.map((user) => {
                 state.lobby.push({
+                    id: user.id,
                     text: user.playerName,
                     isGamemaster: user['is_gamemaster']
                 });
@@ -82,7 +83,7 @@ export default {
         LOBBY_JOINED(state, payload) {
             let userAlreadyThere = false;
             state.lobby.some((user, index) => {
-                if (user.text === payload.playerName) {
+                if (user.text === payload.playerName && user.id === payload.id) {
                     userAlreadyThere = true;
                     return true;
                 }
@@ -90,15 +91,20 @@ export default {
 
             if (! userAlreadyThere) {
                 state.lobby.push({
+                    id: payload.id,
                     text: payload.playerName,
                     isGamemaster: payload['is_gamemaster']
                 });
             }
+
+            state.lobby.sort((a, b) => {
+                return a.id - b.id;
+            });
         },
 
         LOBBY_LEFT(state, payload) {
             state.lobby.map((user, index) => {
-                if (user.text === payload.playerName) {
+                if (user.text === payload.playerName && user.id === payload.id) {
                     state.lobby.splice(index, 1);
                 }
             });

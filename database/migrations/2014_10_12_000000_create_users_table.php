@@ -17,7 +17,10 @@ class CreateUsersTable extends Migration
             $table->id();
 
             $table->string('username');
-            $table->rememberToken();
+            $table->string('auth_token')->unique();
+
+            $table->string('last_login_ip')->nullable();
+            $table->dateTimeTz('last_login_at')->nullable();
 
             $table->timestampsTz();
         });

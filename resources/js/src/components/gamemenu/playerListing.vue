@@ -5,18 +5,18 @@
                 v-for="(user, index) in getLobbyUser"
                 :key="`lobby.user.${index}`"
                 class="ma-2"
-                :style="stringToHslColor(user.text)"
+                :style="stringToHslColor(user.text.repeat(user.id))"
             >
                 <i
                     v-if="user.isGamemaster"
                     class="fas fa-crown fa-sm pr-2"
                 />
 
-                <template v-if="getPlayerName !== user.text">
-                    {{ user.text }}
+                <template v-if="getPlayerName === user.text && getPlayerId === user.id">
+                    <strong>{{ user.text }}</strong>
                 </template>
                 <template v-else>
-                    <strong>{{ user.text }}</strong>
+                    {{ user.text }}
                 </template>
             </v-chip>
         </v-slide-y-transition>
@@ -32,7 +32,8 @@
         computed: {
             ...mapGetters([
                 'getLobbyUser',
-                'getPlayerName'
+                'getPlayerName',
+                'getPlayerId'
             ]),
         },
 

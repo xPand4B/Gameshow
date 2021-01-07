@@ -11,12 +11,17 @@
                             v-for="(message, index) in getChatMessages"
                             :key="index"
                             class="messages"
-                            :class="getPlayerName === message.user ? 'mine' : 'yours'"
+                            :class="(getPlayerName === message.user && getPlayerId === message.user_id )? 'mine' : 'yours'"
                         >
                             <div
                                 class="message"
-                                :style="stringToHslColor(message.user)"
+                                :style="stringToHslColor( message.user.repeat(message.user_id))"
                             >
+                                <i
+                                    v-if="message.is_gamemaster"
+                                    class="fas fa-crown fa-sm"
+                                />
+
                                 <strong>{{ message.user }}</strong>
                                 <small>{{ message.time }}</small>
                                 <br>
@@ -96,6 +101,8 @@
         computed: {
             ...mapGetters([
                 'getPlayerName',
+                'getPlayerId',
+                'isGamemaster',
                 'getChatMessages',
                 'getJoinedSuccessfully'
             ])
@@ -119,6 +126,8 @@
                 const date = new Date();
                 const data = {
                     user: this.getPlayerName,
+                    user_id: this.getPlayerId,
+                    is_gamemaster: this.isGamemaster,
                     message: this.newMessage,
                     time: `${ ('0'+date.getHours()).slice(-2)}:${ ('0'+date.getMinutes()).slice(-2)}`
                 };

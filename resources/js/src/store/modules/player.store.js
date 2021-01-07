@@ -3,12 +3,17 @@ import ApiRoutes from './../../routes/apiRoutes';
 export default {
     state: {
         success: false,
+        id: null,
         playerName: null
     },
 
     getters: {
         getPlayerName({ playerName }) {
             return playerName;
+        },
+
+        getPlayerId({ id }) {
+            return id;
         },
 
         getPlayerLoginSuccess({ success }) {
@@ -30,18 +35,16 @@ export default {
             });
         },
 
-        setPlayerName({ commit }, playerName) {
-            commit('PLAYER_SET', {
-                playerName,
-                success: true
-            });
+        setPlayerName({ commit }, payload) {
+            commit('PLAYER_SET', payload);
         },
     },
 
     mutations: {
         PLAYER_SET(state, payload) {
+            state.id         = payload.id;
             state.playerName = payload.playerName;
-            state.success = !!payload.success;
+            state.success    = !!payload.success;
         }
     },
 };
