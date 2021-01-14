@@ -99,13 +99,13 @@ php artisan serve
     - [x] Enter user-name.
     - [x] Click "Create new Game" button.
     - [x] Check if a game exists with the user-name as GameMaster. Create new one if not.
-    - [ ] Login user with the entered username.
-    - [ ] Return GameResource as response.
-    - [ ] Redirect to game-menu.
+    - [x] Login user with the entered username.
+    - [x] Return GameResource as response.
+    - [x] Redirect to game-menu.
 2. Game-Menu
-    - [ ] Logout user the there is still something in the cache.
+    - [ ] ~~Logout user the there is still something in the cache.~~ Obsulet
     - [x] Ask for username if accessing via invite-link.
     - [x] Login user with the entered username.
-    - [ ] Check if lobby is full.
+    - [x] Check if lobby is full.
     - [x] Send an event that a user has joined.
     - [x] Subscribe to lobby updates.
