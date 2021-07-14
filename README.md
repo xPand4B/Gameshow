@@ -1,4 +1,5 @@
 ## Gameshow
+![Build Status](https://github.com/xPand4B/Gameshow/workflows/CI/badge.svg)
 This should be an interactive website to manage a live-online Game-Show with twitch-chat-integration.
 
 ## Table of content

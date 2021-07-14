@@ -13,7 +13,7 @@ class Install extends Command
     protected $description = 'Install the Application.';
 
     private const COMMANDS = [
-//        'cp .env.example .env',
+        'cp -n .env.example .env',
         'php artisan key:generate --ansi',
         'php artisan migrate:fresh --force',
         'php artisan storage:link',
