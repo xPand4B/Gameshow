@@ -7,9 +7,6 @@ use Tests\TestCase;
 
 class LoginRequestTest extends TestCase
 {
-    /**
-     * @return LoginRequest
-     */
     private function getLoginRequest(): LoginRequest
     {
         return new LoginRequest();

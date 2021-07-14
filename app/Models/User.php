@@ -14,13 +14,9 @@ use Illuminate\Notifications\Notifiable;
  */
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
+    use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'username',
         'auth_token',
@@ -28,19 +24,11 @@ class User extends Authenticatable
         'last_login_at',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'remember_token',
         'auth_token',
     ];
 
-    /**
-     * @return HasOne
-     */
     public function game(): HasOne
     {
         return $this->hasOne(Game::class);

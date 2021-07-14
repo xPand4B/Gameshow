@@ -8,17 +8,13 @@ use Illuminate\Support\ServiceProvider;
 
 class GameServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
+    public function register(): void
     {
-        Game::created(function($game) {
-            Question::create(
-                Question::getAnswerScaffolding($game->id)
-            );
-        });
+        //
+    }
+
+    public function boot(): void
+    {
+        //
     }
 }

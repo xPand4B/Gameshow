@@ -3,6 +3,7 @@
 namespace Tests\Http\Controllers;
 
 use App\Http\Controllers\VueController;
+use Illuminate\View\View;
 use Tests\TestCase;
 
 class VueControllerTest extends TestCase
@@ -12,6 +13,6 @@ class VueControllerTest extends TestCase
     {
         $controller = new VueController();
 
-        self::assertSame(\Illuminate\View\View::class, get_class($controller->index()));
+        self::assertSame(View::class, get_class($controller->index()));
     }
 }

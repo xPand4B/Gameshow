@@ -12,9 +12,6 @@ class QuestionApiControllerTest extends TestCase
 {
     use ApiControllerTrait;
 
-    /**
-     * @var string
-     */
     private const INDEX_ROUTE   = 'api.v1.game.questions.index';
     private const ADD_ROUTE     = 'api.v1.game.questions.add';
     private const SHOW_ROUTE    = 'api.v1.game.questions.show';

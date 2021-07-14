@@ -12,9 +12,6 @@ class AnswerApiControllerTest extends TestCase
 {
     use ApiControllerTrait;
 
-    /**
-     * @var string
-     */
     private const ADD_ROUTE = 'api.v1.game.questions.answer.add';
     private const DELETE_ROUTE = 'api.v1.game.questions.answer.destroy';
 
@@ -68,6 +65,7 @@ class AnswerApiControllerTest extends TestCase
     /** @test */
     public function test_answer_api_controller_wont_delete_answers_if_only_two_remaining(): void
     {
+        $this->withoutExceptionHandling();
         $game = $this->createGame()[0];
         $question = Question::firstOrFail();
 

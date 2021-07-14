@@ -11,7 +11,6 @@ use Tests\TestCase;
 
 class AuthHelperTest extends TestCase
 {
-    /** @var string  */
     private const SAMPLE_USERNAME = 'xPand';
 
     /** @test */
@@ -73,7 +72,7 @@ class AuthHelperTest extends TestCase
         self::assertTrue(Auth::check());
         self::assertSame(self::SAMPLE_USERNAME, Auth::user()->username);
 
-        AuthHelper::logout();
+        AuthHelper::logoutCurrentUser();
         self::assertFalse(Auth::check());
     }
 

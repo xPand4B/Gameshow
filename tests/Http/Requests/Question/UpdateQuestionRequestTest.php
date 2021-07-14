@@ -7,9 +7,6 @@ use Tests\TestCase;
 
 class UpdateQuestionRequestTest extends TestCase
 {
-    /**
-     * @return UpdateQuestionRequest
-     */
     private function getQuestionRequest(): UpdateQuestionRequest
     {
         return new UpdateQuestionRequest();

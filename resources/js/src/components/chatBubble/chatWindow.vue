@@ -11,7 +11,7 @@
                             v-for="(message, index) in getChatMessages"
                             :key="index"
                             class="messages"
-                            :class="(getPlayerName === message.user && getPlayerId === message.user_id )? 'mine' : 'yours'"
+                            :class="(getPlayerName === message.user && getPlayerId === message.user_id ) ? 'mine' : 'yours'"
                         >
                             <div
                                 class="message"

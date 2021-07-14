@@ -44,9 +44,6 @@ trait ApiControllerTrait
         return $game;
     }
 
-    /**
-     * @return $this
-     */
     public function actingAsUser(): self
     {
         Auth::logout();

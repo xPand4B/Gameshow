@@ -8,10 +8,7 @@ use Tests\TestCase;
 
 class ErrorResourceTest extends TestCase
 {
-    /**
-     * @var \ReflectionClass
-     */
-    private $class;
+    private \ReflectionClass $class;
 
     public function setUp(): void
     {
@@ -99,7 +96,7 @@ class ErrorResourceTest extends TestCase
             ->setCode('1337')
             ->setTitle('This is a sample error message')
             ->setDetail('Only occurs while testing the ErrorResource class.')
-            ->setSource('/mipapo/core/phpunit/ErrorResourceTest', 'Sample')
+            ->setSource('/gameshow/core/phpunit/ErrorResourceTest', 'Sample')
             ->setMeta(['message' => 'Some meta information.'])
             ->getError();
 
@@ -117,7 +114,7 @@ class ErrorResourceTest extends TestCase
                     'title' => 'This is a sample error message',
                     'detail' => 'Only occurs while testing the ErrorResource class.',
                     'source' => [
-                        'pointer' => '/mipapo/core/phpunit/ErrorResourceTest',
+                        'pointer' => '/gameshow/core/phpunit/ErrorResourceTest',
                         'parameter' => 'Sample',
                     ],
                     'meta' => [
@@ -153,7 +150,7 @@ class ErrorResourceTest extends TestCase
                     'title' => 'This is a sample error message',
                     'detail' => 'Only occurs while testing the ErrorResource class.',
                     'source' => [
-                        'pointer' => '/mipapo/core/phpunit/ErrorResourceTest',
+                        'pointer' => '/gameshow/core/phpunit/ErrorResourceTest',
                         'parameter' => 'Sample',
                     ],
                     'meta' => [
@@ -170,7 +167,7 @@ class ErrorResourceTest extends TestCase
                     'title' => 'This is a sample error message',
                     'detail' => 'Only occurs while testing the ErrorResource class.',
                     'source' => [
-                        'pointer' => '/mipapo/core/phpunit/ErrorResourceTest',
+                        'pointer' => '/gameshow/core/phpunit/ErrorResourceTest',
                         'parameter' => 'Sample',
                     ],
                     'meta' => [
@@ -181,11 +178,6 @@ class ErrorResourceTest extends TestCase
         ]), $result->getContent());
     }
 
-    /**
-     * Provides a sample error.
-     *
-     * @return array
-     */
     private function getSampleError(): array
     {
         return [
@@ -195,7 +187,7 @@ class ErrorResourceTest extends TestCase
             '1337',
             'This is a sample error message',
             'Only occurs while testing the ErrorResource class.',
-            '/mipapo/core/phpunit/ErrorResourceTest',
+            '/gameshow/core/phpunit/ErrorResourceTest',
             'Sample',
             [
                 'message' => 'Some meta information.'

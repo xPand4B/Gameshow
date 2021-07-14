@@ -14,9 +14,6 @@ class GameApiControllerTest extends TestCase
 {
     use ApiControllerTrait;
 
-    /**
-     * @var string
-     */
     private const STORE_ROUTE   = 'api.v1.game.store';
     private const SHOW_ROUTE    = 'api.v1.game.show';
     private const EXIST_ROUTE   = 'api.v1.game.exists';

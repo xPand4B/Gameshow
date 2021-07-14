@@ -9,9 +9,6 @@ use Illuminate\Http\Request;
 
 trait JokerResourceTrait
 {
-    /**
-     * @return array
-     */
     public function getJokerResource(): array
     {
         $request = new Request();
@@ -20,9 +17,6 @@ trait JokerResourceTrait
         return (new JokerResource($joker))->toArray($request);
     }
 
-    /**
-     * @return array
-     */
     public function getJokerCollection(): array
     {
         $request = new Request();

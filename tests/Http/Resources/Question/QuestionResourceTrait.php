@@ -9,9 +9,6 @@ use Illuminate\Http\Request;
 
 trait QuestionResourceTrait
 {
-    /**
-     * @return array
-     */
     public function getQuestionResource(): array
     {
         $request = new Request();
@@ -20,9 +17,6 @@ trait QuestionResourceTrait
         return (new QuestionResource($question))->toArray($request);
     }
 
-    /**
-     * @return array
-     */
     public function getQuestionCollection(): array
     {
         $request = new Request();

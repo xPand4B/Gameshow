@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Traits\HasRandomStringId;
+use App\Models\Traits\HasRandomStringId;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -17,40 +17,24 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class Question extends Model
 {
-    use HasFactory, HasRandomStringId;
+    use HasFactory;
+    use HasRandomStringId;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
     protected $fillable = [
         'game_id',
         'question',
         'answers',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
     protected $casts = [
         'answers' => 'array'
     ];
 
-    /**
-     * @return BelongsTo
-     */
     public function game(): BelongsTo
     {
         return $this->belongsTo(Game::class);
     }
 
-    /**
-     * @param string $gameId
-     * @return array
-     */
     public static function getAnswerScaffolding(string $gameId): array
     {
         Game::findOrFail($gameId);
@@ -67,10 +51,6 @@ class Question extends Model
         ];
     }
 
-    /**
-     * @param int $id
-     * @return array
-     */
     public static function getAnswerOptionScaffolding(int $id): array
     {
         $now = Carbon::now()->toDateTimeString();

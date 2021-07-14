@@ -11,12 +11,6 @@ use Illuminate\Http\Request;
 
 class AnswerApiController extends Controller
 {
-    /**
-     * @param Request $request
-     * @param string $gameId
-     * @param string $questionId
-     * @return QuestionResource
-     */
     public function add(Request $request, string $gameId, string $questionId): QuestionResource
     {
         $question = Question::where([
@@ -42,13 +36,6 @@ class AnswerApiController extends Controller
         return new QuestionResource($question);
     }
 
-    /**
-     * @param Request $request
-     * @param string $gameId
-     * @param string $questionId
-     * @param int $answerId
-     * @return QuestionResource|JsonResponse
-     */
     public function destroy(Request $request, string $gameId, string $questionId, int $answerId)
     {
         $question = Question::where([

@@ -11,35 +11,17 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
-    /**
-     * A list of the exception types that are not reported.
-     *
-     * @var array
-     */
+
     protected $dontReport = [
         //
     ];
 
-    /**
-     * A list of the inputs that are never flashed for validation exceptions.
-     *
-     * @var array
-     */
     protected $dontFlash = [
         'password',
         'password_confirmation',
     ];
 
-    /**
-     * Render an exception into an HTTP response.
-     *
-     * @param Request $request
-     * @param Throwable $e
-     * @return Response
-     *
-     * @throws Throwable
-     */
-    public function render($request, Throwable $e)
+    public function render($request, Throwable $e): Response
     {
         if ($e instanceof ModelNotFoundException) {
             $parameter = explode('/', $request->fullUrl());
@@ -58,12 +40,7 @@ class Handler extends ExceptionHandler
         return parent::render($request, $e);
     }
 
-    /**
-     * Register the exception handling callbacks for the application.
-     *
-     * @return void
-     */
-    public function register()
+    public function register(): void
     {
         //
     }

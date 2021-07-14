@@ -5,44 +5,42 @@
         </v-card-title>
 
         <v-card-text>
-            <v-list>
-                <start-modal-item
-                    :text="$t('menu.modal.stats.currentPlayerCount')"
-                    :value="`${getLobbyUserCount - 1}/${getCurrentGamePlayerCount}`"
-                    :success="getLobbyFull"
-                    :warning="!getLobbyFull"
-                />
-                <start-modal-item
-                    :text="$t('menu.modal.stats.totalQuestions')"
-                    :value="getGameQuestionsTotalCount.toString()"
-                    :success="getGameQuestionsTotalCount > 5"
-                    :warning="getGameQuestionsTotalCount <= 5"
-                />
+            <start-modal-item
+                :text="$t('menu.modal.stats.currentPlayerCount')"
+                :value="`${getLobbyUserCount - 1}/${getCurrentGamePlayerCount}`"
+                :success="getLobbyFull"
+                :warning="!getLobbyFull"
+            />
+            <start-modal-item
+                :text="$t('menu.modal.stats.totalQuestions')"
+                :value="getGameQuestionsTotalCount.toString()"
+                :success="getGameQuestionsTotalCount > 5"
+                :warning="getGameQuestionsTotalCount <= 5"
+            />
 
-                <v-divider/>
+            <v-divider/>
 
-                <start-modal-item
-                    :text="$t('menu.modal.stats.correctPoints')"
-                    :value="getGamePointSettings.correctAnswer.toString()"
-                />
-                <start-modal-item
-                    :text="$t('menu.modal.stats.pointsIfWrongAnswer')"
-                    :value="getGamePointSettings.pointsForPlayersIfWrongAnswer ? $t('menu.modal.stats.pointsIfWrongAnswerTrue') : $t('menu.modal.stats.pointsIfWrongAnswerFalse')"
-                />
-                <start-modal-item
-                    :text="$t('menu.modal.stats.wrongPoints')"
-                    :value="getGamePointSettings.wrongAnswer.toString()"
-                />
+            <start-modal-item
+                :text="$t('menu.modal.stats.correctPoints')"
+                :value="getGamePointSettings.correctAnswer.toString()"
+            />
+            <start-modal-item
+                :text="$t('menu.modal.stats.pointsIfWrongAnswer')"
+                :value="getGamePointSettings.pointsForPlayersIfWrongAnswer ? $t('menu.modal.stats.pointsIfWrongAnswerTrue') : $t('menu.modal.stats.pointsIfWrongAnswerFalse')"
+            />
+            <start-modal-item
+                :text="$t('menu.modal.stats.wrongPoints')"
+                :value="getGamePointSettings.wrongAnswer.toString()"
+            />
 
-                <v-divider/>
+            <v-divider/>
 
-                <start-modal-item
-                    :text="$t('menu.modal.stats.activeJoker')"
-                    :value="getActiveGameJokerCount.toString()"
-                    :success="getActiveGameJokerCount !== 0"
-                    :warning="getActiveGameJokerCount === 0"
-                />
-            </v-list>
+            <start-modal-item
+                :text="$t('menu.modal.stats.activeJoker')"
+                :value="getActiveGameJokerCount.toString()"
+                :success="getActiveGameJokerCount !== 0"
+                :warning="getActiveGameJokerCount === 0"
+            />
         </v-card-text>
 
         <v-card-actions>

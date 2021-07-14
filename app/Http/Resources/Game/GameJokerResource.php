@@ -7,12 +7,6 @@ use Illuminate\Http\Request;
 
 class GameJokerResource extends JokerResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @param  Request  $request
-     * @return array
-     */
     public function toArray($request): array
     {
         $response = parent::toArray($request);

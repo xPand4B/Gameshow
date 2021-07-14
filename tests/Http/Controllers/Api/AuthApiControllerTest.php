@@ -10,9 +10,6 @@ class AuthApiControllerTest extends TestCase
 {
     use ApiControllerTrait;
 
-    /**
-     * @var string
-     */
     private const LOGIN_ROUTE = 'api.v1.auth.login';
     private const ME_ROUTE    = 'api.v1.auth.me';
 

@@ -36,9 +36,6 @@ trait GameResourceTrait
         ])->create();
     }
 
-    /**
-     * @return array
-     */
     private function getGameResource(): array
     {
         $request = new Request();
@@ -47,9 +44,6 @@ trait GameResourceTrait
         return (new GameResource($game))->toArray($request);
     }
 
-    /**
-     * @return array
-     */
     private function getGameCollection(): array
     {
         $request = new Request();
@@ -58,9 +52,6 @@ trait GameResourceTrait
         return (new GameCollection($game))->toArray($request);
     }
 
-    /**
-     * @return array
-     */
     private function getGameEventResource(): array
     {
         $request = new Request();

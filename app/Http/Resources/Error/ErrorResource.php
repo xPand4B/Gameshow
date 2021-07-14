@@ -14,56 +14,28 @@ class ErrorResource
      */
     private $id;
 
-    /**
-     * @var string
-     */
-    private $linkAbout;
+    private string $linkAbout = '';
 
-    /**
-     * @var int
-     */
-    private $statusCode;
+    private int $statusCode;
 
-    /**
-     * @var string
-     */
-    private $applicationErrorCode;
+    private string $applicationErrorCode = '';
 
-    /**
-     * @var string
-     */
-    private $title;
+    private string $title = '';
 
-    /**
-     * @var string
-     */
-    private $detail;
+    private string $detail = '';
 
-    /**
-     * @var string
-     */
-    private $sourcePointer;
+    private string $sourcePointer = '';
 
-    /**
-     * @var string
-     */
-    private $sourceParameter;
+    private string $sourceParameter = '';
 
-    /**
-     * @var array
-     */
-    private $meta;
+    private array $meta = [];
 
-    /**
-     * @var array
-     */
-    private $errorCollection = [];
+    private array $errorCollection = [];
 
     /**
      * A unique identifier for this particular occurrence of the problem.
      *
      * @param $id
-     *
      * @return $this
      */
     public function setId($id): self
@@ -78,7 +50,6 @@ class ErrorResource
      * About: A link that leads to further details about this particular occurrence of the problem.
      *
      * @param string $about
-     *
      * @return $this
      */
     public function setLinks(string $about): self
@@ -92,7 +63,6 @@ class ErrorResource
      * The HTTP status code applicable to this problem, expressed as a string value.
      *
      * @param int $code
-     *
      * @return $this
      */
     public function setStatusCode(int $code): self
@@ -106,7 +76,6 @@ class ErrorResource
      * An application-specific error code, expressed as a string value.
      *
      * @param string $code
-     *
      * @return $this
      */
     public function setCode(string $code): self
@@ -121,7 +90,6 @@ class ErrorResource
      * except for purposes of localization.
      *
      * @param string $title
-     *
      * @return $this
      */
     public function setTitle(string $title): self
@@ -136,7 +104,6 @@ class ErrorResource
      * Like title, this field’s value can be localized.
      *
      * @param string $detail
-     *
      * @return $this
      */
     public function setDetail(string $detail): self
@@ -158,7 +125,6 @@ class ErrorResource
      *
      * @param string|null $pointer
      * @param string|null $parameter
-     *
      * @return $this
      */
     public function setSource(string $pointer = null, string $parameter = null): self
@@ -178,7 +144,6 @@ class ErrorResource
      * A meta object containing non-standard meta-information about the error.
      *
      * @param array $meta
-     *
      * @return $this
      */
     public function setMeta(array $meta): self
@@ -330,7 +295,6 @@ class ErrorResource
      * Get the base skeleton structure.
      *
      * @param array $errors
-     *
      * @return array
      */
     private function getBaseSkeleton(array $errors): array

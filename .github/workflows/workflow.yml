@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: "build"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: shivammathur/setup-php@v1
+        with:
+          php-version: '7.4'
+      - name: Install Application
+        env:
+            DB_CONNECTION: sqlite
+            DB_DATABASE: database/database.sqlite
+        run: |
+          composer install --optimize-autoloader --no-suggest
+          touch database/database.sqlite
+          php artisan install
+
+  phpunit:
+    name: "testing - phpunit"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: shivammathur/setup-php@v1
+        with:
+          php-version: '7.4'
+          tools: phpunit
+      - name: Install Application
+        env:
+            DB_CONNECTION: sqlite
+            DB_DATABASE: database/database.sqlite
+        run: |
+          composer install --optimize-autoloader --no-suggest
+          touch database/database.sqlite
+          php artisan install
+      - name: Run PHPUnit
+        run: composer test

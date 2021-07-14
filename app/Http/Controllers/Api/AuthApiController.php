@@ -10,10 +10,6 @@ use Illuminate\Http\Request;
 
 class AuthApiController extends Controller
 {
-    /**
-     * @param LoginRequest $request
-     * @return JsonResponse
-     */
     public function login(LoginRequest $request): JsonResponse
     {
         $request->validated();
@@ -24,11 +20,7 @@ class AuthApiController extends Controller
         );
     }
 
-    /**
-     * @param Request $request
-     * @return JsonResponse
-     */
-    public function me(Request $request): JsonResponse
+    public function me(): JsonResponse
     {
         return AuthHelper::getAuthResponse();
     }

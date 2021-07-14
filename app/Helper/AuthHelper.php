@@ -12,19 +12,11 @@ use Illuminate\Support\Str;
 
 class AuthHelper extends Controller
 {
-    /**
-     * @var string
-     */
     private const AUTH_TOKEN_NAME = 'auth_token';
 
-    /**
-     * @param Request $request
-     * @param string $username
-     * @return JsonResponse
-     */
     public static function login(Request $request, string $username): JsonResponse
     {
-        self::logout();
+        self::logoutCurrentUser();
 
         $token = $request->cookie(self::AUTH_TOKEN_NAME);
 
@@ -54,23 +46,17 @@ class AuthHelper extends Controller
         Auth::login($user);
 
         return self::getAuthResponse()->withCookie(
-          \cookie()->forever(self::AUTH_TOKEN_NAME, $token)
+          cookie()->forever(self::AUTH_TOKEN_NAME, $token)
         );
     }
 
-    /**
-     * Logout the current user
-     */
-    public static function logout(): void
+    public static function logoutCurrentUser(): void
     {
         if (Auth::check()) {
             Auth::logout();
         }
     }
 
-    /**
-     * @return JsonResponse
-     */
     public static function getAuthResponse(): JsonResponse
     {
         return response()->json([

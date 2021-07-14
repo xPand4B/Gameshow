@@ -1,15 +1,12 @@
 <?php
 
-namespace App\Traits;
+namespace App\Models\Traits;
 
 use Illuminate\Support\Str;
 
 trait HasRandomStringId
 {
-    /**
-     * Boot function from Laravel.
-     */
-    protected static function boot()
+    protected static function boot(): void
     {
         parent::boot();
 
@@ -20,10 +17,6 @@ trait HasRandomStringId
         });
     }
 
-    /**
-     * @param $model
-     * @return string
-     */
     public static function generateRandomStringId($model): string
     {
         $id = Str::random(24);
@@ -35,20 +28,11 @@ trait HasRandomStringId
         return $id;
     }
 
-    /**
-     * Get the value indicating whether the IDs are incrementing.
-     *
-     * @return bool
-     */
     public function getIncrementing(): bool
     {
         return false;
     }
-    /**
-     * Get the auto-incrementing key type.
-     *
-     * @return string
-     */
+
     public function getKeyType(): string
     {
         return 'string';

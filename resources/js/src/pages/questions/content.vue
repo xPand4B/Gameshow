@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="py-6">
         <!-- Tab selection -->
         <v-row>
             <!-- Tabs -->
@@ -23,15 +23,17 @@
             <!-- Abb tab -->
             <v-col class="col-12 col-sm-1 py-0 px-0 my-auto text-center">
                 <v-btn
-                    @click="onAddQuestion"
                     icon
+                    @click="onAddQuestion"
                 >
                     <v-icon v-text="'fas fa-plus'"/>
                 </v-btn>
             </v-col>
         </v-row>
 
-        <v-divider class="pb-5"/>
+        <v-row class="pb-8">
+            <v-divider/>
+        </v-row>
 
         <!-- Tab Items -->
         <v-tabs-items v-model="selectedTab">
@@ -54,7 +56,6 @@
                 <v-divider class="pb-5"/>
 
                 <!-- Content -->
-
                 <v-expansion-panels
                     v-model="selectedAnswerOption"
                     accordion
@@ -88,7 +89,7 @@
                         <v-expansion-panel-content>
                             <!-- Answers -->
                             <v-row>
-                                <v-col class="pb-0">
+                                <v-col class="mt-4 pb-0">
                                     <v-textarea
                                         v-model="getAnswersByIndex(answerIndex).answer"
                                         @change="onUpdateQuestions({ name: 'answer', answerId: answer.id }, getAnswersByIndex(answerIndex).answer)"
@@ -130,7 +131,7 @@
                             </v-row>
 
                             <!-- Delete answer option -->
-                            <v-row class="py-0">
+                            <v-row class="py-0 mb-2">
                                 <v-col class="py-0">
                                     <v-btn
                                         @click="onDeleteAnswerOption(answer.id)"
@@ -217,13 +218,14 @@
                 handler() {
                     this.selectedAnswerOption = null;
                 }
-            }
+            },
         },
 
         computed: {
             ...mapGetters([
                 'getGameQuestions',
-                'getGameQuestionsFormatted'
+                'getGameQuestionsFormatted',
+                'getGameQuestionsTotalCount',
             ]),
 
             getAnswersFromSelectedQuestion() {

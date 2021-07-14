@@ -22,20 +22,13 @@ and fill in your database and [pusher](https://pusher.com/) credentials.
 
 If that's done you need to run following commands:
 ```bash
-# Install composer & npm dependencies
-composer install 
-npm install
+# Project dependencies
+composer install --prefer-dist --optimize-autoloader --no-suggest {--no-dev}
 
-# Generates app key
-php artisan key:generate
+# Install application
+php artisan install {--dev}
 
-# Run all database migrations
-php artisan migrate:fresh
-
-# Compile all js code
-npm run {watch|dev|prod}
-
-# Optional: Run local web-server
+# Optional: Open dev server on 'http://127.0.0.1:8000'
 php artisan serve
 ```
 

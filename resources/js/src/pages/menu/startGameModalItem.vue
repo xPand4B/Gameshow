@@ -3,13 +3,10 @@
         <v-list-item-content class="py-0">
             <v-list-item-title>
                 <v-row>
-                    <v-col class="py-0">
+                    <v-col>
                         {{ text }}
                     </v-col>
-                    <v-col
-                        :class="[success ? 'green--text' : null, warning ? 'orange--text' : null, danger ? 'red--text' : null]"
-                        class="py-0"
-                    >
+                    <v-col :class="[success ? 'green--text' : null, warning ? 'orange--text' : null, danger ? 'red--text' : null]">
                         {{ value }}
                     </v-col>
                 </v-row>

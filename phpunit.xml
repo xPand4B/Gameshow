@@ -1,23 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
-         colors="true"
-         executionOrder="random"
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+    bootstrap="vendor/autoload.php"
+    colors="true"
+    executionOrder="random"
 >
     <testsuites>
         <testsuite name="Application">
-            <directory suffix="Test.php">./tests/</directory>
+            <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
 
     <coverage processUncoveredFiles="true">
         <include>
-            <directory suffix=".php">./app/Helper</directory>
-            <directory suffix=".php">./app/Http/Controllers</directory>
-            <directory suffix=".php">./app/Http/Requests</directory>
-            <directory suffix=".php">./app/Http/Resources</directory>
+            <directory suffix=".php">./app</directory>
         </include>
+        <report>
+            <html outputDirectory="storage/builds/html-coverage"/>
+        </report>
+        <exclude>
+            <directory suffix="Kernel.php">./app</directory>
+            <file>./app/Http/Middleware/Authenticate.php</file>
+            <file>./app/Http/Middleware/EncryptCookies.php</file>
+            <file>./app/Http/Middleware/PreventRequestsDuringMaintenance.php</file>
+            <file>./app/Http/Middleware/RedirectIfAuthenticated.php</file>
+            <file>./app/Http/Middleware/TrimStrings.php</file>
+            <file>./app/Http/Middleware/TrustHosts.php</file>
+            <file>./app/Http/Middleware/TrustProxies.php</file>
+            <file>./app/Http/Middleware/VerifyCsrfToken.php</file>
+            <directory suffix=".php">./app/Models</directory>
+            <file>./app/Providers/AppServiceProvider.php</file>
+            <file>./app/Providers/AuthServiceProvider.php</file>
+            <file>./app/Providers/BroadcastServiceProvider.php</file>
+            <file>./app/Providers/EventServiceProvider.php</file>
+            <file>./app/Providers/RouteServiceProvider.php</file>
+        </exclude>
     </coverage>
 
     <php>

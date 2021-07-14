@@ -15,24 +15,14 @@ use Illuminate\Http\Request;
 
 class QuestionApiController extends Controller
 {
-    /**
-     * @param Request $request
-     * @param $gameId
-     * @return QuestionCollection
-     */
-    public function index(Request $request, $gameId): QuestionCollection
+    public function index($gameId): QuestionCollection
     {
         return new QuestionCollection(
             Game::findOrFail($gameId)->questions()->orderBy('created_at')->get()
         );
     }
 
-    /**
-     * @param Request $request
-     * @param $gameId
-     * @return QuestionResource
-     */
-    public function add(Request $request, $gameId): QuestionResource
+    public function add($gameId): QuestionResource
     {
         $question = Question::create(
             Question::getAnswerScaffolding($gameId)
@@ -41,22 +31,11 @@ class QuestionApiController extends Controller
         return new QuestionResource($question);
     }
 
-    /**
-     * @param Request $request
-     * @param $gameId
-     * @param $questionId
-     */
     public function show(Request $request, $gameId, $questionId)
     {
         // nth
     }
 
-    /**
-     * @param UpdateQuestionRequest $request
-     * @param $gameId
-     * @param $questionId
-     * @return JsonResponse
-     */
     public function update(UpdateQuestionRequest $request, $gameId, $questionId): JsonResponse
     {
         $request->validated();
@@ -95,13 +74,7 @@ class QuestionApiController extends Controller
         return MessageResponse::json('Entry has been successfully updated!');
     }
 
-    /**
-     * @param Request $request
-     * @param $gameId
-     * @param $questionId
-     * @return JsonResponse
-     */
-    public function destroy(Request $request, $gameId, $questionId): JsonResponse
+    public function destroy($gameId, $questionId): JsonResponse
     {
         Question::where([
             'id' => $questionId,

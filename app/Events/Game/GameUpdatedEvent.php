@@ -15,48 +15,27 @@ use Illuminate\Queue\SerializesModels;
 
 class GameUpdatedEvent implements ShouldBroadcast
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels;
+    use Dispatchable;
+    use InteractsWithSockets;
+    use SerializesModels;
 
-    /**
-     * @var Game
-     */
-    public $game;
+    public Game $game;
 
-    /**
-     * Create a new event instance.
-     *
-     * @param Game $game
-     */
     public function __construct(Game $game)
     {
         $this->game = $game;
     }
 
-    /**
-     * Get the channels the event should broadcast on.
-     *
-     * @return PrivateChannel|array
-     */
     public function broadcastOn(): Channel
     {
         return new PrivateChannel('Game.'.$this->game->id.'.Settings');
     }
 
-    /**
-     * The event's broadcast name.
-     *
-     * @return string
-     */
     public function broadcastAs(): string
     {
         return 'game.updated';
     }
 
-    /**
-     * Get the data to broadcast.
-     *
-     * @return array
-     */
     public function broadcastWith(): array
     {
         $request = new Request();

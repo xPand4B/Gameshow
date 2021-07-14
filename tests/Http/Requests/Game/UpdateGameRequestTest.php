@@ -7,9 +7,6 @@ use Tests\TestCase;
 
 class UpdateGameRequestTest extends TestCase
 {
-    /**
-     * @return UpdateGameRequest
-     */
     private function getGameRequest(): UpdateGameRequest
     {
         return new UpdateGameRequest();

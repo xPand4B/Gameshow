@@ -17,12 +17,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class GameApiController extends Controller
 {
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param CreateGameRequest $request
-     * @return GameResource|JsonResponse
-     */
     public function store(CreateGameRequest $request)
     {
         $request->validated();
@@ -52,11 +46,6 @@ class GameApiController extends Controller
         return response()->json($resource);
     }
 
-    /**
-     * @param Request $request
-     * @param string $gameId
-     * @return JsonResponse
-     */
     public function show(Request $request, string $gameId): JsonResponse
     {
         // Get GameResource
@@ -73,12 +62,7 @@ class GameApiController extends Controller
         return response()->json($resource);
     }
 
-    /**
-     * @param Request $request
-     * @param string $gameId
-     * @return JsonResponse
-     */
-    public function exists(Request $request, string $gameId): JsonResponse
+    public function exists(string $gameId): JsonResponse
     {
         Game::findOrFail($gameId);
 
@@ -87,11 +71,6 @@ class GameApiController extends Controller
         ]);
     }
 
-    /**
-     * @param UpdateGameRequest $request
-     * @param string $gameId
-     * @return GameResource
-     */
     public function update(UpdateGameRequest $request, string $gameId): GameResource
     {
         $request->validated();
@@ -124,14 +103,7 @@ class GameApiController extends Controller
         return new GameResource($game);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Request $request
-     * @param string $gameId
-     * @return JsonResponse
-     */
-    public function destroy(Request $request, string $gameId): JsonResponse
+    public function destroy(string $gameId): JsonResponse
     {
         $game = Game::findOrFail($gameId);
         $game->delete();
@@ -141,9 +113,6 @@ class GameApiController extends Controller
         return MessageResponse::json('Entry has been successfully deleted!');
     }
 
-    /**
-     * @return array
-     */
     private function getAllAvailableJoker(): array
     {
         $jokers = Joker::all();

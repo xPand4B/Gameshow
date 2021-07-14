@@ -98,7 +98,7 @@
         >
             <v-row>
                 <!-- Left -->
-                <v-col class="px-0 py-0">
+                <v-col class="px-0 py-2">
                     <slot name="bottomLeft">
                         <v-btn
                             @click="changeRoute('gameshow.menu.index')"
