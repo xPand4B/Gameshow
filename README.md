@@ -1,9 +1,12 @@
 ## Gameshow
 ![Build Status](https://github.com/xPand4B/Gameshow/workflows/CI/badge.svg)
-This should be an interactive website to manage a live-online Game-Show with twitch-chat-integration.
+
+This should be an interactive website to manage a live online Game-Show with twitch chat-integration.
 
 ## Table of content
 * [How to setup](#how-to-set-up)
+    * [Local Setup](#local-setup)
+    * [Docker Setup](#docker-setup)
 * [Ideas](#ideas)
     * [Functions](#functions)
     * [Game Settings](#game-settings)
@@ -12,16 +15,10 @@ This should be an interactive website to manage a live-online Game-Show with twi
     * [Workflow](#workflow)
 
 ## How to Set up
-In order to set up this project you have to copy the file `.env.example` to `.env` 
+In order to set up this project you have to copy the file `.env.example` to `.env`
 and fill in your database and [pusher](https://pusher.com/) credentials.
 
-[comment]: <> (Imaginary because this project uses [Laravel Websockets]&#40;https://beyondco.de/docs/laravel-websockets/getting-started/introduction&#41;)
-
-[comment]: <> (which is basically the same as pusher but served locally. )
-
-**IMPORTANT:** I expect you to already have [composer](https://getcomposer.org/) and [npm](https://nodejs.org/en/download/) installed on your system.
-
-If that's done you need to run following commands:
+### Local Setup
 ```bash
 # Project dependencies
 composer install --prefer-dist --optimize-autoloader --no-suggest {--no-dev}
@@ -33,15 +30,49 @@ php artisan install {--dev}
 php artisan serve
 ```
 
-[comment]: <> (Great! Now the only thing missing is to start the *"imaginary pusher"* server.)
+### Docker Setup
+This project ships with a [Laravel Sail](https://laravel.com/docs/8.x/sail) setup. 
+In order to use it properly follow these steps.
 
-[comment]: <> (```bash)
+Sail will use your database credentials from the `.env` to create the MySQL container.
 
-[comment]: <> (# Start websockets)
+Check out the [official documentation](https://laravel.com/docs/8.x/sail) to learn more!
+```bash
+# Optional but recommended: Add sail as an bash alias
+echo 'alias sail="bash vendor/bin/sail"' >> ~/.zshrc
+# or
+echo 'alias sail="bash vendor/bin/sail"' >> ~/.bash_profile
 
-[comment]: <> (php artisan websockets:serve)
+# Reload for changes to take effect
+source ~/.zshrc
+# or
+source ~/.bash_profile
 
-[comment]: <> (```)
+# Starting/stopping container (-d to start containers "detached" in the background)
+# https://laravel.com/docs/8.x/sail#starting-and-stopping-sail
+sail up {-d}
+sail down
+
+# Migrate database for the first time
+sail artisan migrate
+```
+If you completed these steps the project should be accessible at [http://localhost](http://localhost).
+
+
+### Useful Sail commands
+```bash
+# Run php artisan commands
+sail artisan {SomeCommand}
+
+# Install npm dependencies
+sail npm install
+
+# Run npm commands
+sail npm run {dev|prod|watch}
+
+# Running test suite
+sail test
+```
 
 **Enjoy!**
 
