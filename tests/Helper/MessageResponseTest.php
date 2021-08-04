@@ -5,6 +5,9 @@ namespace Tests\Helper;
 use App\Helper\MessageResponse;
 use Tests\TestCase;
 
+/**
+ * @group Helper
+ */
 class MessageResponseTest extends TestCase
 {
     /** @test */

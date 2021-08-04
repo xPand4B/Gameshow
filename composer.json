@@ -18,14 +18,15 @@
         }
     ],
     "require": {
-        "ext-json": "*",
         "php": "^7.4|^8.0",
+        "ext-json": "*",
         "beyondcode/laravel-websockets": "^1.9",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
+        "lorisleiva/laravel-actions": "^2.1",
         "pusher/pusher-php-server": "^4.1",
         "symfony/process": "^5.1"
     },

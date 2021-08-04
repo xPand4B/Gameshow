@@ -8,6 +8,10 @@ use App\Models\Question;
 use Illuminate\Http\Request;
 use Tests\TestCase;
 
+/**
+ * @group Controllers
+ * @group Api
+ */
 class QuestionApiControllerTest extends TestCase
 {
     use ApiControllerTrait;
@@ -24,7 +28,8 @@ class QuestionApiControllerTest extends TestCase
         $game = $this->createGame()[0];
         $question = $game->questions[0];
 
-        $response = $this->actingAsUser()
+        $response = $this
+            ->actingAsUser()
             ->json('GET', route(self::INDEX_ROUTE, [
                 'gameId' => $game->id
             ]))
@@ -70,7 +75,8 @@ class QuestionApiControllerTest extends TestCase
             'question' => 'Sample Question'
         ]);
 
-        $response = $this->actingAsUser()
+        $response = $this
+            ->actingAsUser()
             ->json('GET', route(self::ADD_ROUTE, [
                 'gameId' => $game->id
             ]))
@@ -93,7 +99,8 @@ class QuestionApiControllerTest extends TestCase
     {
         $game = $this->createGame()[0];
 
-        $response = $this->actingAsUser()
+        $response = $this
+            ->actingAsUser()
             ->json('GET', route(self::SHOW_ROUTE, [
                 'gameId' => $game->id,
                 'questionId' => $game->questions[0]->id
@@ -113,7 +120,8 @@ class QuestionApiControllerTest extends TestCase
             'value' => 'Sample Question'
         ];
 
-        $response = $this->actingAsUser()
+        $response = $this
+            ->actingAsUser()
             ->json('PATCH', route(self::UPDATE_ROUTE, [
                 'gameId' => $game->id,
                 'questionId' => $game->questions[0]->id
@@ -142,7 +150,8 @@ class QuestionApiControllerTest extends TestCase
         ];
 
         foreach ($payloads as $payload) {
-            $response = $this->actingAsUser()
+            $response = $this
+                ->actingAsUser()
                 ->json('PATCH', route(self::UPDATE_ROUTE, [
                     'gameId' => $game->id,
                     'questionId' => $game->questions[0]->id
@@ -165,7 +174,8 @@ class QuestionApiControllerTest extends TestCase
     {
         $game = $this->createGame()[0];
 
-        $response = $this->actingAsUser()
+        $response = $this
+            ->actingAsUser()
             ->json('DELETE', route(self::DESTROY_ROUTE, [
                 'gameId' => $game->id,
                 'questionId' => $game->questions[0]->id

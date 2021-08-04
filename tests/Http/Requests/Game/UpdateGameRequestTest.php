@@ -5,6 +5,9 @@ namespace Tests\Http\Requests\Game;
 use App\Http\Requests\Game\UpdateGameRequest;
 use Tests\TestCase;
 
+/**
+ * @group Requests
+ */
 class UpdateGameRequestTest extends TestCase
 {
     private function getGameRequest(): UpdateGameRequest

@@ -5,6 +5,9 @@ namespace Tests\Http\Resources\Joker;
 use App\Models\Joker;
 use Tests\TestCase;
 
+/**
+ * @group Resources
+ */
 class JokerResourceTest extends TestCase
 {
     use JokerResourceTrait;

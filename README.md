@@ -53,8 +53,8 @@ source ~/.bash_profile
 sail up {-d}
 sail down
 
-# Migrate database for the first time
-sail artisan migrate
+# Run install command
+sail artisan install
 ```
 If you completed these steps the project should be accessible at [http://localhost](http://localhost).
 
@@ -69,12 +69,18 @@ sail npm install
 
 # Run npm commands
 sail npm run {dev|prod|watch}
-
-# Running test suite
-sail test
 ```
 
 **Enjoy!**
+
+## Testing
+```bash
+# Local setup
+composer test
+
+# Docker setup
+sail test
+```
 
 ## Ideas
 

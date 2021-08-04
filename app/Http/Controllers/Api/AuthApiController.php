@@ -12,15 +12,13 @@ class AuthApiController extends Controller
 {
     public function login(LoginRequest $request): JsonResponse
     {
-        $request->validated();
-
         return AuthHelper::login(
             $request,
             $request->get('username')
         );
     }
 
-    public function me(): JsonResponse
+    public function me(Request $request): JsonResponse
     {
         return AuthHelper::getAuthResponse();
     }

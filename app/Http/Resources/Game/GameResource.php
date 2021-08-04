@@ -9,19 +9,27 @@ use Illuminate\Support\Facades\Crypt;
 
 class GameResource extends JsonResource
 {
+    private bool $isGamemaster;
+
+    public function __construct($resource, bool $isGamemaster = false)
+    {
+        parent::__construct($resource);
+        $this->isGamemaster = $isGamemaster;
+    }
+
     public function toArray($request): array
     {
         return [
             'type' => 'game',
             'id' => $this->id,
             'attributes' => [
-                'is_gamemaster' => false,
-                'player_count' => (int) $this->player_count,
-                'correct_points' => (int) $this->correct_points,
-                'points_if_wrong_answer' => (bool) $this->points_if_wrong_answer,
-                'wrong_points' => (int) $this->wrong_points,
+                'is_gamemaster' => $this->isGamemaster,
+                'player_count' => $this->player_count,
+                'correct_points' => $this->correct_points,
+                'points_if_wrong_answer' => $this->points_if_wrong_answer,
+                'wrong_points' => $this->wrong_points,
                 'available_joker' => $this->formatAvailableJoker($request),
-                'finished' => (bool) $this->finished,
+                'finished' => $this->finished,
                 'created_at' => (string) $this->created_at,
                 'updated_at' => (string) $this->updated_at
             ],

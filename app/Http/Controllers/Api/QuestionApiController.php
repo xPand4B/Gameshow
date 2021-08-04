@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Actions\Questions\GetCurrentQuestion;
+use App\Actions\Questions\UpdateQuestion;
 use App\Helper\MessageResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Question\UpdateQuestionRequest;
@@ -9,20 +11,22 @@ use App\Http\Resources\Question\QuestionCollection;
 use App\Http\Resources\Question\QuestionResource;
 use App\Models\Game;
 use App\Models\Question;
-use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class QuestionApiController extends Controller
 {
-    public function index($gameId): QuestionCollection
+    public function index(Request $request, string $gameId): QuestionCollection
     {
         return new QuestionCollection(
-            Game::findOrFail($gameId)->questions()->orderBy('created_at')->get()
+            Game::findOrFail($gameId)
+                ->questions()
+                ->orderBy('created_at')
+                ->get()
         );
     }
 
-    public function add($gameId): QuestionResource
+    public function add(Request $request, string $gameId): QuestionResource
     {
         $question = Question::create(
             Question::getAnswerScaffolding($gameId)
@@ -36,50 +40,18 @@ class QuestionApiController extends Controller
         // nth
     }
 
-    public function update(UpdateQuestionRequest $request, $gameId, $questionId): JsonResponse
+    public function update(UpdateQuestionRequest $request, string $gameId, string $questionId): JsonResponse
     {
-        $request->validated();
+        $question = GetCurrentQuestion::run($gameId, $questionId);
 
-        $question = Question::where([
-            'id' => $questionId,
-            'game_id' => $gameId
-        ])->first();
-
-        $fieldName  = $request->get('name');
-        $fieldValue = $request->get('value');
-
-        if ($fieldName === 'question') {
-            $question->update([
-                'question' => $fieldValue
-            ]);
-
-            return MessageResponse::json('Entry has been successfully updated!');
-        }
-
-        $answerId = $request->get('answerId');
-        $answers  = $question->answers;
-
-        foreach ($answers as $index => $answer) {
-            if ($answer['id'] === $answerId) {
-                $answers[$index][$fieldName] = $fieldValue;
-                $answers[$index]['updated_at'] = Carbon::now()->toDateTimeString();
-                break;
-            }
-        }
-
-        $question->update([
-            'answers' => array_values($answers)
-        ]);
+        UpdateQuestion::run($request, $question);
 
         return MessageResponse::json('Entry has been successfully updated!');
     }
 
-    public function destroy($gameId, $questionId): JsonResponse
+    public function destroy(Request $request, string $gameId, string $questionId): JsonResponse
     {
-        Question::where([
-            'id' => $questionId,
-            'game_id' => $gameId
-        ])->delete();
+        GetCurrentQuestion::run($gameId, $questionId)->delete();
 
         return MessageResponse::json('Entry has been successfully deleted!');
     }

@@ -6,6 +6,10 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
+/**
+ * @group Controllers
+ * @group Api
+ */
 class AuthApiControllerTest extends TestCase
 {
     use ApiControllerTrait;

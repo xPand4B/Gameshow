@@ -7,10 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * @method static create(array $data)
+ * @method static create(array $array)
+ * @method static where(array $array)
  * @method static first()
- * @method static findOrFail($id)
+ * @method static firstOrFail(int $id)
+ * @method static firstOrNew(array $condition, array $data)
+ * @method static firstOrCreate(array $condition, array $data)
+ * @method static updateOrCreate(array $condition, array $data)
  * @method static paginate(int $int)
+ * @method static inRandomOrder()
+ *
+ * @property int id
+ * @property string name
  */
 class Joker extends Model
 {

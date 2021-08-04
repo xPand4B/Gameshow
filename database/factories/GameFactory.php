@@ -9,18 +9,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class GameFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
     protected $model = Game::class;
 
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
     public function definition(): array
     {
         $jokers = Joker::all();
@@ -32,6 +22,10 @@ class GameFactory extends Factory
                 'active' => false,
                 'count' => 1
             ];
+        }
+
+        if (User::all()->count() === 0) {
+            User::factory()->create();
         }
 
         return [

@@ -5,6 +5,9 @@ namespace Tests\Http\Requests\Game;
 use App\Http\Requests\Game\CreateGameRequest;
 use Tests\TestCase;
 
+/**
+ * @group Requests
+ */
 class CreateGameRequestTest extends TestCase
 {
     private function getGameRequest(): CreateGameRequest
@@ -22,7 +25,7 @@ class CreateGameRequestTest extends TestCase
     public function test_game_request_rules(): void
     {
         self::assertSame([
-            'username' => 'required|bail|string|max:20',
+            'username' => 'bail|required|string|max:20',
         ], $this->getGameRequest()->rules());
     }
 

@@ -5,6 +5,9 @@ namespace Tests\Http\Requests\Question;
 use App\Http\Requests\Question\UpdateQuestionRequest;
 use Tests\TestCase;
 
+/**
+ * @group Requests
+ */
 class UpdateQuestionRequestTest extends TestCase
 {
     private function getQuestionRequest(): UpdateQuestionRequest

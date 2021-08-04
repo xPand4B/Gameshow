@@ -9,26 +9,17 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
-    public function run()
+    public function run(): void
     {
         $this->call([
             UserSeeder::class,
             GameSeeder::class,
         ]);
 
-        $userCount     = User::all()->count();
-        $gameCount     = Game::all()->count();
-        $questionCount = Question::all()->count();
-
         $this->command->info("\nTotal:");
         $this->command->info("=============");
-        $this->command->info("Users     : {$userCount}");
-        $this->command->info("Games     : {$gameCount}");
-        $this->command->info("Questions : {$questionCount}");
+        $this->command->info("Users     : " . User::all()->count());
+        $this->command->info("Games     : " . Game::all()->count());
+        $this->command->info("Questions : " . Question::all()->count());
     }
 }

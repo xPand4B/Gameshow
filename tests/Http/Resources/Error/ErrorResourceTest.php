@@ -6,6 +6,9 @@ use App\Helper\MessageResponse;
 use App\Http\Resources\Error\ErrorResource;
 use Tests\TestCase;
 
+/**
+ * @group Resources
+ */
 class ErrorResourceTest extends TestCase
 {
     private \ReflectionClass $class;

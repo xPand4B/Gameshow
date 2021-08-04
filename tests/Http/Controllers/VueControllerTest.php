@@ -6,6 +6,9 @@ use App\Http\Controllers\VueController;
 use Illuminate\View\View;
 use Tests\TestCase;
 
+/**
+ * @group Controllers
+ */
 class VueControllerTest extends TestCase
 {
     /** @test */

@@ -14,7 +14,7 @@ class CreateGameRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => 'required|bail|string|max:20',
+            'username' => 'bail|required|string|max:20',
         ];
     }
 }

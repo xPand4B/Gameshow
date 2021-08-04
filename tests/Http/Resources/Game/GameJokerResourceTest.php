@@ -6,6 +6,9 @@ use App\Helper\MessageResponse;
 use App\Models\Game;
 use Tests\TestCase;
 
+/**
+ * @group Resources
+ */
 class GameJokerResourceTest extends TestCase
 {
     use GameResourceTrait;

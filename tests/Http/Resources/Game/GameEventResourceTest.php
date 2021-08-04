@@ -5,6 +5,9 @@ namespace Tests\Http\Resources\Game;
 use App\Models\Game;
 use Tests\TestCase;
 
+/**
+ * @group Resources
+ */
 class GameEventResourceTest extends TestCase
 {
     use GameResourceTrait;

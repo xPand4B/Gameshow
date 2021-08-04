@@ -4,24 +4,19 @@ namespace Database\Factories;
 
 use App\Models\Game;
 use App\Models\Question;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class QuestionFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
     protected $model = Question::class;
 
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
     public function definition(): array
     {
+        if (User::all()->count() === 0) {
+            User::factory()->create();
+        }
+
         if (Game::all()->count() === 0) {
             Game::factory()->create();
         }
@@ -49,7 +44,6 @@ class QuestionFactory extends Factory
         return [
             'id' => $id,
             'answer' => $this->faker->sentence,
-            'context' => $this->faker->sentence,
             'isCorrect' => $this->faker->boolean,
         ];
     }

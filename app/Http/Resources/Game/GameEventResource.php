@@ -11,9 +11,8 @@ class GameEventResource extends GameResource
     {
         $response = parent::toArray($request);
 
-        $response['type'] = 'event.game.updated';
-
         unset($response['links']);
+        $response['type'] = 'event.game.updated';
 
         return $response;
     }

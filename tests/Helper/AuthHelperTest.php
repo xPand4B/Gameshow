@@ -2,6 +2,7 @@
 
 namespace Tests\Helper;
 
+use App\Actions\Auth\LogoutUser;
 use App\Helper\AuthHelper;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -9,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Tests\TestCase;
 
+/**
+ * @group Helper
+ */
 class AuthHelperTest extends TestCase
 {
     private const SAMPLE_USERNAME = 'xPand';
@@ -24,6 +28,7 @@ class AuthHelperTest extends TestCase
         self::assertSame(1, User::all()->count());
         self::assertTrue(Auth::check());
         self::assertSame(self::SAMPLE_USERNAME, Auth::user()->username);
+        self::assertSame(User::first()->auth_token, Auth::user()->auth_token);
 
         self::assertSame([
             'success' => true,
@@ -35,27 +40,31 @@ class AuthHelperTest extends TestCase
     /** @test */
     public function test_auth_helper_can_login_existing_user(): void
     {
-        self::markTestSkipped('Need to figure out how to add cookies to request.');
-
         self::assertSame(0, User::all()->count());
         self::assertFalse(Auth::check());
 
         $token = Str::random(24);
-        User::create([
+        User::factory()->count(9)->create();
+        User::factory()->create([
             'username' => self::SAMPLE_USERNAME,
             'auth_token' => $token,
         ]);
-        self::assertSame(1, User::all()->count());
+        self::assertSame(10, User::all()->count());
 
-        $response = AuthHelper::login(new Request(), self::SAMPLE_USERNAME);
-        self::assertSame(2, User::all()->count());
+        $request = new Request(
+            [], [], [], [AuthHelper::AUTH_TOKEN_NAME => $token]
+        );
+
+        $response = AuthHelper::login($request, self::SAMPLE_USERNAME);
+        self::assertSame(10, User::all()->count());
 
         self::assertTrue(Auth::check());
         self::assertSame(self::SAMPLE_USERNAME, Auth::user()->username);
+        self::assertSame($token, Auth::user()->auth_token);
 
         self::assertSame([
             'success' => true,
-            'id' => 2,
+            'id' => 10,
             'playerName' => self::SAMPLE_USERNAME
         ], json_decode($response->getContent(), true));
     }
@@ -72,7 +81,7 @@ class AuthHelperTest extends TestCase
         self::assertTrue(Auth::check());
         self::assertSame(self::SAMPLE_USERNAME, Auth::user()->username);
 
-        AuthHelper::logoutCurrentUser();
+        LogoutUser::run();
         self::assertFalse(Auth::check());
     }
 

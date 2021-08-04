@@ -34,10 +34,6 @@
 <script>
     export default {
         name: "pages-game-gamemaster",
-
-        data: () => ({
-
-        })
     }
 </script>
 

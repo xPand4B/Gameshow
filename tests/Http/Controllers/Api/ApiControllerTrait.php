@@ -21,7 +21,7 @@ trait ApiControllerTrait
         parent::setUp();
 
         $this->user = User::factory()->create();
-        self::assertSame(1, User::all()->count());
+        self::assertCount(1, User::all());
     }
 
     /**
@@ -39,7 +39,7 @@ trait ApiControllerTrait
         $countAfter = Game::all()->count();
 
         self::assertSame($countAfter, $countBefore + 1);
-        self::assertSame($count, Question::all()->count());
+        self::assertCount($count, Question::all());
 
         return $game;
     }

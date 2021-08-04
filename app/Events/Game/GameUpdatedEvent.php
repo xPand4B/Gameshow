@@ -3,7 +3,6 @@
 namespace App\Events\Game;
 
 use App\Http\Resources\Game\GameEventResource;
-use App\Http\Resources\Game\GameResource;
 use App\Models\Game;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -28,7 +27,7 @@ class GameUpdatedEvent implements ShouldBroadcast
 
     public function broadcastOn(): Channel
     {
-        return new PrivateChannel('Game.'.$this->game->id.'.Settings');
+        return new PrivateChannel('Game.' . $this->game->id . '.Settings');
     }
 
     public function broadcastAs(): string
@@ -38,8 +37,6 @@ class GameUpdatedEvent implements ShouldBroadcast
 
     public function broadcastWith(): array
     {
-        $request = new Request();
-
-        return (new GameEventResource($this->game))->toArray($request);
+        return (new GameEventResource($this->game))->toArray(new Request());
     }
 }

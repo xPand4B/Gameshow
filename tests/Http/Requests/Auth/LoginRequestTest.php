@@ -5,6 +5,9 @@ namespace Tests\Http\Requests\Auth;
 use App\Http\Requests\Auth\LoginRequest;
 use Tests\TestCase;
 
+/**
+ * @group Requests
+ */
 class LoginRequestTest extends TestCase
 {
     private function getLoginRequest(): LoginRequest

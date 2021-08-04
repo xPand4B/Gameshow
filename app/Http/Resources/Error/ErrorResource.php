@@ -13,23 +13,14 @@ class ErrorResource
      * @var string|int
      */
     private $id;
-
     private string $linkAbout = '';
-
     private int $statusCode;
-
     private string $applicationErrorCode = '';
-
     private string $title = '';
-
     private string $detail = '';
-
     private string $sourcePointer = '';
-
     private string $sourceParameter = '';
-
     private array $meta = [];
-
     private array $errorCollection = [];
 
     /**
@@ -178,8 +169,7 @@ class ErrorResource
         string $sourcePointer = null,
         string $sourceParameter = null,
         array $meta = null
-    ): self
-    {
+    ): self {
         $error = [];
 
         if ($id) {

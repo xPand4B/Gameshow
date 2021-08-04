@@ -21,6 +21,7 @@
         </report>
         <exclude>
             <directory suffix="Kernel.php">./app</directory>
+            <directory suffix="Handler.php">./app</directory>
             <file>./app/Http/Middleware/Authenticate.php</file>
             <file>./app/Http/Middleware/EncryptCookies.php</file>
             <file>./app/Http/Middleware/PreventRequestsDuringMaintenance.php</file>

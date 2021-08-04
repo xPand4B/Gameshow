@@ -8,6 +8,10 @@ use App\Models\Question;
 use Illuminate\Http\Request;
 use Tests\TestCase;
 
+/**
+ * @group Controllers
+ * @group Api
+ */
 class AnswerApiControllerTest extends TestCase
 {
     use ApiControllerTrait;

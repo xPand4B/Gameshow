@@ -9,8 +9,19 @@ use Illuminate\Notifications\Notifiable;
 
 /**
  * @method static create(array $array)
- * @method static inRandomOrder()
  * @method static where(array $array)
+ * @method static first()
+ * @method static firstOrFail(int $id)
+ * @method static firstOrNew(array $condition, array $data)
+ * @method static firstOrCreate(array $condition, array $data)
+ * @method static updateOrCreate(array $condition, array $data)
+ * @method static paginate(int $int)
+ * @method static inRandomOrder()
+ *
+ * @property int id
+ * @property string username
+ * @property string auth_token
+ * @property mixed last_login_ip
  */
 class User extends Authenticatable
 {

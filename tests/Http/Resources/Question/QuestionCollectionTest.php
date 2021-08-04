@@ -7,9 +7,13 @@ use App\Models\Question;
 use Tests\Http\Resources\Game\GameResourceTrait;
 use Tests\TestCase;
 
+/**
+ * @group Resources
+ */
 class QuestionCollectionTest extends TestCase
 {
-    use GameResourceTrait, QuestionResourceTrait;
+    use GameResourceTrait;
+    use QuestionResourceTrait;
 
     /** @test */
     public function test_question_resource_collection_has_correct_format(): void
