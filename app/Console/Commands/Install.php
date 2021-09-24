@@ -17,18 +17,12 @@ class Install extends Command
         'php artisan key:generate --ansi',
         'php artisan migrate:fresh --force',
         'php artisan storage:link',
-    ];
-
-    private const DEV_COMMANDS = [
         'npm install',
-        'npm run dev'
+        'npm run prod',
     ];
 
     public function handle(): void
     {
-        $this->runCommands(
-            self::COMMANDS,
-            $this->option('dev') ? self::DEV_COMMANDS : null
-        );
+        $this->runCommands(self::COMMANDS);
     }
 }
