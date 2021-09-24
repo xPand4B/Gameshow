@@ -65,8 +65,8 @@
             "@php artisan key:generate --ansi"
         ],
         "setup:sail": [
-            'cp -n .env.sail .env',
             "composer install --optimize-autoloader --no-suggest",
+            "cp -n .env.sail .env",
             "sail up -d",
             "sail artisan install"
         ],
