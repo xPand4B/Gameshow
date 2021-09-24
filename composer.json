@@ -64,6 +64,9 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
+        "setup": [
+            "composer install --optimize-autoloader --no-suggest"
+        ],
         "test": "@php artisan test --parallel"
     },
     "extra": {
