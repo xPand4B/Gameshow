@@ -2,6 +2,7 @@
 version: '3'
 services:
     laravel.test:
+        container_name: gameshow-laravel
         build:
             context: ./vendor/laravel/sail/runtimes/8.0
             dockerfile: Dockerfile
@@ -20,6 +21,7 @@ services:
         depends_on:
             - mysql
     mysql:
+        container_name: gameshow-mysql
         image: 'mysql:8.0'
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
