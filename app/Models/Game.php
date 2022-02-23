@@ -29,6 +29,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property bool finished
  * @property bool started
  *
+ * @property User $user
  */
 class Game extends Model
 {

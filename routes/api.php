@@ -66,42 +66,38 @@ Route::prefix('v1')->group(function() {
             | Question
             |--------------------------------------------------------------------------
             */
-            Route::prefix('')->group(function() {
-                Route::get(
-                    '/{gameId}/questions', [QuestionApiController::class, 'index']
-                )->name('api.v1.game.questions.index');
+            Route::get(
+                '/{gameId}/questions', [QuestionApiController::class, 'index']
+            )->name('api.v1.game.questions.index');
 
-                Route::get(
-                    '/{gameId}/questions/add', [QuestionApiController::class, 'add']
-                )->name('api.v1.game.questions.add');
+            Route::get(
+                '/{gameId}/questions/add', [QuestionApiController::class, 'add']
+            )->name('api.v1.game.questions.add');
 
-                Route::get(
-                    '/{gameId}/questions/{questionId}', [QuestionApiController::class, 'show']
-                )->name('api.v1.game.questions.show');
+            Route::get(
+                '/{gameId}/questions/{questionId}', [QuestionApiController::class, 'show']
+            )->name('api.v1.game.questions.show');
 
-                Route::patch(
-                    '/{gameId}/questions/{questionId}', [QuestionApiController::class, 'update']
-                )->name('api.v1.game.questions.update');
+            Route::patch(
+                '/{gameId}/questions/{questionId}', [QuestionApiController::class, 'update']
+            )->name('api.v1.game.questions.update');
 
-                Route::delete(
-                    '/{gameId}/questions/{questionId}', [QuestionApiController::class, 'destroy']
-                )->name('api.v1.game.questions.destroy');
-            });
+            Route::delete(
+                '/{gameId}/questions/{questionId}', [QuestionApiController::class, 'destroy']
+            )->name('api.v1.game.questions.destroy');
 
             /*
             |--------------------------------------------------------------------------
             | Answer
             |--------------------------------------------------------------------------
             */
-            Route::prefix('')->group(function() {
-                Route::get(
-                    '/{gameId}/questions/{questionId}/add', [AnswerApiController::class, 'add']
-                )->name('api.v1.game.questions.answer.add');
+            Route::get(
+                '/{gameId}/questions/{questionId}/add', [AnswerApiController::class, 'add']
+            )->name('api.v1.game.questions.answer.add');
 
-                Route::delete(
-                    '/{gameId}/questions/{questionId}/{answerId}', [AnswerApiController::class, 'destroy']
-                )->name('api.v1.game.questions.answer.destroy');
-            });
+            Route::delete(
+                '/{gameId}/questions/{questionId}/{answerId}', [AnswerApiController::class, 'destroy']
+            )->name('api.v1.game.questions.answer.destroy');
         });
     });
 });

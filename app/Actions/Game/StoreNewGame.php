@@ -14,11 +14,13 @@ class StoreNewGame
 
     public function handle(): GameResource
     {
+        $userId = Auth::user()->id;
+
         $game = Game::firstOrCreate([
-            'user_id' => Auth::user()->id,
+            'user_id' => $userId,
             'finished' => false
         ], [
-            'user_id' => Auth::user()->id,
+            'user_id' => $userId,
             'available_joker' => GetAvailableJoker::run(),
         ]);
 

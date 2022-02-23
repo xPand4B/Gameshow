@@ -13,19 +13,18 @@ use App\Http\Requests\Game\CreateGameRequest;
 use App\Http\Requests\Game\UpdateGameRequest;
 use App\Http\Resources\Game\GameResource;
 use App\Models\Game;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class GameApiController extends Controller
 {
-    public function store(CreateGameRequest $request)
+    public function store(CreateGameRequest $request): GameResource
     {
         $request->validated();
 
         return StoreNewGame::run();
     }
 
-    public function show(Request $request, string $gameId): GameResource
+    public function show(string $gameId): GameResource
     {
         return ShowGame::run($gameId);
     }
@@ -48,7 +47,7 @@ class GameApiController extends Controller
         return new GameResource($game);
     }
 
-    public function destroy(Request $request, string $gameId): JsonResponse
+    public function destroy(string $gameId): JsonResponse
     {
         DestroyGame::run($gameId);
 

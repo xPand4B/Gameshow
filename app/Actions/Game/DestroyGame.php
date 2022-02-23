@@ -11,7 +11,9 @@ class DestroyGame
 
     public function handle(string $gameId): void
     {
+        /** @var Game $game */
         $game = Game::findOrFail($gameId);
+
         $game->user->delete();
         $game->delete();
     }

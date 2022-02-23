@@ -9,7 +9,7 @@ class LogoutUser
 {
     use AsAction;
 
-    public function handle()
+    public function handle(): void
     {
         if (Auth::check()) {
             Auth::logout();

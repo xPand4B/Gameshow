@@ -7,11 +7,10 @@ use App\Actions\Answers\DeleteAnswer;
 use App\Actions\Questions\GetCurrentQuestion;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Question\QuestionResource;
-use Illuminate\Http\Request;
 
 class AnswerApiController extends Controller
 {
-    public function add(Request $request, string $gameId, string $questionId): QuestionResource
+    public function add(string $gameId, string $questionId): QuestionResource
     {
         $question = CreateNewAnswer::run(
             GetCurrentQuestion::run($gameId, $questionId)
@@ -20,7 +19,7 @@ class AnswerApiController extends Controller
         return new QuestionResource($question);
     }
 
-    public function destroy(Request $request, string $gameId, string $questionId, int $answerId)
+    public function destroy(string $gameId, string $questionId, int $answerId)
     {
         $question = GetCurrentQuestion::run($gameId, $questionId);
 

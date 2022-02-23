@@ -9,7 +9,7 @@ class GetCurrentQuestion
 {
     use AsAction;
 
-    public function handle(string $gameId, string $questionId)
+    public function handle(string $gameId, string $questionId): ?Question
     {
         return Question::where([
             'id' => $questionId,

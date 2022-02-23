@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 
 class QuestionApiController extends Controller
 {
-    public function index(Request $request, string $gameId): QuestionCollection
+    public function index(string $gameId): QuestionCollection
     {
         return new QuestionCollection(
             Game::findOrFail($gameId)
@@ -26,7 +26,7 @@ class QuestionApiController extends Controller
         );
     }
 
-    public function add(Request $request, string $gameId): QuestionResource
+    public function add(string $gameId): QuestionResource
     {
         $question = Question::create(
             Question::getAnswerScaffolding($gameId)
@@ -49,7 +49,7 @@ class QuestionApiController extends Controller
         return MessageResponse::json('Entry has been successfully updated!');
     }
 
-    public function destroy(Request $request, string $gameId, string $questionId): JsonResponse
+    public function destroy(string $gameId, string $questionId): JsonResponse
     {
         GetCurrentQuestion::run($gameId, $questionId)->delete();
 

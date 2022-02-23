@@ -26,7 +26,7 @@ class CreateNewAnswer
         return $question;
     }
 
-    protected function setLatestAnswerId(array $answers)
+    protected function setLatestAnswerId(array $answers): void
     {
         $this->latestAnswerId = 1;
 

@@ -7,7 +7,7 @@ import store from './src/store'
 
 // Plugins
 import GlobalComponents from "./src/components/global";
-import Vuetify from './vendors/vuetify';
+import vuetify from './vendors/vuetify';
 import i18n from './src/snippets';
 import VueClipboards from 'vue-clipboards';
 import VueChatScroll from 'vue-chat-scroll';
@@ -25,6 +25,6 @@ new Vue({
     router,
     store,
     i18n,
-    Vuetify,
+    vuetify,
     render: (h) => h(App),
 }).$mount('#app');

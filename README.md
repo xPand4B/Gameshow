@@ -24,7 +24,7 @@ and fill in your database and [pusher](https://pusher.com/) credentials.
 composer install --prefer-dist --optimize-autoloader --no-suggest {--no-dev}
 
 # Install application
-php artisan install {--dev}
+php artisan install
 
 # Optional: Open dev server on 'http://127.0.0.1:8000'
 php artisan serve

@@ -12,7 +12,7 @@ class LoginUser
 {
     use AsAction;
 
-    public function handle(Request $request, string $username, ?string $token)
+    public function handle(Request $request, string $username, ?string $token): void
     {
         $user = User::updateOrCreate([
             'username' => $username,

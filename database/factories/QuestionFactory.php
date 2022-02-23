@@ -35,10 +35,6 @@ class QuestionFactory extends Factory
         ];
     }
 
-    /**
-     * @param int $id
-     * @return array
-     */
     protected function getFakerAnswer(int $id): array
     {
         return [

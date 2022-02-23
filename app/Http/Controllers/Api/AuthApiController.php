@@ -6,7 +6,6 @@ use App\Helper\AuthHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 class AuthApiController extends Controller
 {
@@ -18,7 +17,7 @@ class AuthApiController extends Controller
         );
     }
 
-    public function me(Request $request): JsonResponse
+    public function me(): JsonResponse
     {
         return AuthHelper::getAuthResponse();
     }
