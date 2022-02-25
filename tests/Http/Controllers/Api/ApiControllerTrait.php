@@ -11,10 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 trait ApiControllerTrait
 {
-    /**
-     * @var User
-     */
-    public $user;
+    public User $user;
 
     public function setUp(): void
     {

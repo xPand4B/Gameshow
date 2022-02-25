@@ -18,28 +18,25 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.0",
         "ext-json": "*",
-        "beyondcode/laravel-websockets": "^1.9",
-        "fideloper/proxy": "^4.4",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.40",
-        "laravel/tinker": "^2.5",
-        "lorisleiva/laravel-actions": "^2.1",
-        "pusher/pusher-php-server": "^4.1",
+        "fruitcake/laravel-cors": "^2.0.5",
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^9.0",
+        "laravel/tinker": "^2.7",
+        "lorisleiva/laravel-actions": "^2.3",
+        "pusher/pusher-php-server": "^7.0",
         "xpand4b/laravel-command-collection": "@dev"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
         "brianium/paratest": "^6.3",
-        "facade/ignition": "^2.5",
+        "spatie/laravel-ignition": "^1.0",
         "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.8",
-        "mockery/mockery": "^1.4.2",
-        "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3",
-        "wulfheart/pretty_routes": "^0.3.0"
+        "laravel/sail": "^1.10",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^6.1",
+        "phpunit/phpunit": "^9.5.10"
     },
     "repositories": [
         {
@@ -72,12 +69,7 @@
         ],
         "setup": [
             "composer install --prefer-dist --optimize-autoloader --no-progress",
-            "@setup:sail"
-        ],
-        "setup:sail": [
-            "@php artisan down",
-            "@php artisan app:install",
-            "@php artisan up"
+            "@php artisan app:install"
         ],
         "test": "@php artisan test --parallel"
     },

@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static create(array $array)
  * @method static where(array $array)
  * @method static first()
- * @method static firstOrFail(int $id)
+ * @method static firstOrFail()
  * @method static firstOrNew(array $condition, array $data)
  * @method static firstOrCreate(array $condition, array $data)
  * @method static updateOrCreate(array $condition, array $data)

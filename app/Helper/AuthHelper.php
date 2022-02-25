@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 class AuthHelper extends Controller
 {
@@ -22,7 +23,7 @@ class AuthHelper extends Controller
         LoginUser::run($request, $username, $token);
 
         return self::getAuthResponse()->withCookie(
-            cookie()->forever(self::AUTH_TOKEN_NAME, $token)
+            Cookie::forever(self::AUTH_TOKEN_NAME, $token)
         );
     }
 
